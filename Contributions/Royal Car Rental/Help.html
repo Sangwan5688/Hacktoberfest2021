@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Help</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="homeStyle.css" rel="stylesheet" />	
+	<link href="bookingStyle.css" rel="stylesheet" />
+	<link href="helpStyle.css" rel="stylesheet" />	
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<section class="section-1">
+	<div class="bg-image" style="height:800px;">
+	<table class="nav-table">
+		<tr class = "tr1">
+			<td width="1500px" height="100px">
+				<div style = "padding-left:80px;">Royal Car Rental
+				<div id="google_translate_element" style="border-radius:25px;border:none;"></div>
+				</div>
+
+					<script type="text/javascript">
+					function googleTranslateElementInit() {
+					  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+					}
+					</script>
+
+					<script type="text/javascript" src="f.txt"></script>
+			</td>
+		</tr>		
+		
+		<tr class="tr2">
+			<td width="1500px" height="40px">
+				<nav>
+					<ul>
+						<li><a href="Index.html">Home</a></li>
+						<li><a href="Index.html">Booking</a></li>
+						<li><a href="Index.html">Services</a></li>
+						<li><a href="Index.html">Location</a></li>
+						<li><a href="RentalTerms.html">Rental Terms</a></li>
+						<li><a class="active" href="Help.html">Help</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</td>
+		</tr>
+	</table><br><br>
+
+	<div class="form">
+		<button class="accordion">Will I receive a confirmation of my online reservation?</button>
+		<div class="panel">
+	  		<p>Definitely yes, our company will send to your reservation conformation to your e mail.</p>
+		</div>
+
+		<button class="accordion">How can I pay for the service?</button>
+		<div class="panel">
+	  		<p>Cash or credit card, but, you should fill a affidavit and gave your own vehicle book 
+(if you have), Id card or some your property for guarnte.</p>
+		</div>
+
+		<button class="accordion">What if I need to keep the rented vehicle a bit longer than the agreed date and time?</button>
+		<div class="panel">
+	  		<p>Then you should inform our company and you pay the extra charges.</p>
+		</div>
+
+		<button class="accordion">Do you have mileage limit?</button>
+		<div class="panel">
+	  		<p>We atached to separete meter in the vehicle. then you can count your journy distance.
+ and our company and vehicles  connected by with GPS</p>
+		</div>
+
+		<button class="accordion">What is included in your rates? Do you charge additional fees?</button>
+		<div class="panel">
+	  		<p>You can talk that to any branch of our company. if you want to talk our telephone line.
+  yes, we charge aditional fee.</p>
+		</div>
+
+		<button class="accordion">Can I change the vehicle during the pickup?</button>
+		<div class="panel">
+	  		<p>Usually you can't. but if your change is very essential, sometimes we can do your requirement.</p>
+		</div>
+
+		<button class="accordion">How can I cancel my reservation?</button>
+		<div class="panel">
+	  		<p>You can make a phone call to us or send a e-mail.</p>
+		</div>
+
+		<button class="accordion">Do you have discounts for regular clients?</button>
+		<div class="panel">
+	  		<p>Usually we don't give discounts. but, we have specially packegs and budjet packeges.</p>
+		</div>
+
+		<button class="accordion">Can I pickup or return the vehicle on a location chosen by me?</button>
+		<div class="panel">
+	  		<p>You can't, You should get and return the vehicle in our vehicle yard.
+ but , when your requst is vehicle with driver, then we can send to vehicle your chosen location. </p>
+		</div>
+
+		<button class="accordion">Do you have minimum or maximum booking length?</button>
+		<div class="panel">
+	  		<p>Yes, You can avilable one vehicle for one ID card.</p>
+		</div>
+	</div><br>	
+
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var panel = this.nextElementSibling;
+		    if (panel.style.display === "block") {
+		      panel.style.display = "none";
+		    } else {
+		      panel.style.display = "block";
+		    }
+		  });
+		}
+	</script>
+
+</div>
+</section><br>
+
+	<div class="section-5">
+		<form action="message.php" method="POST">
+			<p>Leave a message if you have any questions.</p>
+			<input type="text" placeholder="Firstname" class="fname">&nbsp;
+			<input type="text" placeholder="E-mail" class="e-mail"><br><br>
+			<input type="text" placeholder="Message/Qustion" class="message"><br><br>
+			<input  class="submit-button" type="submit" value="Submit" name="submit" size="57px">
+		</form>	
+	</div>
+
+	<footer id="contact">
+		<p class="para1">Royal Car Rental
+			<a href="www.facebook.com"><img class="facebook" src="images/facebook.png"/></a>
+		</p>
+		<pre>84/3, 
+N.C school road,
+Anuradhapura,
+Sri Lanka</pre>
+
+	</footer>
+			
+</body>
+</html>	

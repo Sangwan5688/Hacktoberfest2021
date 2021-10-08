@@ -1,0 +1,24 @@
+<html>
+<body>
+	<div style="padding-left:20px;">
+			<button onclick="admin()" class = "admin">admin</button></p>
+			<p id="demo"></p>
+
+			<script>
+				function admin(){
+					var un = prompt("please enter the username:");
+					var pswrd = prompt("enter the password");
+					var txt;
+
+					if (un== "admin" && pswrd == "admin"){
+	                   window.location = 'Addministraion.php';
+					}else{
+						 alert("Invalid user.");
+					}
+					document.getElementById("demo");
+			 }
+			</script>
+		</div>
+
+</body>
+</html>

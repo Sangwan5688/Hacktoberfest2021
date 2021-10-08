@@ -1,0 +1,391 @@
+html{
+	scroll-behavior: smooth;
+	resize: both;
+	overflow: auto;
+}
+
+body{
+	margin: 0;
+}
+
+.bg-image{
+	background-image: url('images/unk1.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	max-width: 100%;
+	height:auto;
+}
+
+.section-1 .tr1{
+	background-color:#262626; 
+	color:#ffff66; 
+	font-size: 60px;
+	padding-left: 40px;
+	font-family: 'Roboto Slab', sans-serif;
+	height:100px;
+	width: auto;
+}
+
+.section-1 #google_translate_element{
+	float: right;
+	padding-right: 100px;
+	padding-top: 30px;
+}
+
+.section-1 .nav-table{
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.section-1 .tr2{
+	background-color:#ffff66; 
+	height:40px;
+}
+
+.section-1 nav ul li a{
+	text-decoration: none;
+	color: #262626;
+	/*display: inline-block;*/
+	text-align: center;
+	padding-top: 10px;
+	margin:0px;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 20px;
+	float: left;
+	width: 14%;
+	height:30px;
+	border-right: dotted;
+}
+
+.section-1 nav ul li a:hover{
+	background-color: #ffcc00;
+}
+
+.section-1 .active{
+	background-color: #ffcc00;
+}
+
+.section-1 nav ul{
+	list-style: none;
+	margin:0.5px; 
+}
+
+.section-1 .description{
+	font-family: 'Roboto Condensed', sans-serif;
+	color: white;
+	font-size: 60px;
+	text-align: center;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.section-1 .sub-des{
+	font-family: 'Roboto Condensed', sans-serif;
+	color: white;
+	font-size: 40px;
+	text-align: center;
+}
+
+.section-1 .contact{
+	font-family: 'Roboto Condensed', sans-serif;
+	color: white;
+	font-size: 50px;
+	text-align: center;
+}
+
+.para{
+	color: black;
+	font-size: 60px;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+}
+
+.bg-img{
+	background-image: url('images/bg2-edited.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	height: auto;
+}
+
+.section-3{
+	background-size: 1345px 700px;
+	padding-left: 30px;
+}
+
+.section-3 h2{
+	font-family: 'Roboto Condensed', sans-serif;
+	color: white;
+	font-size: 60px;
+	padding-top: 30px;
+	text-align: center;
+}
+
+.slide-table .row-1 .column-1, .column-2, .column-3, .column-4{
+    width:400px;
+  }
+
+.slide-table .row-2 .column-1, .column-2, .column-3, .column-4{
+    width:400px;
+  }  
+
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8 {
+	display:none;
+	text-align: center;
+	color: white;
+}
+
+.section-3 img {
+	vertical-align: middle; 
+	height: 200px; 
+	width: 300px;
+}
+
+.section-2 h2{
+	font-family: 'Roboto Condensed', sans-serif;
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	padding-right: 400px;
+}
+
+.section-2 form{
+	padding-left: 400px;	
+}
+
+.section-2 .select-vehicle{
+	height: 40px;
+	padding: 10px;
+	border:none;
+	border-radius: 25px;
+	outline: none;
+	width: 500px;
+}
+
+.section-2 .search-button{
+	height: 35px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border:none;
+	border-radius: 25px;
+	outline: none;
+	width: 100px;
+	background-color: #ffff66;
+	/*box-shadow: 0 9px #ffcc00;*/
+  	cursor: pointer;
+}
+
+.section-2 .search-button:active {
+  background-color: #ffcc00;
+  transform: translateY(4px);
+}
+
+.section-2 .select-vehicle option{
+	border:none;
+	border-radius: 25px;
+	outline: none;
+}
+
+.section-2 form .booking-form{
+	border-radius: 25px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 30px;
+	background-color: black;
+	opacity: 0.7;
+	width: 500px;
+	height: 300px;
+}
+
+.section-2 form .filling-form .first, .last, .con1, .con2, .hours{
+	border-radius: 25px;
+	padding-left: 6px;
+	width: 220px;
+}
+
+.section-2 form .filling-form input[type="date"]{
+	border-radius: 25px;
+	padding-left: 6px;
+	width: 220px;
+}
+
+.section-2 form .filling-form .NIC, .email, .address{
+	border-radius: 25px;
+	padding-left: 6px;
+	width: 460px;
+}
+
+.section-2 form .booking-form .filling-form .form-submit{
+	height: 35px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border:none;
+	border-radius: 25px;
+	outline: none;
+	width: 100px;
+	background-color:  #ffff66;
+  	cursor: pointer;
+}
+
+.section-2 form .booking-form .filling-form .form-submit:active{
+	background-color: #ffcc00;
+	transform: translateY(4px);
+}
+
+.location{
+	background-color: #ffff99;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left:450px;
+	width:890px; 
+	height:500px;
+}
+
+iframe{
+	width:500px; 
+	height:500px;
+}
+
+.loc-para{
+	font-family: 'Roboto Condensed', sans-serif; 
+	color:black;
+	padding-left:20px; 
+	font-size:50px; 
+	text-align:center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.section-4 img{
+	width: 50px;
+	height: 50px;
+}
+
+.section-4 .info{
+	padding-left: 70px;
+	padding-right: 80px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	float: left;
+	width: 90px;
+}
+
+.section-4 {
+	padding-right: 38px;
+}
+
+.section-4 h4{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.section-4 pre{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.section-6 .image{
+	background-image: url('images/wedding2.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: auto;
+	height:auto; 
+	padding-bottom:50px;
+}
+
+.section-6 .form{
+	padding-top: 50px;
+}
+
+.section-5{
+	padding-top: 20px;
+	padding-left: 400px;
+}
+
+.section-5 form{
+	padding-top: 20px;
+	padding-bottom: 30px;
+	border-radius: 25px;
+	background-color:#ffff66;
+	padding-left: 100px;
+	width: 450px;
+}
+
+.section-5 form .fname, .e-mail{
+	padding-left: 6px;
+	width: 180px;
+}
+
+.section-5 form .message{
+	padding-left: 6px;
+	width: 377px;
+}
+
+.section-5 p{
+	padding-left: 50px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: black;
+}
+
+.section-5 .submit-button{
+	height: 35px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border:none;
+	border-radius: 25px;
+	outline: none;
+	width: 100px;
+	cursor: pointer;
+	background-color: black;
+	color: #ffff66;
+}
+
+footer{
+	background-color:#262626; 
+	height: 290px;
+	width: 1345px;
+}
+
+footer .para1{
+	font-family: 'Roboto Condensed', sans-serif;
+	color: white;
+	font-size: 20px;
+	text-align: left;
+	padding-left: 40px;
+	padding-top: 50px;
+}
+
+footer pre{
+	font-family: 'Roboto Condensed', sans-serif;
+	color: white;
+	font-size: 20px;
+	text-align: left;
+	padding-left: 40px;
+	padding-bottom: 30px;
+}
+
+.admin{
+	height: 35px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border:none;
+	border-radius: 25px;
+	outline: none;
+	width: 100px;
+	cursor: pointer;
+	background-color: black;
+	color: #ffff66;
+}
+
+.facebook{
+	background: #3B5998;
+	color: white;
+	height: 40px;
+	width: 40px;
+	float: right;
+	padding-right: 20px
+}
+
+.facebook:hover{
+	opacity: 0.7;
+}
+

@@ -1,25 +1,15 @@
-#include<iostream>
-using namespace std;
+#include <stdio.h>
 
-int factorial(int number) 
-{
-  	if(number==0) 
-  	{
-  		return 1;
-  	}
-  	else 
-  	{
-  		return (number * factorial(number-1));
-  	}
+// factorial -> nx(n-1)x(n-2)x(n-3)x...
+int factorial(int number) {
+  if (number==0) return 1;
+  else return (number * factorial(number-1));
 }
 
-int main()
-{
+int main() {
   int number;
-  
-  cout<<"Enter Last Number : ";
-  cin>>number;
-  cout<<"\nThe factorial of "<<number<<"  is : "<<factorial(number)<<endl;
+  scanf("%d", &number);
+  printf("The factorial of %d : %d\n", number, factorial(number));
 
   return 0;
 }

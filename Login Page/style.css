@@ -1,0 +1,103 @@
+ body{
+    background: linear-gradient(rgba(0, 0, 0, 0.73),rgba(0, 0, 0,0.73)) ,
+     url(https://wallpaperaccess.com/full/187161.jpg) ;
+} 
+
+
+  
+  .login-page {
+    margin-top: 5%;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    align-items: center;
+  }
+  
+  .title {
+    margin-bottom: 2rem;  
+    font-size: 3rem;  
+    text-align: center;
+    color: #fff;
+    border-radius:1rem;
+    background-color: rgb(121, 122, 45);
+  }
+  
+  .title:hover {
+    color: rgb(226, 48, 48);
+  }
+  .login-container {
+    height: 40%;
+    padding: 0.2rem;
+    place-content: center;
+  }
+  .login {
+    min-width: 300px;
+    width: 28vw;
+    height: 60vh;
+    border-radius: 1rem;
+    background-color: white;
+    color: #fff;
+    flex-direction: column;
+    place-content: center;
+  }
+  .container{
+    margin-top: 2%;
+    height: 30px;
+    padding: 1.5rem;
+    width: 50%;
+    place-content: center;
+    margin: auto;
+  } 
+  
+  .forget{
+   height: 10px;
+   place-content: center;
+   margin-bottom: 1rem;
+   margin-top: 2px;
+   margin: auto;
+   text-align: center;
+   margin-left: 16px;
+  }
+  
+  
+   .cont{
+   margin: auto;
+   place-content: center;
+   align-items: center;
+   justify-content: space-around;
+   margin-left: 100px;
+  } 
+  
+  .btn{
+    border: none;
+   border-radius: 1rem;
+    background-color:rgb(43, 43, 129);
+    cursor: pointer;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    color: white;
+  }
+  
+  
+  
+  .btn h4:hover {
+    color:yellow ;
+  }
+  
+  .btn {
+    width: 200px;
+    height: 2rem;
+  }
+  
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+  } 
+  
+  
+  

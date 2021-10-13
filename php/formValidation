@@ -1,0 +1,24 @@
+<?php 
+$uname = $uemail = $message = "";
+if (isset($_POST) && COUNT($_POST) > 0) {
+  $uname = $_POST["uname"];
+  $uemail = $_POST["uemail"];
+  $message = $_POST["message"];
+}
+?>
+
+<h2>PHP Form Validation</h2>
+<form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">  
+  Name: <input type="text" name="uname">
+  <br><br>
+  Mail: <input type="text" name="uemail">
+  <br><br>
+  message: <textarea name="message" rows="5" cols="40"></textarea>
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
+
+<?php
+if (isset($_POST) && COUNT($_POST) > 0) {
+echo "Given Values are: <br>".$uname."<br>".$uemail."<br>".$message."<br>"; }
+?>

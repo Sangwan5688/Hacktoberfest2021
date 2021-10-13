@@ -1,0 +1,60 @@
+<html><head>
+    <style>
+        body{
+            background: linear-gradient(to left, #ca39c3, #eb39cd, #cf1b8a);
+        }
+        h2{
+            color: yellow;
+            font-size:xx-large;
+            
+        }
+        h2:hover{
+            color: red;
+            transition: 0.7s;
+            cursor: pointer;
+        }
+        hr{
+            height: 3px;
+            background-color: white;
+            border: 3px dashed greenyellow;
+
+        }
+    </style>
+</head>
+    <body>
+        <br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br>
+        <hr>
+        <h2 align="center" id="h1id"></h2>
+<hr>
+        <script>
+            var units;
+            var amount,sur_charge,total_amount;
+
+            units=prompt("Enter the UNITS your consumed: ");
+            if(units<50){
+                amount=units*2.60;
+                sur_charge=25;
+            }
+            else if(units<=100){
+                amount=130+((units-50)*3.25);
+                sur_charge=35;
+            }
+            else if(units<=200){
+                amount=130+162.50+((units-100)*5.26);
+                sur_charge=45;
+            
+            }
+            else
+            {
+                amount=130+162.50+526+((units-200)*7.75);
+                sur_charge=55;
+            }
+            total_amount=amount+sur_charge;
+            document.getElementById("h1id").innerHTML=("Electricity Bill = "+total_amount+" /-");
+
+
+
+        </script>
+    </body>
+</html>

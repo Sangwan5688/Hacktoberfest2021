@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Quiz</title>
+        <link href="quiz7.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div id="question-container" class="hide">
+                <div id="question">p tag stands for?</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button onclick="wrong(this)" class="btn">table</button>
+                    <button onclick="wrong(this)" class="btn">image</button>
+                    <button onclick="wrong(this)" class="btn">line break</button>
+                    <button onclick="right(this)" id="corr-btn" class="btn">paragraph</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button onclick="previous()" id="previous-btn"> &laquo Previous</button>
+                <button onclick="submit()" id="submit-btn">Submit</button>
+                <button onclick="end()" id="end-btn">End Quiz</button>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function end()
+            {
+                document.location.href="quiz5.html";
+            }
+               function right(_this)
+               {
+                   _this.style.backgroundColor="yellow";
+                  // alert("You are correct.");
+               }
+               function wrong(_this)
+               {
+                _this.style.backgroundColor="yellow";
+                //alert("Oops!! You are wrong.");
+               }
+               function previous()
+               {
+                   document.location.href="quiz6.html";
+               }
+               function submit()
+               {
+                var scorrect = document.getElementById("corr-btn");
+                var s = document.getElementsByClassName("btn");
+                var c=0; var i=0;
+                for(i=0;i<s.length;i++)
+                if(s[i].style.backgroundColor === "yellow")
+                c++;
+                if(c==0){
+                alert("Please select any option!");
+                document.location.href="quiz7.html";}
+                else if(c>1) {
+                alert("Please select any one option!");
+                document.location.href="quiz7.html";
+                }
+                else {
+                if(scorrect.style.backgroundColor === "yellow")
+                {
+                    for(i=0;i<s.length;i++)
+                    if(s[i].style.backgroundColor === "yellow")
+                    {
+                        s[i].style.backgroundColor = "red";
+                        // break;
+                    }
+                    scorrect.style.backgroundColor = "green";
+                    // alert("correct!");
+                }  
+                else
+                {
+                    // alert("wrong!");
+                    for(i=0;i<s.length;i++)
+                    if(s[i].style.backgroundColor === "yellow")
+                    {
+                        s[i].style.backgroundColor = "red";
+                        // break;
+                    }
+                    scorrect.style.backgroundColor = "green";
+                }
+            }
+                //alert("You have successfully submitted your quiz!");
+               }
+            </script>
+    </body>
+</html>

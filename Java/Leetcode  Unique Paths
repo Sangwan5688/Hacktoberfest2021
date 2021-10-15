@@ -1,0 +1,19 @@
+class Solution {
+    public int uniquePaths(int m, int n) {
+        Integer [][]cache = new Integer[m + 1][n + 1];
+        cache[1][1] = 1;
+        return helper(m,n,cache);
+    }
+    
+    public int helper(int m,int n, Integer [][]cache){
+        if(m < 1 || n < 1){
+            return 0;
+        }
+        if(cache[m][n] != null){
+            return cache[m][n];
+        }
+        int ans = helper(m ,n - 1,cache) + helper(m - 1,n,cache);
+        cache[m][n] = ans;
+        return ans;
+    }
+}

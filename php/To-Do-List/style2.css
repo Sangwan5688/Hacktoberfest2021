@@ -1,0 +1,34 @@
+.container2{
+    padding-left: 30px;
+    padding-top: 20px;
+    width: 30vw;
+    /* display: flex; */
+    /* float: left; */
+}
+.container3{
+    text-align: center;
+}
+.container4{
+    border: 2px solid rgb(165, 164, 164);
+    border-radius: 10px;
+    width: 50vw;
+    margin-left: 25vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.container5{
+    width: 7vw;
+}
+.container6{
+    text-align: center;
+    padding-top: 20px;
+}
+.container{
+    /* margin-left: 30px; */
+    border: 2px solid rgb(165, 164, 164);
+    width: 50vw;
+    height: 50vh;
+    border-radius: 5px;
+}

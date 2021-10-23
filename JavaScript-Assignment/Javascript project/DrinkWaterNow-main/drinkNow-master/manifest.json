@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "cheers~!",
+    "version": "0.0.8",
+    "description": "Mom is no longer worried that I will not drink water!",
+    "icons": {
+        "16": "./img/logo.png",
+        "48": "./img/logo.png",
+        "128": "./img/logo.png"
+    },
+    "permissions": [
+        "notifications",
+        "webRequestBlocking",
+        "storage"
+    ],
+    "background": {
+        "page": "./background.html"
+    },
+    "browser_action": {
+        "default_icon": "./img/logo.png",
+        "default_title": "drinkNow!",
+        "default_popup": "./popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "js/content-script.js"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}

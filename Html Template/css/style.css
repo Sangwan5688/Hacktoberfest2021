@@ -23,7 +23,7 @@
 .header_area .main-menu .nav-item .nav-link{
     font: normal 500 15px/2px var(--roboto);
     text-transform: uppercase;
-    padding: 1.7rem;
+    padding: 1.8rem;
     color: var(--title-color);
 }
 
@@ -51,7 +51,7 @@
 }
 
 .site-main .site-banner .site-title h3{
-    padding-top: 35%;
+    padding-top: 36%;
     font-weight: 500;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .site-main .about-area .about-title .paragraph > p{
-    padding: .4rem 0;
+    padding: .5rem 0;
 }
 
 /* End About Area */ 
@@ -225,7 +225,7 @@
 }
 
 .site-main .project-area .button-group button + button{
-    padding-left: 3rem;
+    padding-left: 3.5rem;
 }
 
 .site-main .project-area .grid .our-project > .title h4{
@@ -304,7 +304,7 @@
 
 .site-main .subscribe-us-area .subscribe form .input-textbox input{
     width: 400px;
-    padding: 1.5rem 1rem;
+    padding: 1.6rem 1rem;
     border: 1px solid whitesmoke;
     background: transparent;
     color: white;
@@ -335,7 +335,7 @@ footer.footer-area .social h5{
 }
 
 footer.footer-area .social a > i{
-    font-size:22px;
+    font-size:22.5px;
     padding: 2rem;
     color: var(--border-color);
 }

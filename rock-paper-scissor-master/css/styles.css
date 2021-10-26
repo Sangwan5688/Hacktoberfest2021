@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #65655c;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+header {
+  background:
+  linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(315deg, black 25%, transparent 25%),
+  linear-gradient(45deg, black 25%, transparent 25%);
+  background-size: 2em 2em;
+  background-color: #232323;
+  padding: 20px;
+}
+
+header > h1 {
+  color: #fff;
+  text-align: center;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size:4rem;
+}
+
+.score-board {
+  margin: 20px auto;
+  border: 3px solid white;
+  border-radius: 4px;
+  text-align: center;
+  width: 200px;
+  color: white;
+  font-size: 46px;
+  padding: 15px 20px;
+  font-family: Asap, sans-serif;
+  position: relative;
+}
+
+.badge {
+  background-color: #000;
+  color: white;
+  font-size: 14px;
+  padding: 2px 10px;
+  font-family: Asap, sans-serif;
+}
+
+#user-label {
+  position: absolute;
+  top: 30px;
+  left: -25px;
+}
+
+#comp-label {
+  position: absolute;
+  top: 30px;
+  right: -30px;
+}
+
+.result {
+  font-size: 30px;
+  color: white;
+}
+
+.result > p {
+  text-align: center;
+  font-weight: bold;
+  font-family: Asap, sans-serif;
+}
+
+.choices {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.choice {
+  padding: 30px;
+  display: inline-block;
+}
+
+.choice > img {
+  width: 100px;
+}
+
+.choice:hover {
+  cursor: pointer;
+}
+.icons{
+  background-color: orange;
+  padding: 1rem;
+  border-radius: 100%;
+}
+.icons:hover{
+  background-color: black;
+  color: orange;
+  border-color: orange;
+  border-style: solid;
+  border-width: 2px;
+}
+.green-glow {
+  border: 4px solid #00FF00;
+  box-shadow: 0 0 10px #31b43a;
+  border-radius: 50%;
+}
+
+.red-glow {
+  border: 4px solid #FF0000;
+  box-shadow: 0 0 10px #d01115;
+  border-radius: 50%;
+}
+
+.gray-glow {
+  border: 4px solid #0000FF;
+  box-shadow: 0 0 10px #25292b;
+  border-radius: 50%;
+}
+
+#action-message {
+  text-align: center;
+  color: white;
+  font-family: Asap, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+.btn{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: none;
+  border: solid 2px black;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: bolder;
+  color: black;
+}
+.btn:hover{
+  background-color: black;
+  border-color: orange;
+  color: white;
+}
+.btn-div{
+  text-align: center;
+  padding: 8px;
+}
+.rules{
+  text-align: center;
+  margin-top: 1rem;
+}
+.image-rules{
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  height: 21rem;
+}
+.fa-times{
+  margin-left: 2rem;
+  color: rgba(0,0,0,0.6);
+}
+.fa-times:hover{
+  color: rgb(0,0,0);
+  cursor: pointer;
+}
+.close-rules{
+  margin-left: 1.8rem;
+}
+.rules{
+  display: none;
+}
+#rules-game{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer{
+  text-align: center;
+  color: white;
+  background:
+  linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(315deg, black 25%, transparent 25%),
+  linear-gradient(45deg, black 25%, transparent 25%);
+  background-size: 2em 2em;
+  background-color: #232323;
+  padding: 20px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+}
+.fa-heart{
+  color: red;
+}
+em{
+  font-weight: 900;
+}

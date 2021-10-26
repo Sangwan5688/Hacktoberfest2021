@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="splitv">
+        <div id="split-0v">
+            <div class="split">
+                <div id="split-0">
+                    <div class="alert alert-dark mb-0 p-1" role="alert" style="border-radius: 0 !important;">
+                        HTML
+                    </div>
+                    <textarea class="form-control" placeholder="HTML" id="html" style="height:40vh;"></textarea>
+                </div>
+                <div id="split-1">
+                    <div class="alert alert-dark mb-0 p-1" role="alert" style="border-radius: 0 !important;">
+                        CSS
+                    </div>
+                    <textarea class="form-control" id="css" placeholder="CSS" style="height:40vh;"></textarea>
+                </div>
+                <div id="split-2">
+                    <div class="alert alert-dark mb-0 p-1" role="alert" style="border-radius: 0 !important;">
+                        Javascript
+                    </div>
+                    <textarea class="form-control" placeholder="Javascript" id="js" style="height:40vh;"></textarea>
+                
+                </div>
+
+            </div>
+        </div>
+        <div id="split-1v">
+            <div class="alert alert-dark mb-0 p-1" role="alert" style="border-radius: 0 !important;">
+                Output
+            </div>
+            <iframe id="code"></iframe>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/split.js/dist/split.min.js"></script>
+    <script>
+        Split(["#split-0", "#split-1", "#split-2"], {
+
+        });
+        Split(["#split-0v", "#split-1v"], {
+            direction: 'vertical',
+        });
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

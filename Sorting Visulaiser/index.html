@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!---------Icon------->
+    <link rel = "icon" href = "images/icon.ico" type = "image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>Algorithm App</title>
+  </head>
+  <body>
+   <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg navbar-light" id="top">
+      <a class="navbar-brand" href="#">
+         <img src="images/icon-big.png" width="60" height="60" class="d-inline-block align-top" alt="" loading="lazy">
+      </a>
+      <a class="navbar-brand navbar-brand-name" href="#">
+         Algorithm App
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+         <div class="navbar-nav ml-auto">
+            <a class="nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#sorting">Sorting</a>
+            <a class="nav-link" href="#codes">Code </a>
+            <a class="nav-link " href="#footer">Contact</a>
+         </div>
+      </div>
+   </nav>
+<!-- Introduction -->
+   <section class="icon-show" id="home">
+      <div class="icon-container">
+         <div class="icon">
+            <img src="images/algoicon.png" class="d-inline-block align-top img-fluid" alt="" loading="lazy">
+         </div>
+         <div class="icon-text">
+            <h3>Algorithm Visualization</h3>
+            <p><i class="fa fa-quote-left"></i>&nbsp;Understand the Sorting concept by visualizing it&nbsp;better&nbsp;<i class="fa fa-quote-right"></i></p>
+            <a type="button" class="btn custom-btn" href="#sorting">Start&nbsp;&nbsp;<i class="fa fa-chevron-circle-down"></i> </a>
+         </div>
+      </div>
+   </section>
+
+
+   <div class="hr"></div>
+
+<!------------SORTING-MAIN ALGORITHM PANEL----------->
+<section class="algorithm-main" id="sorting">
+
+   <article class="text-center main bubble-sort" id="bubble-sort">
+      <h1>BUBBLE SORT</h1>
+      <div class="chart chart-bubble text-center">
+      </div>
+      <div class="container m-auto p-0 ">
+         <div class="row  m-0 p-0 justify-content-center">
+            <!--<div class="col-lg-4 col-md-4 col-sm-6 my-2">
+               <button class="btn custom-btn" id = "bubble-x">Stop</button>
+            </div>-->
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <input type="range" class="slider" min="2" max="100" value="20" id="b_amount">
+               <p>Amount : <span id="b_amount_val"></span></p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <input type="range" class="slider" min="1" max="1000" value="850" id="b_speed">
+               <p>Speed : <span id="b_speed_val"></span></p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 my-2">
+               <button class="btn custom-btn" id = "bubble-f">Sort</button>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6 my-auto">
+               <p class="definition "> <i class="fa fa-quote-left"></i>
+                  Bubble sort is a basic algorithm for arranging a string of numbers or other elements 
+                  in the correct order. The method works by examining each set of adjacent elements in the string, 
+                  from left to right, switching their positions if they are out of order. 
+                  The algorithm then repeats this process until 
+                  it can run through the entire string and find no two elements that need to be swapped.&nbsp;<i class="fa fa-quote-right"></i>
+                  <a class="btn btn-outline-warning " target = "_blank" href="https://www.youtube.com/watch?v=nmhjrI-aW5o&list=PLqM7alHXFySHrGIxeBOo4-mKO4H8j2knW&index=6"> <i class="fa fa-link"></i> Know More </a>
+               </p>
+            </div>
+            <div class="col-md-6">
+               <img src="images/Bubble.png" width="500" height="500" class="mx-auto img-fluid" alt="" loading="lazy">
+            </div>            
+         </div>
+      </div>
+   </article>
+
+   <div class="hr"></div>
+   
+   <article class="text-center main select-sort" id="select-sort">
+      <h1>SELECTION SORT</h1>
+      <div class="chart chart-select text-center">
+      </div>
+      <div class="container m-auto p-0 ">
+         <div class="row  m-0 p-0 justify-content-center">
+            <!--<div class="col-lg-4 col-md-4 col-sm-6 my-2">
+               <button class="btn custom-btn" id = "select-x">Stop</button>
+            </div>-->
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <input type="range" class="slider" min="2" max="100" value="20" id="s_amount">
+               <p>Amount : <span id="s_amount_val"></span></p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <input type="range" class="slider" min="1" max="1000" value="850" id="s_speed">
+               <p>Speed : <span id="s_speed_val"></span></p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 my-2">
+               <button class="btn custom-btn" id = "select-f">Sort</button>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6 my-auto">
+               <p class="definition "> <i class="fa fa-quote-left"></i>
+                  In selection sort, the first element in the list is selected and it is compared 
+                  repeatedly with all the remaining elements in the list. If any element is smaller 
+                  than the selected element (for Ascending order), then both are swapped so that first 
+                  position is filled with the smallest element in the sorted order. Next, we select the 
+                  element at a second position in the list and it is compared with all the remaining elements in the list. 
+                  If any element is smaller than the selected element, then both are swapped. 
+                  This procedure is repeated until the entire list is sorted.&nbsp;<i class="fa fa-quote-right"></i>
+                  <a class="btn btn-outline-warning " target = "_blank" href="https://www.youtube.com/watch?v=xWBP4lzkoyM&list=PLqM7alHXFySHrGIxeBOo4-mKO4H8j2knW&index=5"> <i class="fa fa-link"></i> Know More </a>
+               </p>
+            </div>
+            <div class="col-md-6">
+               <img src="images/Select.png" width="500" height="500" class="mx-auto img-fluid" alt="" loading="lazy">
+            </div>            
+         </div>
+      </div>
+   </article>
+
+   <div class="hr"></div>
+ 
+   <article class="text-center main insert-sort" id="insert-sort">
+      <h1>INSERTION SORT</h1>
+      <div class="chart chart-insert text-center">
+      </div>
+      <div class="container m-auto p-0 ">
+         <div class="row  m-0 p-0 justify-content-center">
+            <!--<div class="col-lg-4 col-md-4 col-sm-6 my-2">
+               <button class="btn custom-btn" id = "insert-x">Stop</button>
+            </div>-->
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <input type="range" class="slider" min="2" max="100" value="20" id="i_amount">
+               <p>Amount : <span id="i_amount_val"></span></p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <input type="range" class="slider" min="1" max="1000" value="850" id="i_speed">
+               <p>Speed : <span id="i_speed_val"></span></p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 my-2">
+               <button class="btn custom-btn" id = "insert-f">Sort</button>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6 my-auto">
+               <p class="definition "> <i class="fa fa-quote-left"></i>
+                  In insertion sort, an array is virtually split into a sorted and an unsorted part. 
+                  Values from the unsorted part are picked and placed at the correct position in the sorted part.
+                  Each element in the array is checked with the previous elements, 
+                  resulting in a growing sorted output list. With each iteration, the sorting algorithm 
+                  removes one element at a time and finds the appropriate location within the sorted array 
+                  and inserts it there. The iteration continues until the whole list is sorted.&nbsp;<i class="fa fa-quote-right"></i>
+                  <a class="btn btn-outline-warning " target = "_blank" href="https://www.youtube.com/watch?v=OGzPmgsI-pQ&list=PLqM7alHXFySHrGIxeBOo4-mKO4H8j2knW&index=3"> <i class="fa fa-link"></i> Know More </a>
+               </p>
+            </div>
+            <div class="col-md-6">
+               <img src="images/Bubble.png" width="500" height="500" class="mx-auto img-fluid" alt="" loading="lazy">
+            </div>            
+         </div>
+      </div>
+   </article>
+
+   <div class="hr"></div>
+ 
+   <article class="text-center main quick-sort" id="quick-sort">
+      <h1>QUICK SORT</h1>
+      <div class="chart chart-quick text-center">
+      </div>
+      <div class="container m-auto p-0 ">
+         <div class="row  m-0 p-0 justify-content-center">
+            <!--<div class="col-lg-4 col-md-4 col-sm-6 my-2">
+               <button class="btn custom-btn" id = "quick-x">Stop</button>
+            </div>-->
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <input type="range" class="slider" min="2" max="100" value="20" id="q_amount">
+               <p>Amount : <span id="q_amount_val"></span></p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+               <input type="range" class="slider" min="1" max="1000" value="850" id="q_speed">
+               <p>Speed : <span id="q_speed_val"></span></p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 my-2">
+               <button class="btn custom-btn" id = "quick-f">Sort</button>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6 my-auto">
+               <p class="definition "> <i class="fa fa-quote-left"></i>
+                  Quicksort algorithm follows divide-and-conquer method. In this case a
+                  pivot point is chosen from the array.Then the array is reordered so that all values smaller than the 
+                  pivot are moved before it and all values larger than the pivot are moved after it, with values equaling 
+                  the pivot going either way. When this is done, the pivot move to it's final position.
+                  The step is repeated recursively for each subarray of smaller values as well as done separately 
+                  for the subarray with greater values.&nbsp;<i class="fa fa-quote-right"></i>
+                  <a class="btn btn-outline-warning " target = "_blank" href="https://www.youtube.com/watch?v=PgBzjlCcFvc&list=PLqM7alHXFySHrGIxeBOo4-mKO4H8j2knW&index=2"> <i class="fa fa-link"></i> Know More </a>
+               </p>
+            </div>
+            <div class="col-md-6">
+               <img src="images/Quick.png" width="500" height="500" class="mx-auto img-fluid" alt="" loading="lazy">
+            </div>            
+         </div>
+      </div>
+   </article>
+
+   <!----MERGE SORT UNDER CODESTRUCTION------>
+
+   <!----HEAP SORT UNDER CODESTRUCTION------>
+
+</section>
+<!-----------END OF MAIN ALGORITHM PANEL----------->
+
+<section class="code-block text-center" id="codes">
+   <h1><i class="fa fa-cog fa-spin fa-fw"></i>CODE</h1>
+   <div id="options">
+      <div id="language">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-6 col-lg-3"><button class="m-1 btn custom-btn shadow" id = "c">C</button></div>
+               <div class="col-sm-6 col-lg-3"><button class="m-1 btn custom-btn" id = "cpp">C++</button></div>
+               <div class="col-sm-6 col-lg-3"><button class="m-1 btn custom-btn" id = "java">Java</button></div>
+               <div class="col-sm-6 col-lg-3"><button class="m-1 btn custom-btn" id = "py">Python</button></div>
+            </div>
+         </div>
+      </div>
+
+      <div id="algorithm" class="mt-2">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-6 col-lg-3"><button class="m-1 btn custom-btn-lg shadow" id = "bubble">Bubble</button></div>
+               <div class="col-sm-6 col-lg-3"><button class="m-1 btn custom-btn-lg" id = "select">Selection</button></div>
+               <div class="col-sm-6 col-lg-3"><button class="m-1 btn custom-btn-lg" id = "insert">Insertion</button></div>
+               <div class="col-sm-6 col-lg-3"><button class="m-1 btn custom-btn-lg" id = "quick">Quick</button></div>
+            </div>
+         </div>
+
+      </div>      
+   </div>
+   <div id="code-screen" class="bg-dark mx-auto mb-2 mt-2">
+      <div id="fetch-code" class="text-light text-left"></div>
+   </div>
+   <div class="copy mb-2 mx-5 p-0">
+      <button class="btn btn-warning mb-4" id="copyText"> <i class="fa fa-clone"></i> Copy</button>
+   </div>
+</section>
+
+<div id="#secret" style="display: none;">
+
+</div>
+
+<!-- Footer -->
+   <div class='footer-container' id="footer">
+      <section class='footer-subscription'>
+      <p class='footer-subscription-heading'>
+         Join our exclusive membership to receive the latest news and trends
+      </p>
+      <p class='footer-subscription-text'>
+         You can unsubscribe at any time.
+      </p>
+      <div class='input-areas'>
+         <form>
+            <input class='footer-input' name='email' type='email' placeholder='Your Email'/>
+            <button type="button" class="btn in-custom-btn" id="sorry">Subscribe</button>
+         </form>
+      </div>
+      </section>
+      <div class='footer-links'>
+      <div class='footer-link-wrapper'>
+         <div class='footer-link-items'>
+            <h2>About Us</h2>
+            <a href="#">How it works</a>
+            <a href="#">Testimonials</a>
+            <a href="#">Careers</a>
+            <a href="#">Terms of Service</a>
+         </div>
+         <div class='footer-link-items'>
+            <h2>Contact Us</h2>
+            <a href="#">Contact</a>
+            <a href="#">Support</a>
+            <a href="#">Destinations</a>
+            <a href="#">Sponsorships</a>
+         </div>
+      </div>
+      <div class='footer-link-wrapper'>
+         <div class='footer-link-items'>
+            <h2>Videos</h2>
+            <a href="#">Submit Video</a>
+            <a href="#">Ambassadors</a>
+            <a href="#">Agency</a>
+            <a href="#">Influencer</a>
+         </div>
+         <div class='footer-link-items'>
+            <h2>Get Social</h2>
+            <a href="https://www.instagram.com/san_deep_10/"  target="_blank">Instagram</a>
+            <a href="https://github.com/sandeep-shaw10"  target="_blank">Github</a>
+            <a href="https://www.youtube.com/channel/UCnzoz-Snqs689f1YLqi--zg?view_as=subscriber"  target="_blank">Youtube</a>
+            <a href="https://www.linkedin.com/in/sandeep-shaw-b47b47158/"  target="_blank">LinkedIn</a>
+         </div>
+      </div>
+      </div>
+      <section class='social-media'>
+      <div class='social-media-wrap'>
+         <div class='footer-logo'>
+            <a href="#top" class='social-logo'>
+               <img src="images/icon-big.png" width="60" height="60" class="d-inline-block align-top" alt="" loading="lazy">
+            SIGHT EXPLORE
+            </a>
+         </div>
+         <small class='website-rights'>SIGHT EXPLORE © 2020</small>
+         <div class='social-icons'>
+            <a class='social-icon-link' href="https://github.com/sandeep-shaw10" target='_blank' aria-label='Facebook'>
+               <i class="fa fa-github"></i>
+            </a>
+            <a class='social-icon-link' href="https://www.instagram.com/san_deep_10/" target='_blank' aria-label='Instagram' >
+               <i class="fa fa-instagram"></i>
+            </a>
+            <a class='social-icon-link' href='https://www.youtube.com/channel/UCnzoz-Snqs689f1YLqi--zg?view_as=subscriber' target='_blank' aria-label='Youtube'>
+               <i class="fa fa-youtube-play"></i>
+            </a>
+            <a class='social-icon-link' href="https://www.yourquote.in/sandeep-shaw-b09xt/quotes" target='_blank' aria-label='Twitter'>
+               <i class="fa fa-quote-left"></i>
+            </a>
+            <a class='social-icon-link' href="https://www.linkedin.com/in/sandeep-shaw-b47b47158/" target='_blank' aria-label='LinkedIn' >
+               <i class="fa fa-linkedin-square"></i>
+            </a>
+         </div>
+      </div>
+      </section>
+   </div>
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+   <script src="js/smooth-scroll.js"></script>
+   <script>var scroll = new SmoothScroll('a[href*="#"]');</script>
+   <script src="js/slider.js"></script>
+   <script src="js/bubblesort.js"></script>
+   <script src="js/selectionsort.js"></script>
+   <script src="js/insertionsort.js"></script>
+   <script src="js/quicksort.js"></script>
+   <script src="js/coderender.js"></script>
+   <script src="js/clipboard.js"></script>
+   <!--<script src="js/mergesort.js"></script>----Coming Soon---->
+   <!--<script src="js/heapsort.js"></script>----Coming Soon---->
+   <script>
+   </script>
+   <div class="copy-alert disappear">
+      <i class="fa fa-file-text-o"></i>  Code Copied
+   </div>
+   <div class="sorry-alert disappear">
+      <div class="text-center">
+         <h4>Sorry, this service is Unavailable</h4>
+         <img class="img-fluid mx-auto" src="images/Service.png">
+         <p>Want to encourage the Developer ?</p>
+         <a class="btn btn-outline-danger" href="https://github.com/sandeep-shaw10/Algorithm_App" target="_blank">Click Here</a>
+      </div>
+   </div>
+   </body>
+</html>

@@ -80,7 +80,7 @@ void BellmanFord(struct Graph* graph, int u) {
   return;
 }
 
-int main() {
+int main(void) {
   // Create a graph
   int V = 5;  // Total vertices
   int E = 8;  // Total edges
@@ -124,5 +124,5 @@ int main() {
 
   BellmanFord(graph, 0);  //0 is the source vertex
 
-  return 0;
+  return 0;  //it will return 0 to the main function because the return type of main function is int.
 }

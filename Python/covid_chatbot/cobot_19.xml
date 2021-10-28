@@ -1,0 +1,13 @@
+<aiml version="1.0.1" encoding="UTF-8">
+   
+       <category>
+
+        <pattern>LOAD BASIC CHAT</pattern>
+
+        <template>
+            <learn>cobot_19t.aiml</learn>
+        </template>
+        
+    </category>
+
+</aiml>

@@ -1,0 +1,45 @@
+//program to check the validity of data recorded for the students at a college
+#include<stdio.h>	
+void main()
+{
+    int id,error=0; //id-student id number
+    char type; //type-course type as part time (P) or full time(F)
+    float fee,avg_mark; //fee-fees paid for the tution, average marks-average mark of the student
+     
+    
+  printf("Enter the Id, Type, Average marks and Fee : \n");
+  scanf("%d,%c,%f,%f",&id,&type,&avg_mark,&fee);
+  
+      
+        while(id>0)
+          { 
+            if(id<1000 || id>9999) //id number should be between 1000 and 9999 inclusive
+                error++;
+                
+            if(type!='P' && type!='F') //course type should be “P” or “F”
+                error++;
+                
+            if(avg_mark<0 ||avg_mark>100) //average marks must be between 0 and 100 inclusive
+                error++;
+                
+            if(type=='P') 
+                {   
+                    if(fee>200000) //fees paid for part-time should not exceed Rs.200000
+                        error++;
+                }
+            else    
+                    if(type=='F') //fees 
+                        { 
+                             if(fee>500000) //fees paid for fulltime should not exceed Rs.500000
+                                 error++;
+                        }
+                
+              
+                printf("%d errors\n",error);
+                error=0;
+                printf("Enter the Id, Type, Average Marks and Fee : \n");
+                scanf("%d, %c, %f, %f",&id,&type,&avg_mark,&fee);
+               
+          }           
+                    
+}

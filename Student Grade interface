@@ -1,0 +1,131 @@
+//Student grade 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grade</title>
+   
+    <style>
+      
+        
+       
+    
+    </style>
+    </head>
+<body>
+   
+    <center>
+        <table border="1" style="border-spacing:0px">
+            <tr>
+                <td style="padding:25px">
+                    <center>
+        <h1 style="font-size:20px">Student Grade Calculator</h1>
+                        <br/>
+                        <br/>
+                    </center>
+    <form onsubmit="return Addrow()" id="frm" name="student">
+        <input type="text" name="stid" id="stid" style="width:500px; padding:10px"  
+        placeholder="Enter Student ID(Format ST-00100)" pattern="ST-[0-9]{5}" required ><br/><br/>
+        <input type="number" name="Maths" id="Maths_mark" style="width:500px; padding:10px" placeholder="Enter Mathematics Marks" required><br/><br/>
+        <input type="number" name="English" id="English_mark" style="width:500px; padding:10px"placeholder="Enter English Marks" required><br/><br/>
+        <input type="number" name="Science" id="Science_mark" style="width:500px; padding:10px" placeholder="Enter Science Marks" required><br/><br/>
+        <input type="submit" name="submit" id="submit" value="ENTER" style="width:535px; padding:10px"  >        
+    </form>
+                </td>
+            </tr>
+        </table>
+    </center>
+<center>
+    <h1 style="font-size: 20px; padding: 20px">Student Results</h1>
+    <table border="1" id="tbl1" style="text-align: center; padding: 10px">
+        <tbody>
+       <thead>    
+    <tr>
+        
+        <th style="padding-left: 30px; padding-right: 30px; padding-top: 5px; padding-bottom: 5px"> Student No.</th>
+         <th style="padding-left: 30px; padding-right: 30px; padding-top: 5px; padding-bottom: 5px"> Mathematics</th>
+         <th style="padding-left: 30px; padding-right: 30px; padding-top: 5px; padding-bottom: 5px"> English</th>
+         <th style="padding-left: 30px; padding-right: 30px; padding-top: 5px; padding-bottom: 5px"> Sinhala</th>
+         <th style="padding-left: 30px; padding-right: 30px; padding-top: 5px; padding-bottom: 5px"> Total</th>
+         <th style="padding-left: 30px; padding-right: 30px; padding-top: 5px; padding-bottom: 5px"> Average</th>
+         <th style="padding-left: 30px; padding-right: 30px; padding-top: 5px; padding-bottom: 5px"> Grade</th>
+        
+        </tr>
+        </thead>
+        </tbody>
+    </table>
+    </center>
+   <script>
+        function Addrow()
+               {
+        var List1 = [];
+        var List2 = [];
+        var List3 = [];
+        var List4 = [];
+        var List5 = [];
+        var List6 = [];
+        var List7 = [];
+        
+       
+       var x=1;
+        var y = 0;
+            var Addrown = document.getElementById('tbl1');
+            var NewRow = Addrown.insertRow(x);
+        
+            List1[y] = document.getElementById("stid").value;
+            List2[y] = document.getElementById("Maths_mark").value;
+            List3[y] = document.getElementById("English_mark").value;
+            List4[y] = document.getElementById("Science_mark").value;
+            var a = parseInt(document.getElementById("Maths_mark").value); 
+            var b = parseInt(document.getElementById("English_mark").value);
+            var c = parseInt(document.getElementById("Science_mark").value);
+            List5[y] = a + b + c;
+            List6[y] = parseInt((a + b + c)/3);
+            var avg = parseInt((a + b + c)/3);
+            if(avg >= 75)
+                {
+                    List7[y] = 'A';
+                }
+            else if(avg >= 65)
+                {
+                    List7[y] = 'B';
+                }
+            else if(avg >= 55)
+                {
+                    List7[y] = 'C';
+                }
+            else if(avg >= 40)
+                {
+                    List7[y] = 'S';
+                }
+            else
+                {
+                    List7[y] = 'F';
+                }
+            
+            
+            var cell1 = NewRow.insertCell(0);
+            var cell2 = NewRow.insertCell(1);
+            var cell3 = NewRow.insertCell(2);
+            var cell4 = NewRow.insertCell(3);
+            var cell5 = NewRow.insertCell(4);
+            var cell6 = NewRow.insertCell(5);
+            var cell7 = NewRow.insertCell(6);
+            
+            cell1.innerHTML = List1[y];
+            cell2.innerHTML = List2[y];
+            cell3.innerHTML = List3[y];
+            cell4.innerHTML = List4[y];
+            cell5.innerHTML = List5[y];
+            cell6.innerHTML = List6[y];
+            cell7.innerHTML = List7[y];
+            
+            ;x++       
+           y++;
+          
+            document.student.reset();
+          return false;
+                      
+        }
+    </script>
+    </body>
+</html>

@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
   int i,fac=1,num;
-  cout<<"Enter a number to calculate factorial";
+  cout<<"Enter a number to calculate its factorial";
   cin>>num;
 
     for(i=1;i<=num;i++)

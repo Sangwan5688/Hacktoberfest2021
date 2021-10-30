@@ -1,0 +1,50 @@
+import 'package:expandable/expandable.dart';
+import 'package:flutter/material.dart';
+
+class ExpandableTile extends StatelessWidget {
+  const ExpandableTile({
+    Key? key,
+    this.itemCount,
+    required this.header,
+    required this.expanded,
+  }) : super(key: key);
+
+  final int? itemCount;
+  final Widget header;
+  final Widget expanded;
+
+  @override
+  Widget build(BuildContext context) {
+    return ExpandableNotifier(
+      child: ExpandablePanel(
+        header: header,
+        collapsed: SizedBox.shrink(),
+        expanded: expanded,
+        builder: (context, collapsed, expanded) => Expandable(
+          collapsed: collapsed,
+          expanded: expanded,
+          theme: ExpandableThemeData(
+            hasIcon: false,
+            tapBodyToExpand: true,
+            tapBodyToCollapse: true,
+            tapHeaderToExpand: true,
+            useInkWell: false,
+            animationDuration: Duration(
+              milliseconds: 500,
+            ),
+          ),
+        ),
+        theme: ExpandableThemeData(
+          hasIcon: false,
+          tapBodyToExpand: true,
+          tapBodyToCollapse: true,
+          tapHeaderToExpand: true,
+          useInkWell: false,
+          animationDuration: Duration(
+            milliseconds: 500,
+          ),
+        ),
+      ),
+    );
+  }
+}

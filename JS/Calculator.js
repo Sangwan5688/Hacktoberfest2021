@@ -35,7 +35,7 @@ padding: 20px;
 input
 {
 width: 20px;
-background-color: green;
+background-color: #5cb85c;
 color: white;
 border: 3px solid gray;
 	border-radius: 5px;

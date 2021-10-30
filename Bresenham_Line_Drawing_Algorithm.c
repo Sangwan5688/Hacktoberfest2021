@@ -1,3 +1,5 @@
+// This is Algorithm for Bresenham Line Drawing.
+
 # include<GL/glut.h>
 # include <stdio.h>
 int x1, y1, x2, y2;

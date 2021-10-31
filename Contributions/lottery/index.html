@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<title>Lottery</title>
+<style>
+    main{
+    text-align: center;
+    padding:15px;
+    }
+    .number-generated{
+        margin-top: 50px;
+        font-size: 16;
+    }
+</style>
+</head>
+<body>
+    <main>
+        <h1>Lottery Generator</h1>
+        <button onclick="generate(6,50)">GENERATE</button>
+        <div class="number-generated" id="lottery"></div>
+    </main>
+</body>
+<script>
+    /**
+     * Brainstorming
+     * 1. Generate n size randoms number from 1 to max highest
+     * 2. check for duplicate
+     * 3. store numbers to an array
+     * 4. sort array with ascending order
+     * 5. append result to each element in html
+    */
+    
+    // generate n size random number
+    function generate(size,highest){
+        let numbers=[]
+
+        while(numbers.length<size){
+            let add = true;
+            let randoms = Math.floor(Math.random()*highest)+1;
+
+            if(numbers.indexOf(randoms) === -1){
+                // store random number to array
+                numbers.push(randoms)
+            }
+
+            // check for duplicates number
+            for(let y=0;y<highest;y++){
+                if(numbers[y] == numbers){
+                    add = false
+                }
+            }
+        }
+
+        // sort array by ascending order
+        const sorted = [...numbers].sort((a,b)=>a-b);
+        
+        // append result to html element
+        document.getElementById('lottery').innerHTML = sorted.join(' - ')
+    }
+</script>
+</html> 

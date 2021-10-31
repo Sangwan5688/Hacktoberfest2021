@@ -1,3 +1,5 @@
+// This is a clock program made with Java
+
 package pratice;
 
 import java.awt.*;

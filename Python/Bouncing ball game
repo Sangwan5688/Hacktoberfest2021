@@ -1,3 +1,5 @@
+# This is a Bouncing game program
+
 import pygame
 import random
 BLACK = (0, 0, 0)
@@ -58,3 +60,5 @@ pygame.quit()
 
 if __name__ == "__main__":
    main()
+
+# End of the program

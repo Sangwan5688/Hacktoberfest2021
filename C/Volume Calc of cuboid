@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <math.h>
+void main()
+{
+    float length, breadth, height;
+    float volume;
+     printf("Enter value of length, breadth & height of the cuboid:\n");
+    scanf("%f%f%f", &length, &breadth, &height);
+     volume = length * breadth * height;
+      printf("\n Volume of cuboids is : %.3f", volume);
+}

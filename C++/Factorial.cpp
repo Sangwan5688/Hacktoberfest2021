@@ -13,6 +13,8 @@ int factorial(int number)
   	}
 }
 
+
+//driver function
 int main()
 {
   int number;

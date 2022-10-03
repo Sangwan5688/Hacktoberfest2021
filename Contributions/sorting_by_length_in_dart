@@ -1,0 +1,11 @@
+// Main function
+main() {
+
+//List of strings
+List<String> strs = ['one', 'two', 'three', 'four'];
+
+// Sorting string by comparing the length
+strs.sort((a, b) => a.length.compareTo(b.length));
+
+print(strs);
+}

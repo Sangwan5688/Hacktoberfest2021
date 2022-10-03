@@ -21,7 +21,13 @@ public class MyClass {
         }
         
         int target = scn.nextInt();
-        if(bSearch(arr, target)) System.out.println("Found the element");
-        else System.out.println("Not found the element");
+        if(bSearch(arr, target)) 
+        {
+            System.out.println("Found the element");
+        }
+        else
+        {
+            System.out.println("Not found the element");
+        }
     }
 }

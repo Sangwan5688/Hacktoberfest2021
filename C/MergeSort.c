@@ -1,89 +1,43 @@
-// INTRODUCTION
-// --------------------------------
-//  Merge Sort is a Divide and Conquer algorithm. It has mainly divide the array into subarray
-//  untill futher division is not possible, then subarray is combined while comparing with other
-//  subarray.
-// ---------------------------------
+#include <bits/stdc++.h>
+using namespace std;
+vector<int>  merge(vector<int> &v1,vector<int> &v2)
+{
+   v1.push_back(INT_MAX);
+   v2.push_back(INT_MAX);
+   vector<int> v;
+   int i=0,j=0;
+   while(i<v1.size() && j<v2.size())
+   {
+    if(v1[i]==INT_MAX && v2[j]==INT_MAX)
+    break;
 
-// TIME COMPLEXITIES
+    if(v1[i]<v2[j])
+   { v.push_back(v1[i]);
+   i++;
 
-// Best	    O(nlog n)
-// Worst	O(nlog n)
-// Average	O(nlog n)
+   }
+   else
+   {
+    v.push_back(v2[j]);
+    j++;
 
-
-
-// CODE
-// -------------------------------------------
-
-#include<stdio.h>
-#define MAXSIZE 100  //used to define Maximum size of array
-
-int arr[MAXSIZE]; //main array
-int b[MAXSIZE];  //auxilary array
+   }
 
 
-//This fuctions merge and sort the array
-void merge( int low, int mid, int high){
-    int h=low, i=low, j=mid+1, k;
-    while((h<=mid)&&(j<=high)){
-        if(arr[h]<=arr[j]){
-            b[i]= arr[h];
-            h++;
-        }else{
-            b[i]=arr[j];
-            j++;
-        }
-        i++;
-    }
+   }
+   return v;
 
-    if(h>mid){
-        for(k=j;k<=high;k++){
-            b[i]=arr[k];
-            i++;
-            }
-        }
-        else{
-        for(k=h;k<=mid;k++){
-            b[i]=arr[k];
-            i++;
-        }
-        }
-        for(k=low;k<=high;k++){
-            arr[k]=b[k];
-        }
 }
+int main(int argc, char const *argv[])
+{
+vector<int> v1={1,2,5,9,11};
+vector<int> v2={3,4,6,10,12};
+vector<int> v=merge(v1,v2);
+for(int i=0;i<v.size();i++)
+{
+    cout<<v[i]<<" ";
 
-//This function divide the array into subarray 
-void mergeSort( int low, int high ){
-
-    if(low<high){
-        int mid = low+(high-low)/2;
-        mergeSort(low,mid);
-        mergeSort(mid+1,high);
-        merge( low, mid,high );
-    }
 }
-
-int main(){
-    int  n, i,temp;
-
-    printf("Enter number elements to be sorted: ");
-    scanf("%d",&n);
-
-    printf("Enter numbers:");
-    for(i=0;i<n;i++){
-        scanf("%d",&temp);
-        arr[i]=temp;
-    }
-
-    mergeSort(0,n-1);
-
-    printf("After Sorting: \n");
-
-    for(i=0;i<n;i++){
-        printf("%d ",arr[i]);
-    }
 
     return 0;
 }

@@ -1,20 +1,20 @@
-import java.util.Scanner;
-public class Fibonacci {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int a = 0;                    //initializing a with 0's value (a is first digit)
-        int b = 1;                    //initializing b with 1 (b is the second digit)
-        int count = 1;                //count is 1 because 0 will be already printed before entering the while loop
-        System.out.print(a + " ");
+class GFG {
+	static void Fibonacci(int N)
+	{
+		int num1 = 0, num2 = 1;
 
-        while(count<=n-1){
-            int counter = b;
-            b = b + a;
-            a = counter;
-            count++;
-            System.out.print(a + " ");
-        }
-
-    }
+		int counter = 0;
+		while (counter < N) {
+			System.out.print(num1 + " ");
+			int num3 = num2 + num1;
+			num1 = num2;
+			num2 = num3;
+			counter = counter + 1;
+		}
+	}
+	public static void main(String args[])
+	{
+		int N = 10;
+		Fibonacci(N);
+	}
 }

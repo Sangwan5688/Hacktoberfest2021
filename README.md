@@ -14,6 +14,16 @@ To know more about the event: <a href="https://hacktoberfest.digitalocean.com/">
 <a href="https://hacktoberfestswaglist.com/">Swag List</a>
 <br>
 
+Also, you find some good issues if you are just starting your open-source contribution journey, these resources might be helpful to you <br>
+https://goodfirstissues.com/ <br>
+https://contributor.ninja/ <br>
+https://www.firsttimersonly.com/ <br>
+https://up-for-grabs.net/#/ <br>
+https://github.com/mungell/awesome-for-beginners <br>
+https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/
+
+Enjoy Coding and Keep contributing to open source.
+
 ### How to contribute?
 
 * Fork this repository

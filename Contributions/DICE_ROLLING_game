@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+// Function to roll two dice and return the sum
+int rollDice() {
+    int die1 = rand() % 6 + 1;
+    int die2 = rand() % 6 + 1;
+    return die1 + die2;
+}
+
+int main() {
+    srand(time(0));
+
+    cout << "Welcome to the Dice Rolling Game!" << endl;
+    cout << "Guess the sum of two dice rolls (2-12)." << endl;
+
+    int targetSum = rollDice(); // Randomly generate the target sum
+    int attempts = 0;
+    int guess;
+
+    while (true) {
+        cout << "Enter your guess: ";
+        cin >> guess;
+        attempts++;
+
+        if (guess == targetSum) {
+            cout << "Congratulations! You guessed the correct sum " << targetSum << " in " << attempts << " attempts." << endl;
+            break;
+        } else {
+            cout << "Incorrect guess. Try again." << endl;
+        }
+    }
+
+    return 0;
+}

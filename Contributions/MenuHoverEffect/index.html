@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Menu Hover</title>
+</head>
+<body>
+    <ul>
+        <li><a href="" data-text="Home"><img src="https://source.unsplash.com/random/300x300" alt="">Home</a></li>
+        <li><a href="" data-text="About"><img src="https://source.unsplash.com/random/301x300" alt="">About</a></li>
+        <li><a href="" data-text="Services"><img src="https://source.unsplash.com/random/300x301" alt="">Services</a></li>
+        <li><a href="" data-text="Portfolio"><img src="https://source.unsplash.com/random/301x301" alt="">Portfolio</a></li>
+        <li><a href="" data-text="Team"><img src="https://source.unsplash.com/random/302x300" alt="">Team</a></li>
+        <li><a href="" data-text="Contact"><img src="https://source.unsplash.com/random/300x302" alt="">Contact</a></li>
+        <div class="cursor"></div>
+    </ul>
+
+    <script>
+        let pos = document.documentElement;
+        pos.addEventListener("mousemove",e=>{
+            pos.style.setProperty('--x',e.clientX+"px");
+            // console.log(e.clientX+" "+e.clientY)
+            pos.style.setProperty('--y',e.clientY+"px");
+        })
+    </script>
+</body>
+</html>

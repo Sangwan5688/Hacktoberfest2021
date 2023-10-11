@@ -1,0 +1,13 @@
+def selectionSort(aList):
+    for i in range(len(list)):
+        least = i
+        for k in range(i+1, len(list)):
+            if list[k] < aList[least]:
+                least = k
+                 
+        swap(list, least, i)
+         
+def swap(A, x, y):
+    temp = A[x]
+    A[x] = A[y]
+    A[y] = temp

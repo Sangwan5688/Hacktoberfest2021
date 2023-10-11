@@ -1,15 +1,16 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-void TOH(int n, char a, char b, char c){
-    if(n>0){
-        TOH(n-1,a,c,b);
-        cout<<a<<" to "<<c<<endl;
-        TOH(n-1,b,a,c);
+void towerOfHanoi(int n, char source,char dest,char helper){
+    if(n==0){
+        return;
     }
+    towerOfHanoi(n-1,source,helper,dest);
+    cout<<"Move from "<<source<<" to "<<dest<<endl;
+    towerOfHanoi(n-1,source,dest,helper);
 }
 
 int main(){
-    TOH(3,'A','B','C');
+    towerOfHanoi(3,'A','C','B');
     return 0;
 }

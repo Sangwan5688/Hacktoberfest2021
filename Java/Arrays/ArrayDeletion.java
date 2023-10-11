@@ -1,50 +1,112 @@
 
 /**
- * Author:  ARUN BALAJI R
- * Date:    02 July 2021 (Friday)
+ * Author:  Ujwal Gulhane 
+ * Date:    24 Oct 2021 (Friday)
  */
 
+import java.util.Arrays;
+ 
 
-import java.util.*;
-public class ArrayDeletion{
-	public static void main(String args[]){
-		Solution s = new Solution();
-		int arr[] = {1,2,3,4,5,6};
-		s.deleteLast(arr);
-		s.printArray(arr);
-		s.deleteStart(arr);
-		s.printArray(arr);
-		s.deleteAt(arr,2);
-		s.printArray(arr);
-	}
-}
+class GFG {
+ 
 
-class Solution{
-	void deleteLast(int arr[]){
-		arr[arr.length-1]=0;
-	}
+    // Function to remove the element
 
-	void deleteStart(int arr[]){
-		// arr[0]=0;
-		for(int i=0;i<arr.length-1;i++){
-			arr[i]=arr[i+1];
-		}
-	}
+    public static int[] removeTheElement(int[] arr, int index)
 
-	void deleteAt(int arr[],int pos){
-		for(int i=0;i<=arr.length-1;i++){
-			if(i==pos){
-				arr[i]=arr[i+1];
-				return;
-			}
+    {
+ 
 
-		}
-	}
+        // If the array is empty
 
-	void printArray(int arr[]){
-		for(int i=0;i<arr.length;i++)
-			System.out.print(arr[i]+" ");
-		System.out.println();
-		
-	}
+        // or the index is not in array range
+
+        // return the original array
+
+        if (arr == null || index < 0
+
+            || index >= arr.length) {
+ 
+
+            return arr;
+
+        }
+ 
+
+        // Create another array of size one less
+
+        int[] anotherArray = new int[arr.length - 1];
+ 
+
+        // Copy the elements except the index
+
+        // from original array to the other array
+
+        for (int i = 0, k = 0; i < arr.length; i++) {
+ 
+
+            // if the index is
+
+            // the removal element index
+
+            if (i == index) {
+
+                continue;
+
+            }
+ 
+
+            // if the index is not
+
+            // the removal element index
+
+            anotherArray[k++] = arr[i];
+
+        }
+ 
+
+        // return the resultant array
+
+        return anotherArray;
+
+    }
+	public static void main(String[] args)
+
+    {
+ 
+
+        // Get the array
+
+        int[] arr = { 1, 2, 3, 4, 5 };
+ 
+
+        // Print the resultant array
+
+        System.out.println("Original Array: "
+
+                           + Arrays.toString(arr));
+ 
+
+        // Get the specific index
+
+        int index = 2;
+ 
+
+        // Print the index
+
+        System.out.println("Index to be removed: " + index);
+ 
+
+        // Remove the element
+
+        arr = removeTheElement(arr, index);
+ 
+
+        // Print the resultant array
+
+        System.out.println("Resultant Array: "
+
+                           + Arrays.toString(arr));
+
+    }
 }

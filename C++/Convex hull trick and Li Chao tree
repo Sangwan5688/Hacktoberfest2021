@@ -1,0 +1,13 @@
+vector<point> hull, vecs;
+
+void add_line(ftype k, ftype b) {
+    point nw = {k, b};
+    while(!vecs.empty() && dot(vecs.back(), nw - hull.back()) < 0) {
+        hull.pop_back();
+        vecs.pop_back();
+    }
+    if(!hull.empty()) {
+        vecs.push_back(1i * (nw - hull.back()));
+    }
+    hull.push_back(nw);
+}

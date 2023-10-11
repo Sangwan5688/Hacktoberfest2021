@@ -1,0 +1,87 @@
+#include <bits/stdc++.h>
+using namespace std;
+struct Node
+{
+    int data;
+    Node *next;
+    Node(int a)
+    {
+        data = a;
+        next = NULL;
+    }
+};
+Node *inserth(Node *head, int x, int pos)
+{
+
+    Node *temp = new Node(x);
+    if (head == NULL)
+    {
+        temp->next = temp;
+        cout << "null" << endl;
+        return temp;
+    }
+    else if (pos == 1)
+    {
+        temp->next = head->next;
+        head->next = temp;
+        int t = head->data;
+        head->data = temp->data;
+        temp->data = t;
+        return head;
+    }
+    Node *curr = head;
+    for (int i = 0; i < pos - 2; i++)
+        curr = curr->next;
+    temp->next = curr->next;
+    curr->next = temp;
+    return head;
+}
+Node *del(Node *head, int pos)
+{
+    Node *curr = head;
+    if (pos == 1)
+    {
+        head->data = head->next->data;
+        Node *ptr = head->next;
+        head->next = head->next->next;
+        delete(ptr);
+        return head;
+    }
+    for (int i = 0; i < pos - 2; i++)
+        curr = curr->next;
+    Node *next = curr->next;
+    curr->next = curr->next->next;
+    delete (next);
+    return head;
+}
+void print(Node *head)
+{
+    Node *curr = head;
+    do
+    {
+        cout << curr->data << " ";
+        curr = curr->next;
+    } while (curr != head);
+}
+int main()
+{
+    Node *head = NULL;
+    head = inserth(head, 10, 1);
+    print(head);
+    cout << endl;
+    head = inserth(head, 20, 1);
+    print(head);
+    cout << endl;
+    head = inserth(head, 30, 1);
+    print(head);
+    cout << endl;
+    head = inserth(head, 50, 3);
+    print(head);
+    cout << endl;
+    head = inserth(head, 100, 4);
+    print(head);
+    cout << endl;
+    head = del(head, 5);
+    print(head);
+    cout << endl;
+}

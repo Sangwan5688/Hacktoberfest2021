@@ -1,0 +1,22 @@
+{
+  "name": "IMDb Lookup",
+  "description": "Display IMDb rating from context menu and on rotten tomatoes",
+  "version": "0.1",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon48.png"
+  },
+  "permissions": ["contextMenus"],
+  "content_scripts": [{
+    "matches": [
+      "https://www.rottentomatoes.com/*"
+    ],
+    "js": ["jquery-3.5.1.min.js", "content.js"]
+  }]
+}

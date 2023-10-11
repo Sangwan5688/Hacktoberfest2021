@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "LA5GKSdzUu5hWQ45SaQ8jz5WHYA/AR+dffOHfdKdmr6636tqHZt5AgUMqzYCtY9JnlGXacs/wj2xaknd3WEf9g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\andre\\Documents\\Repositories\\Hacktoberfest21\\Hacktoberfest2021\\Contributions\\SingletonPattern\\SingletonPattern\\SingletonPattern.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
+  "logs": []
+}

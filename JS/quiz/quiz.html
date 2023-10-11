@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <script type="text/javascript">
+           function right(_this)
+           {
+               _this.style.backgroundColor="yellow";
+              // alert("You are correct.");
+           }
+           function wrong(_this)
+           {
+            _this.style.backgroundColor="yellow";
+            //alert("Oops!! You are wrong.");
+           }
+           function next()
+           {
+               document.location.href="quiz3.html";
+           }
+           function previous()
+           {
+               document.location.href="start.html";
+           }
+           function submit()
+               {
+                var scorrect = document.getElementById("corr-btn");
+                var s = document.getElementsByClassName("btn");
+                var c=0; var i=0;
+                for(i=0;i<s.length;i++)
+                if(s[i].style.backgroundColor === "yellow")
+                c++;
+                if(c==0){
+                alert("Please select any option!");
+                document.location.href="quiz.html";}
+                else if(c>1) {
+                alert("Please select any one option!");
+                document.location.href="quiz.html";
+                }
+                else {
+                if(scorrect.style.backgroundColor === "yellow")
+                {
+                    for(i=0;i<s.length;i++)
+                    if(s[i].style.backgroundColor === "yellow")
+                    {
+                        s[i].style.backgroundColor = "red";
+                        // break;
+                    }
+                    scorrect.style.backgroundColor = "green";
+                    // alert("correct!");
+                }  
+                else
+                {
+                    // alert("wrong!");
+                    for(i=0;i<s.length;i++)
+                    if(s[i].style.backgroundColor === "yellow")
+                    {
+                        s[i].style.backgroundColor = "red";
+                        // break;
+                    }
+                    scorrect.style.backgroundColor = "green";
+                }
+            }
+                //alert("You have successfully submitted your quiz!");
+               }
+        </script>
+        <title>Quiz</title>
+    </head>
+    <link href="quiz.css" rel="stylesheet">
+    <body>
+        <div class="container">
+            <!-- <div id="question-container" class="hide"> -->
+                <div id="question">How is stack operated?</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button onclick="right(this)" id="corr-btn" class="btn">LIFO</button>
+                    <button onclick="wrong(this)" class="btn">FIFO</button>
+                    <button onclick="wrong(this)" class="btn">Both</button>
+                    <button onclick="wrong(this)" class="btn">None</button>
+                </div>
+            <!-- </div> -->
+            <div class="controls">
+                <button onclick="previous()" id="previous-btn"> &laquo Previous</button>
+                <button onclick="submit()" id="submit-btn">Submit</button>
+                <button onclick="next()" id="next-btn"> Next &raquo</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+This model predicts the price of the house based on various factors like area, bedrooms, parking and other alike.

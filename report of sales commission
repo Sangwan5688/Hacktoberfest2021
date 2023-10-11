@@ -1,0 +1,87 @@
+#include <stdio.h>
+//program to deliver a summary report of sales commission earned by agents of five districts
+
+void main()
+
+{
+    int area_code,sales; //code= representative's code number  sales=representative's sale value
+    float totC=0,totGM=0,totK=0,totM=0,totGL=0,comC,comGL,comGM,comK,comM;     
+   		                                    /*totC=total sales commission for Colombo, totGM= total sales   commission for gampaha, totK=)  total sales commission for kandy , totM=total sales commission for mannar, totGL=  total sales commission for galle, comC= commission for colombo,comGL= commission for galle, comGM= commission for, comK= commission for kandy, comM= commission for mannar*/
+
+        printf("Enter the area code and the sales:");
+
+        scanf("%d %d",&area_code,&sales);
+
+        while(area_code!=0 && sales!=0)
+    {
+         if(area_code<150)  
+            {
+                    {
+                if(sales<100000) //commission calculated is 5% for the first Rs.100,000
+          		 comC=(sales*0.05);
+                else
+                        comC=((100000*0.05)+(sales-100000)*0.1); //commission calculated is 10% after 
+                    }    
+                         totC=totC+comC;
+            }
+           
+        else  
+             if(area_code<220)
+                {
+                        {
+                    if(sales<100000)
+                       
+                             comGL=(sales*0.05);
+                    else
+                            comGL=((100000*0.05)+(sales-100000)*0.1);
+                        }
+                            totGL=totGL+comGL;
+                }
+                else
+                    if(area_code<310)
+                        {      
+                                {
+                            if(sales<100000)
+                                    comGM=(sales*0.05);
+                            else
+                                    comGM=((100000*0.05)+(sales-100000)*0.1);
+                                }    
+                                     totGM=totGM+comGM;
+                        }
+                        else
+                            if(area_code<415)
+                             {
+                                        {
+                                    if(sales<100000)
+                                       
+                                            comK=(sales*0.05);
+                                    else
+                                            comK=((100000*0.05)+(sales-100000)*0.1);
+                                        }        
+                                            totK=totK+comK;
+                             }
+                            else
+                                {
+                                        {
+                                    if(sales<100000)
+                                       
+                                             comM=(sales*0.05);
+                                    else
+                                             comM=((100000*0.05)+(sales-100000)*0.1);
+                                        }    
+                                             totM=totM+comM;
+                            }
+           
+        printf("Enter the area code and the sales:");
+        scanf("%d %d",&area_code,&sales);
+       
+    }
+         printf(" Colombo    Rs.%.0f\n ",totC);
+         printf("Galle      Rs.%.0f\n",totGL);
+         printf(" Gampaha    Rs.%.0f\n",totGM);
+         printf(" Kandy      Rs.%.0f\n",totK);
+         printf(" Mannar     Rs.%.0f\n",totM);
+
+}
+
+

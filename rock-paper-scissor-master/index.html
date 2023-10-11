@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1f59238970.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rock Paper Scissors | by Vibhanshu Garg</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+
+  <header>
+    <h1>Rock Paper Scissors</h1>
+    <div class="btn-div">
+      <button type="button" name="button" class="btn" onclick="rulesbtn()">Rules</button>
+      <button type="button" name="button" class="btn" onclick="closebtn()">Close Rules</button>
+    </div>
+  </header>
+  <div class="rules" id="rules-game">
+    <img src="images/rules.svg" alt="Rules" class="image-rules"><br>
+  </div>
+  <div class="score-board">
+    <div id="user-label" class="badge">USER</div>
+    <div id="comp-label" class="badge">COMP</div>
+    <span id="user-score">0</span>:<span id="comp-score">0</span>
+  </div>
+
+  <div class="result">
+    <p>Best of Luck🤞🤞</p>
+  </div>
+
+  <div class="choices">
+    <div id="rock" class="choice">
+<i class="icons fas fa-hand-rock fa-5x"></i>    </div>
+    <div id="paper" class="choice">
+<i class="icons fas fa-hand-paper fa-5x"></i>    </div>
+    <div id="scissors" class="choice">
+<i class="icons fas fa-hand-scissors fa-5x"></i>    </div>
+  </div>
+
+  <p id="action-message">Make your move ⬆️</p>
+  <div class="btn-div">
+    <button type="button" name="button" class="btn" onclick="reload()">Reset Game</button>
+  </div>
+  <footer>
+    <h3>Made by <em>Vibhanshu Garg</em> with <i class="fas fa-heart "></i></h3>
+
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

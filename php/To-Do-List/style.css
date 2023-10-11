@@ -1,0 +1,26 @@
+#header{
+    text-align: center;
+}
+#Login{
+    text-align: center;
+}
+.container{
+    border: 3px solid rgb(165, 164, 164);
+    border-radius: 10px;
+    /* margin-right: 20px; */
+    width: 40vw;
+    /* height: 40vh; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+/* .container2{
+    border: 3px solid rgb(165, 164, 164);
+    height: 50vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    
+} */

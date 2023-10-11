@@ -1,0 +1,14 @@
+.zoom-effect {
+    overflow: hidden;
+    width: 800px;
+    margin: auto;
+}
+
+.kotak img {
+    transition: all .3s;
+}
+
+.zoom-effect:hover .kotak img {
+    transform: scale(1.08);
+    cursor: pointer;
+}

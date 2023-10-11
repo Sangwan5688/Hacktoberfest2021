@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Klee One
+- Font Author: Copyright 2020 The Klee Project Authors (https://github.com/fontworks-fonts/Klee)
+- Font Source: http://fonts.gstatic.com/s/kleeone/v1/LDI2apCLNRc6A8oT4pbYF8Osc-bGkqIw.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

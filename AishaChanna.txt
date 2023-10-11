@@ -1,0 +1,110 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+
+public class GUI6 {
+
+
+        JFrame frame=new JFrame("Register Form");
+        Container con=frame.getContentPane();
+        JLabel lhead, lusername, lpassword, lgender, lcity, lemail;
+        JTextField tusername, temail;
+        JPasswordField pass;
+        JRadioButton r1, r2;
+        ButtonGroup gender=new ButtonGroup();
+        JComboBox city;
+        JCheckBox term;
+        JButton register, reset;
+
+        GUI6(){
+            frame.setBounds(350, 90, 750, 500);
+            frame.setVisible(true);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            con.setLayout(null);
+            con.setBackground(Color.LIGHT_GRAY);
+
+            Font f=new Font("Times New Roman", Font.BOLD, 20);
+            lhead=new JLabel("Registeration Form");
+            lhead.setBounds(250, 5, 400, 30);
+            lhead.setFont(f);
+            con.add(lhead);
+
+            lusername=new JLabel("Username");
+            lusername.setBounds(50, 50, 60, 30);
+            con.add(lusername);
+
+            lpassword=new JLabel("Password");
+            lpassword.setBounds(50, 100, 60, 30);
+            con.add(lpassword);
+
+            lgender=new JLabel("Gender");
+            lgender.setBounds(50, 150, 60, 30);
+            con.add(lgender);
+
+            lcity=new JLabel("City");
+            lcity.setBounds(50, 200, 60, 30);
+            con.add(lcity);
+
+            lemail=new JLabel("Email");
+            lemail.setBounds(50, 250, 60, 30);
+            con.add(lemail);
+
+            tusername=new JTextField();
+            tusername.setBounds(130, 53, 180, 20);
+            con.add(tusername);
+
+            pass=new JPasswordField();
+            pass.setBounds(130, 103, 180, 20);
+            con.add(pass);
+
+            r1= new JRadioButton("Male");
+            r1.setBounds(130, 153, 80, 30);
+            r1.setBackground(Color.LIGHT_GRAY);
+            con.add(r1);
+
+            r2=new JRadioButton("Female");
+            r2.setBounds(230, 153, 80, 30);
+            r2.setBackground(Color.LIGHT_GRAY);
+            con.add(r2);
+
+            gender.add(r1);
+            gender.add(r2);
+
+            String citylist[]={"karachi","hyderabad","Abbottabad","Dadu","Faisalabad","Sargodha"};
+
+            city = new JComboBox(citylist);
+            city.setBounds(130, 203, 95, 25);
+            con.add(city);
+
+            temail = new JTextField();
+            temail.setBounds(130, 253, 180, 20);
+            con.add(temail);
+
+            term = new JCheckBox("I accept terms and conditions");
+            term.setBounds(65, 290, 200, 20);
+            term.setBackground(Color.GRAY);
+            con.add(term);
+
+            register = new JButton("Register");
+            register.setBounds(100, 330, 85, 25);
+            con.add(register);
+
+            reset = new JButton("Reset");
+            reset.setBounds(195, 330, 85, 25);
+            con.add(reset);
+
+
+
+	}
+        }
+
+
+        class Main{
+            public static void main(String []args) {
+                GUI6 r=new GUI6();
+
+            }
+
+        }
+

@@ -1,0 +1,65 @@
+body{
+  padding: 5%;
+  font-family: monospace;
+  background-color: #F7F5EB;
+  color: #205295;
+}
+
+h1{
+  font-size: 4em;
+}
+
+.form-control{
+  width: 30%;
+  display: inline-block;
+}
+
+.add{
+  background-color: #205295;
+}
+.add:hover{
+  background-color: #243763;
+}
+
+.card{
+  border-width: 0;
+  display: inline-block;
+  min-width: 25%;
+}
+
+.list-item{
+  display: flex;
+}
+
+p{
+  margin: auto 20px;
+}
+
+.delete{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+input[type=checkbox] {
+  accent-color: #205295;
+}
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #FF6E31;
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+    margin-top: 7%;
+  }
+  h1{
+    font-size: 2.5rem;
+  }
+  .card{
+    min-width: 100%;
+  }
+  .form-control{
+    width: 60%;
+  }
+}

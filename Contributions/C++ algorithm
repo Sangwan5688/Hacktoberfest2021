@@ -1,0 +1,19 @@
+// A simple code to swap 2 numbers without a 3rd variable
+// I will implement this in C++
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter 2 numbers";
+    cin>>a>>b;
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    cout<<a<<" "<<b;
+    return 0;
+}
+
+

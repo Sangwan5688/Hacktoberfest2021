@@ -1,0 +1,108 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.flex-container-row {
+    display: flex;
+}
+
+.button {
+    flex-basis: 25%;
+
+
+    font-size: 1.5em;
+    text-align: center;
+    padding: 40px;
+    border: 1px solid black;
+    /* background: -webkit-linear-gradient(top, #d2d2d2, #ddd); */
+    cursor: pointer;
+    background-color: #A2D5F2;
+
+}
+
+.double {
+    flex-basis: 50%;
+}
+
+.display {
+    color: black;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #DBE2EF;
+    border: 2.5px groove black;
+    font-size: 2em;
+}
+
+.operator,
+.negative,
+.equals {
+    color: white;
+    background: #CB3737;
+}
+
+.card {
+    box-shadow: 1px 1px 2.3px 5px #07689F;
+    border-radius: 5px;
+    padding: 30px;
+    margin-top: 20px;
+
+}
+
+.button:hover {
+    font-weight: bold;
+}
+
+.history {
+    width: 80%;
+    margin: 30px auto 0 auto;
+    overflow: scroll;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 16px;
+}
+
+th {
+    background-color: orange;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #d2d2d2;
+}
+
+
+@media screen and (max-width: 513px) {
+    .button {
+        padding: 10px;
+    }
+
+    .history {
+        width: 100%;
+    }
+}

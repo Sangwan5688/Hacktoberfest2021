@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+html{
+    height:100%;
+    width:100%;
+    background-image: url('calculator background image.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+body{
+    display:inline;
+}
+
+.container{
+    
+    max-width:30vw;
+    
+    
+    
+}
+.button
+{
+  padding: 20px;
+  margin: 8px;
+  border:2px solid black;
+  border-radius:50%;
+  cursor:pointer;
+  justify-content: center;
+  background-color:#ff9a3c;
+  display: flexbox;
+
+}
+
+.button:hover {
+    background-color:#87908f;
+   
+  }
+
+.row{
+   margin: 8px 0;
+   display: flex;
+   width:82vw;
+   align-items: center;
+   justify-content: center;
+   
+}
+.input{
+    margin:0;
+    padding:10px 58px;
+    border:2px solid black;
+    border-radius:5px;
+    width:291px;
+}
+.text-center{
+    text-align:center;
+    font-family:'Lato', sans-serif;
+    margin-top:136px;
+    margin-left: 70px;
+}
+
+.div{
+    display: none;
+}

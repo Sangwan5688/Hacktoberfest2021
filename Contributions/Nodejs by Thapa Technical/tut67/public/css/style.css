@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Piazzolla", serif;
+}
+
+:root {
+  --main-bg: #1e272e;
+  --main-color: #0097e6;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  margin: 0;
+}
+
+/* navbar style */
+
+.main_menu {
+  background-color: var(--main-bg);
+}
+
+.navbar {
+  color: #fff;
+  background-color: var(--main-bg);
+  padding: 2rem 0;
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+.navbar li {
+  margin-left: 2rem;
+}
+
+.navbar-toggler {
+  background-color: #718093;
+}
+
+.fa-snowflake {
+  transition: all linear;
+  animation: rot 2s linear infinite;
+  color: var(--main-color);
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* main header part  */
+
+.main_header_left {
+  height: 70rem;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main_header_left p {
+  font-size: 2rem;
+}
+
+.main_header_left h1 {
+  font-size: 4rem;
+  margin: 1rem 0 4rem 0;
+  text-transform: capitalize;
+}
+
+.txt_clr {
+  color: var(--main-color);
+}
+
+.main_header_left button {
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px black;
+  outline: none;
+  /* transition: all 0.2s linear; */
+}
+
+.main_header_left button:hover {
+  box-shadow: 0 8px 6px -6px var(--main-color);
+  /* border: 1px solid var(--main-color); */
+}
+
+.main_header_right {
+  height: 70rem;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_header_right figure img {
+  filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.3));
+}
+
+/* weather page style */
+/* temp input fields style code */
+
+.temp_form {
+  width: 60%;
+  position: relative;
+  margin: 5rem auto;
+}
+
+.temp_form input[type="text"] {
+  width: 100%;
+  padding: 2rem 5rem 2rem 2rem;
+  background: #1e202b;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 1.7rem;
+  border-radius: 3rem;
+}
+
+::placeholder {
+  color: #bfc1c8;
+}
+
+.temp_form input[type="submit"] {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: none;
+  background: #009ad8;
+  padding: 0 3rem;
+  border-radius: 3rem;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.temp_form input[type="submit"]:hover {
+  color: #009ad8;
+  background-color: #fff;
+}
+
+/* temp detials show here */
+
+.tempInformation {
+  width: 40rem;
+  margin: auto;
+  min-height: 20rem;
+  background-color: #323544;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.top_layer {
+  width: 100%;
+  height: 20%;
+  background-color: #2d303d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 2rem 0;
+}
+
+.top_layer p {
+  color: #fff;
+  font-weight: 300;
+}
+
+.main_layer {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_layer #city_name {
+  padding: 2rem 0;
+  color: #bfc1c8;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.main_layer .middle_layer {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa {
+  font-size: 7rem;
+  font-weight: 900;
+}
+
+.fa {
+  color: #009ad8;
+}
+
+sup {
+  font-size: 6rem;
+  margin-top: -2rem;
+}
+
+.data_hide {
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+
+/* 404 error page */
+
+.main_header_left .errimg img {
+  width: 60rem;
+  height: 30rem;
+}
+
+/* footer style  */
+
+footer {
+  width: 100%;
+  /* height: 5rem; */
+  background-color: var(--main-bg);
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+  line-height: 5rem;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+/* responsive code  */
+
+@media (max-width: 768px) {
+  .main_header_left {
+    height: auto;
+    margin: 5rem 0;
+  }
+
+  .main_header_right {
+    height: auto;
+    margin-top: 3rem;
+  }
+
+  .temp_form {
+    width: auto;
+  }
+  .tempInformation {
+    width: auto;
+  }
+
+  .main_layer .middle_layer p,
+  .main_layer .middle_layer .fa {
+    font-size: 5rem;
+    font-weight: 900;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    background-color: #fff;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    padding: 10px 20px;
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #262626;
+    text-underline-offset: 5px;
+    transition: 0.75s;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/** section-container1 */
+
+section.container1 {
+    height: 90vh;
+    background-image: url(../image/intro-image.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+div.quote {
+    margin-bottom: 5vh;
+}
+
+div.quote p {
+    position: relative;
+    color: #fff;
+    font-size: 45px;
+    font-weight: 700;
+    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4); 
+}
+
+div.quote p::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: 'Dance is the hidden language of the soul. ';
+    text-shadow: 0 0 1px #000;
+}
+
+/** section-container2 */
+
+section.container2 {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.container2 .center { 
+    width: 80%;
+    height: 60vh;
+    display: grid;
+    grid-template-areas: "1fr 1fr 1fr";
+    box-sizing: border-box;
+}
+
+section.container2 .center .card {
+    margin: 0 30px;
+    /* height: 100%; */
+    height: 50vh;
+    padding: 20px 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+section.container2 .center .card:first-child, section.container2 .center .card:last-child{
+    margin: 0;
+}
+
+section.container2 .center .card h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+section.container2 .center .card .content {
+    width: 100%;
+    height: 90%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+section.container2 .center .card:nth-child(1) .content {
+    background: url(../image/rythm.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+section.container2 .center .card:nth-child(2) .content {
+    background: url(../image/poetry.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+section.container2 .center .card:nth-child(3) .content {
+    background: url(../image/nature.jpg);
+    height: calc(100% - 60px);
+    background-size: cover;
+    background-position: center center;
+}
+
+/** form */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .wrapper {
+    margin: 40px;
+    padding: 25px;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 5px;
+
+    border: 1px solid #000;
+}
+
+.container .wrapper h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container .wrapper form label {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin: 10px;
+}
+
+.container .wrapper form label input {
+    width: 400px;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+.container .wrapper form label textarea {
+    max-width: 400px;
+    padding: 5px 10px;
+    resize: none;
+    max-height: 8vh;
+}
+
+.container .wrapper form button {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.button-62 {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+/** footer */
+
+section.footer {
+    height: 10vh;
+}
+
+div.center {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#gender1 ,
+#gender2 {
+  width: 17px;
+}

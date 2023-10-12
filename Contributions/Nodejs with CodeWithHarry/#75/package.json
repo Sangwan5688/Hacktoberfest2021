@@ -1,0 +1,17 @@
+{
+  "name": "vishal-dance-academy",
+  "version": "1.0.0",
+  "description": "this is best website for dance tutorial",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon app.js"
+  },
+  "author": "vishal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.21",
+    "pug": "^3.0.2"
+  }
+}

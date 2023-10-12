@@ -1,0 +1,22 @@
+{
+  "name": "tut69",
+  "version": "1.0.0",
+  "description": "this is my first node js repo",
+  "main": "tut69.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon tut69.js"
+  },
+  "keywords": [
+    "awesome"
+  ],
+  "author": "vishal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}

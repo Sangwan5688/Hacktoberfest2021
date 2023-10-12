@@ -1,0 +1,1 @@
+console.log("weclome to my static data")

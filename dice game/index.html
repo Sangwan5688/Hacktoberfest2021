@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PIG.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>PIG Game</title>
+    <script src="PIG.js"></script>
+</head>
+
+<body>
+    <div class="G_frame1">
+        <h1 class="Uname1" style="font-size: 26px;" id="head1">PLAYER 1</h1>
+        <h1 class="Uname2 hidden" style="font-size: 26px;" id="head2">PLAYER 2</h1>
+        <div class="G_frame3" id="Frame1">
+            <h1 class="Uname1" style="font-size: 26px;">PLAYER 1</h1>
+            <div class="ScoreP1" id="SP1">0</div>
+            <div class="scoreLine1"><span id="player">CURRENT</span><br> <span id="score1">0</span>
+            </div>
+        </div>
+        <div class="G_frame2 colChanger" id="Frame2">
+            <h1 class="Uname2" style="font-size: 26px;">PLAYER 2</h1>
+            <div class="ScoreP2" id="SP2">0</div>
+            <div class="scoreLine2"><span id="player">CURRENT</span><br> <span id="score2">0</span></div>
+        </div>
+        <input type="button" class="New_Button" value="🔄 NEW GAME">
+        <input type="button" value="🎲 ROLL DICE" class="DRoll">
+        <input type="button" value="📥 HOLD" class="DHold">
+    </div>
+    <img src="Frame 8.png" class="Dice">
+    <script src="PIG.js"></script>
+</body>
+
+</html>

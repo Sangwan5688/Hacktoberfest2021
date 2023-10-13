@@ -1,0 +1,37 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int maxSubarraySum(vector<int>& arr, int windowSize) {
+  int maxSum = 0;
+  int currentSum = 0;
+
+  // Initialize the sliding window.
+  for (int i = 0; i < windowSize; i++) {
+    currentSum += arr[i];
+  }
+
+  // Slide the window over the array and update the maximum sum.
+  for (int i = windowSize; i < arr.size(); i++) {
+    currentSum += arr[i] - arr[i - windowSize];
+    maxSum = max(maxSum, currentSum);
+  }
+
+  // Return the maximum sum.
+  return maxSum;
+}
+
+int main() {
+  // Create an array.
+  vector<int> arr = {1, 2, 3, 4, 5};
+
+  // Find the maximum subarray sum with a window size of 3.
+  int windowSize = 3;
+  int maxSum = maxSubarraySum(arr, windowSize);
+
+  // Print the maximum sum.
+  cout << "The maximum subarray sum is: " << maxSum << endl;
+
+  return 0;
+}

@@ -1,0 +1,63 @@
+#include <iostream>
+
+using namespace std;
+
+class Node {
+public:
+    int data;
+    Node *next;
+
+    Node(int data) {
+        this->data = data;
+        this->next = nullptr;
+    }
+};
+
+class CyclicLinkedList {
+public:
+    Node *head;
+
+    CyclicLinkedList() {
+        this->head = nullptr;
+    }
+
+    void addNode(int data) {
+        Node *newNode = new Node(data);
+
+        if (head == nullptr) {
+            head = newNode;
+            newNode->next = head;
+        } else {
+            Node *current = head;
+            while (current->next != head) {
+                current = current->next;
+            }
+
+            current->next = newNode;
+            newNode->next = head;
+        }
+    }
+
+    void printList() {
+        Node *current = head;
+
+        do {
+            cout << current->data << " ";
+            current = current->next;
+        } while (current != head);
+
+        cout << endl;
+    }
+};
+
+int main() {
+    CyclicLinkedList list;
+
+    list.addNode(1);
+    list.addNode(2);
+    list.addNode(3);
+    list.addNode(4);
+
+    list.printList();
+
+    return 0

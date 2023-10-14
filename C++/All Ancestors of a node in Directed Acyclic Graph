@@ -1,0 +1,27 @@
+void dfs(int i,vector<bool>&vis,vector<int>adj[],vector<int>&v,int& node){
+        vis[i]=true;
+        if(i!=node)
+        v.push_back(i);
+        for(int j:adj[i]){
+            if(!vis[j]){
+                dfs(j,vis,adj,v,node);
+            }
+        }
+    }
+    vector<vector<int>> getAncestors(int n, vector<vector<int>>& edg) {
+        vector<vector<int>>ans;
+        vector<int>adj[n];
+        for(int i=0;i<edg.size();i++){
+            int u=edg[i][0],v=edg[i][1];
+            adj[v].push_back(u);
+        }
+        for(int i=0;i<n;i++){
+            vector<bool>vis(n,false);
+            vector<int>v;
+            dfs(i,vis,adj,v,i);
+            sort(v.begin(),v.end());
+            ans.push_back(v);
+
+        }
+        return ans;
+    }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    {{>header}}
+    <div class="container">
+        <div class="wrapper">
+            <h2>{{title}}</h2>
+
+            <form action="/" method="post" id="contact">
+                <label for="name">
+                    <p>Enter Name</p>
+                    <input type="text" name="name" id="name">
+                </label>
+
+                <label for="phone">
+                    <p>Enter Phone ☎️</p>
+                    <input type="phone" name="phone" id="phone">
+                </label>
+                
+                <label for="email">
+                    <p>Enter Email 📫</p>
+                    <input type="email" name="email" id="email">
+                </label>
+
+                <label for="address">
+                    <p>Enter Address 🏡</p>
+                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                </label>
+
+                <label for="concern">
+                    <p>Enter your concern 🙋‍♀️</p>
+                    <textarea name="concern" id="concern" cols="30" rows="10"></textarea>
+                </label>
+
+                <button type="submit" class="button-62">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    {{footer}}
+</body>
+</html>

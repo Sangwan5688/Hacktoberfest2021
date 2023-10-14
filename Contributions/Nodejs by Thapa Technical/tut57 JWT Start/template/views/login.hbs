@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {{>headerLinks}}
+</head>
+<body>
+    {{>navbar}}
+
+    <!-- main header  -->
+    <div class="container">
+        <div class="wrapper">
+            <h2>Login Form</h2>
+
+            <form action="/login" method="post" id="contact">
+                <label for="name">
+                    <p>Enter Name</p>
+                    <input type="text" name="name" id="name">
+                </label>
+
+                <label for="email">
+                    <p>Enter Email 📫</p>
+                    <input type="email" name="email" id="email">
+                </label>
+
+                <label for="phone">
+                    <p>Enter Phone ☎️</p>
+                    <input type="phone" name="phone" id="phone">
+                </label>
+
+                <label for="pwd">
+                    <p>Enter Password 🔒</p>
+                    <input type="password" name="pwd" id="pwd">
+                </label>
+
+                <label for="cpwd">
+                    <p>Enter Confirm Password 🔒</p>
+                    <input type="password" name="cpwd" id="cpwd">
+                </label>
+
+                <button type="submit" class="button-62">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    {{>footer}}
+
+</body>
+</html>

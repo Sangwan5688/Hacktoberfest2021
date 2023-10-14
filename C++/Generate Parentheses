@@ -1,0 +1,17 @@
+void help(int o,int c,int n,vector<string>&ans,string tmp){
+        if(o==n & c==n){
+            ans.push_back(tmp);
+            return;
+        }
+        if(o<n)
+        help(o+1,c,n,ans,tmp+"(");
+        if(o>c)
+        help(o,c+1,n,ans,tmp+")");
+    }
+    vector<string> generateParenthesis(int n) {
+        vector<string>ans;
+        string tmp="";
+        help(0,0,n,ans,tmp);
+        return ans;
+
+    }

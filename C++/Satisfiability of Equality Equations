@@ -1,0 +1,19 @@
+int par[26];
+    int find(int a){
+        return (par[a]==a) ? a : (par[a]=find(par[a]));
+    }
+    bool equationsPossible(vector<string>& a) {
+        for(int i=0;i<26;i++){
+            par[i]=i;
+        }
+        for(int i=0;i<a.size();i++){
+            if(a[i][1]=='=')
+            par[find(a[i][0]-'a')]=find(a[i][3]-'a');
+        }
+        for(int i=0;i<a.size();i++){
+            if(a[i][1]=='!' && find(a[i][0]-'a')==find(a[i][3]-'a'))
+            return false;
+        }
+        return true;
+    
+    }

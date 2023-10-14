@@ -1,0 +1,32 @@
+class Solution {
+    public int paintWalls(int[] cost, int[] time) {
+        dp=new Integer[cost.length][1001];
+        return util(cost, time, 0, 0);
+    }
+    private Integer dp[][];
+    private int util(int cost[], int time[], int i, int netTime) {
+        if(netTime>=cost.length) {
+            return 0;
+        }
+
+        if(i==time.length) {
+            if(netTime<0)
+                return Integer.MAX_VALUE;
+            else return 0;
+        }
+
+        if(dp[i][netTime+500]!=null) return dp[i][netTime+500];
+
+        int take=0;
+        int get1=util(cost, time, i+1, netTime+time[i]);
+        if(get1==Integer.MAX_VALUE) take=get1;
+        else take=cost[i]+get1;
+    
+        int dontTake=0;
+        int get2=util(cost, time, i+1, netTime-1);
+        dontTake=get2;
+
+        int ret=Math.min(take, dontTake);
+        return dp[i][netTime+500]=ret;
+    }
+}

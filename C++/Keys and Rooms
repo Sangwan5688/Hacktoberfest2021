@@ -1,0 +1,19 @@
+void dfs(vector<vector<int>>& v,bool vis[],int i){
+        vis[i]=true;
+        for(int j:v[i]){
+            if(!vis[j])
+            dfs(v,vis,j);
+        }
+    }
+    bool canVisitAllRooms(vector<vector<int>>& v) {
+        int n=v.size();
+        bool vis[n];
+        for(int i=0;i<n;i++)
+        vis[i]=false;
+        dfs(v,vis,0);
+        for(int i=1;i<n;i++){
+            if(vis[i]==false)
+            return false;
+        }
+        return true;
+    }

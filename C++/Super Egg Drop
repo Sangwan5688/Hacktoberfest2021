@@ -1,0 +1,30 @@
+int dp[101][10001];
+    
+    int help(int k,int n){
+         if(n==1 || n==0)
+         return n;
+         if(k==1)
+         return n;
+         if(dp[k][n]!=-1)
+         return dp[k][n];
+         int mn=INT_MAX;
+         int lo=0,hi=n;
+         while(lo<=hi){
+            int mid=(lo+hi)/2;
+            int l=help(k-1,mid-1);
+            int r=help(k,n-mid);
+            int tmp=1+max(l,r);
+            mn=min(mn,tmp);
+            if(l<r)
+            lo=mid+1;
+            else
+            hi=mid-1;
+
+         }
+         return dp[k][n]=mn; 
+    }
+    int superEggDrop(int k, int n) {
+         memset(dp,-1,sizeof(dp));
+         
+         return help(k,n);
+    }

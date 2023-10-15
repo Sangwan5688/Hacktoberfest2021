@@ -1,0 +1,33 @@
+int countPaths(int n, vector<vector<int>>& rds) {
+        vector<pair<int,int>>adj[n];
+        for(int i=0;i<rds.size();i++){
+            int u=rds[i][0],v=rds[i][1],wt=rds[i][2];
+            adj[u].push_back({v,wt});
+            adj[v].push_back({u,wt});
+        }
+        vector<long long>dist(n,1e17),ways(n,0);
+       priority_queue<pair<long long,long long>,vector<pair<long long,long long>>,greater<pair<long long,long long>>>pq;
+       
+        pq.push({0,0});
+        ways[0]=1;
+        dist[0]=0;
+        int mod=1e9+7;
+        while(!pq.empty()){
+            int node=pq.top().second;
+            long long dis=pq.top().first;
+            pq.pop();
+            for(auto it:adj[node]){
+                int adjnode=it.first;
+                long long wt=it.second;
+                if(dist[adjnode]>dis+wt){
+                    dist[adjnode]=dis+wt;
+                    pq.push({dist[adjnode],adjnode});
+                    ways[adjnode]=ways[node]%mod;
+                }
+                else if(dist[adjnode]==dis+wt){
+                    ways[adjnode]=(ways[adjnode]+ways[node])%((int)mod);
+                }
+            }
+        }
+        return ways[n-1]%((int)mod);
+    }

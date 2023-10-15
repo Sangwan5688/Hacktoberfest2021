@@ -1,0 +1,67 @@
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Queue;
+
+public class BFSExample {
+    private int V; // Number of vertices
+    private ArrayList<ArrayList<Integer>> adj; // Adjacency list
+
+    public BFSExample(int vertices) {
+        V = vertices;
+        adj = new ArrayList<>(V);
+
+        for (int i = 0; i < V; i++) {
+            adj.add(new ArrayList<>());
+        }
+    }
+
+    // Function to add an edge to the graph
+    public void addEdge(int source, int destination) {
+        adj.get(source).add(destination);
+        adj.get(destination).add(source); // For an undirected graph
+    }
+
+    // Perform BFS starting from a given source node
+    public void BFS(int source) {
+        boolean[] visited = new boolean[V];
+        int[] distance = new int[V];
+
+        Queue<Integer> queue = new ArrayDeque<>();
+        visited[source] = true;
+        distance[source] = 0;
+        queue.add(source);
+
+        while (!queue.isEmpty()) {
+            int u = queue.poll();
+
+            for (int v : adj.get(u)) {
+                if (!visited[v]) {
+                    visited[v] = true;
+                    distance[v] = distance[u] + 1;
+                    queue.add(v);
+                }
+            }
+        }
+
+        // Print the distances from the source node to all other nodes
+        for (int i = 0; i < V; i++) {
+            System.out.println("Distance from node " + source + " to node " + i + " is " + distance[i]);
+        }
+    }
+
+    public static void main(String[] args) {
+        int vertices = 6;
+        BFSExample graph = new BFSExample(vertices);
+
+        graph.addEdge(0, 1);
+        graph.addEdge(0, 2);
+        graph.addEdge(1, 3);
+        graph.addEdge(1, 4);
+        graph.addEdge(2, 4);
+        graph.addEdge(3, 4);
+        graph.addEdge(3, 5);
+
+        System.out.println("Breadth-First Traversal (Starting from Node 0):");
+        graph.BFS(0);
+    }
+}

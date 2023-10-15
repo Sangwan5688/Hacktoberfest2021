@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="style1.css">
+    <div class="bgvideo2">
+        <video autoplay loop muted>
+            <source src="registerBG.mp4">
+        </video>
+    </div>
+    <div class="main">
+        <div class="register">
+            <h2> Registration form </h2>
+            <form id="register" action="submit.html">
+                <div>
+                    <label for="1">First Name :</label><br>
+                    <input type="text" name="fname" placeholder="Enter Your First Name" class="name"
+                        pattern="[A-Za-z]{1,20}" required>
+                </div> <br>
+                <div>
+                    <label>Last Name : </label> <br>
+                    <input type="text" name="lname" placeholder="Enter your last name" pattern="[A-Za-z]{1,20}"
+                        class="name" required>
+                </div> <br>
+                <div>
+                    <label>Date Of Birth : </label> <br>
+                    <input type="date" placeholder="Enter your DOB." class="name" required max="2006-12-31">
+                </div> <br>
+                <div>
+                    <label>Email ID : </label> <br>
+                    <input type="email" placeholder="Enter your email id" class="name" required>
+                </div> <br>
+                <div>
+                    <label for="PhnNo">Phone Number :</label><br>
+                    <input type="tel" pattern=[0-9]{10} placeholder="Enter Your Phone No." class="name"
+                        required><br><br>
+                </div>
+                <div>
+                    <label>Passport Size Photo : </label> <br>
+                    <input type="file" class="name" id="file" required onchange="return FV()" />
+                    <script>
+                        function FV() {
+                            var fileInput =
+                                document.getElementById('file');
+
+                            var filePath = fileInput.value;
+
+                            // Allowing file type
+                            var allowedExtensions =
+                                /(\.png|\.jpeg|\.jpg)$/i;
+
+                            if (!allowedExtensions.exec(filePath)) {
+                                alert('Please use valid file type for passport size photo - (.jpg/.jpeg/.png)');
+                                fileInput.value = '';
+                                return false;
+                            }
+                        }
+                    </script>
+                </div>
+
+
+                <br>
+                <div><label>State :</label><br>
+                    <select class="name" value="select an option">
+                        <option value="select">select state</option>
+                        <option value="J&K">Jammu And Kashmir</option>
+                        <option value="HP">Himachal Pradesh</option>
+                        <option value="PB">Punjab</option>
+                        <option value="UK">Uttrakhand</option>
+                        <option value="HR">Haryana</option>
+                        <option value="GJ">Gujrat</option>
+                        <option value="RJ">Rajasthan</option>
+                        <option value="MP">Madhya Pradesh</option>
+                    </select>
+                </div> <br>
+                <div>
+                    <label>Gender : </label> <br>
+                    &nbsp;&nbsp;&nbsp; <input required type="radio" name="gender" class="gender">
+                    <label>Male</label>
+                    &nbsp;&nbsp;&nbsp; <input required type="radio" name="gender" class="gender">
+                    <label>Female</label>
+                    &nbsp;&nbsp;&nbsp; <input required type="radio" name="gender" class="gender">
+                    <label>Others</label>
+                </div> <br> <br>
+                <button type="submit" class="btn btn-link sub">submit</button><br><br>
+                <a href="index.html" class="btn btn-link sub">Home</a>
+
+            </form>
+        </div>
+    </div>
+
+    </form>
+</body>
+
+</html>

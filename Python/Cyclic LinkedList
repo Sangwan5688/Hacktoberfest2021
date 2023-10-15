@@ -1,0 +1,44 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class CyclicLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def addNode(self, data):
+        newNode = Node(data)
+
+        if self.head is None:
+            self.head = newNode
+            newNode.next = self.head
+        else:
+            current = self.head
+            while current.next != self.head:
+                current = current.next
+
+            current.next = newNode
+            newNode.next = self.head
+
+    def printList(self):
+        current = self.head
+
+        while current is not None:
+            print(current.data, end=" ")
+            current = current.next
+
+            if current == self.head:
+                break
+
+        print()
+
+if __name__ == "__main__":
+    list = CyclicLinkedList()
+
+    list.addNode(1)
+    list.addNode(2)
+    list.addNode(3)
+    list.addNode(4)
+
+    list.printList()

@@ -2,7 +2,7 @@ package mis5;
 
 public class PGM_medical 
 {
-	int size =0;
+	int size = 0;
 	public void convert_To_Len_th_base(int n, int arr[],int len, int L, int a1[][])
 	{
 		for (int i = L-1; i >= 0; i--)
@@ -10,12 +10,11 @@ public class PGM_medical
 			a1[size][i] =arr[n % len];
 			n /= len;
 		}
-		size= size+1;
+		size = size+1;
 	}
 	public int[][] fullfact(int arr[], int len, int L,int a1[][])
 	{
-		for (int i = 0;
-				i < (int)Math.pow(len, L); i++)
+		for (int i = 0; i < (int)Math.pow(len, L); i++)
 		{
 			convert_To_Len_th_base(i, arr, len, L,a1);
 		}

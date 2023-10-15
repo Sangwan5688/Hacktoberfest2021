@@ -1,0 +1,26 @@
+int dp[301][301];
+    int help(vector<vector<char>>& mat,int i,int j,int& maxi){
+        if(i>=mat.size() || j>=mat[0].size())
+        return 0;
+        if(dp[i][j]!=-1)
+        return dp[i][j];
+        int l=help(mat,i+1,j,maxi);
+        int d=help(mat,i+1,j+1,maxi);
+        int r=help(mat,i,j+1,maxi);
+        if(mat[i][j]=='1'){
+            int tmp=1+min(l,min(d,r));
+            maxi=max(maxi,tmp);
+            return dp[i][j]=tmp;
+
+        }
+        else
+        return dp[i][j]=0;
+    }
+    int maximalSquare(vector<vector<char>>& mat) {
+        int m=mat.size(),n=mat[0].size();
+        
+        memset(dp,-1,sizeof(dp));
+        int maxi=0;
+        help(mat,0,0,maxi);
+        return maxi*maxi;
+    }

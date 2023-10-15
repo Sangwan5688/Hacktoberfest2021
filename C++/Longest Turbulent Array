@@ -1,0 +1,13 @@
+int maxTurbulenceSize(vector<int>& a) {
+        int n=a.size();
+        int ans=1;
+        vector<int>sml(n,1),lar(n,1);
+        for(int i=1;i<n;i++){
+            if(a[i]>a[i-1])
+            sml[i]=lar[i-1]+1;
+            else if(a[i]<a[i-1])
+            lar[i]=sml[i-1]+1;
+            ans=max(ans,max(sml[i],lar[i]));
+        }
+        return ans;
+    }

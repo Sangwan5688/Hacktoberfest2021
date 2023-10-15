@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bgvid{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .bgvid {
+        width:100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .bgvid { 
+        width:auto;
+        height: 100%;
+    }
+}
+
+.navbar{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 100%;
+    position: fixed;
+    justify-content: center;
+    z-index: 2;
+}
+
+.navbar ul li{
+    display: inline-block;
+    padding: 20px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover{
+    color: grey;
+}
+
+.title{
+    display: inline-flex;
+    float: center;
+    color: honeydew;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Corinthia', cursive;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Satisfy', cursive;
+    font-size: 40px;
+
+    position: relative;
+    animation: text 3s 1;
+     
+}
+
+@keyframes text {
+    
+    0%{
+        color: black;
+        margin-bottom: -50px;
+    }
+
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -50px;
+    }
+
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -50px;
+    }
+
+}
+
+.info{
+    display: flex;
+    color: white;
+    text-align: center;
+    margin-top: 10vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+
+    font-family: 'Nunito', sans-serif;
+
+}
+
+
+
+.explore{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    background-image: url(exploreBG.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    align-items: center;
+    
+}
+
+.heading-exp{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.heading-exp h1{
+    color: white;
+    font-family: 'Satisfy', cursive;
+    font-size: 60px;
+}
+
+.clubs{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-exp{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    border-radius: 5%;
+    margin: 10px;
+    text-shadow: 2px 2px black;
+}
+
+.card-exp:hover{
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.card-exp .face{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-exp .face.face1{
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.card-exp .face.face1 h2{
+    margin-bottom: 30px;
+}
+
+.card-exp .face.face2{
+    transition: 0.5s;
+    border-radius: 5%;
+}
+
+.card-exp:hover .face.face2{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    border: 2px solid white;
+}
+
+.card-exp .face.face2 h2{
+    text-transform: uppercase;
+}
+
+.card-exp:hover .face.face2 h2{
+    display: none;
+}
+
+.content-exp{
+    margin-top: 6rem;
+}
+
+.about{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.heading-abt{
+    color: white;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+
+    font-size: 30px;
+
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Corinthia', cursive;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Satisfy', cursive;
+
+}
+
+section{
+    position: relative;
+}
+
+.container{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.container .card{
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(68, 68, 68, 0.822);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(100px);
+    margin-left: 20px;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+.container .card:hover{
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(167, 163, 163, 0.822);
+}
+
+.container .card .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0.70;
+    transition: 0.5s;
+}
+
+.container .card:hover .content{
+    opacity: 1;
+}
+
+.container .card .content .img{
+    margin: 10px 10px 10px 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.container .card .content .img img{
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.container .card .content .text h3{
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Corinthia', cursive;
+    font-family: 'Satisfy', cursive;
+}
+
+.container .card .content .text center span{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: initial;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.arxan{
+    color:white;
+}
+.arxan:hover{
+    color:grey;
+    font-size:20px;
+    transition:0.5s;
+}
+
+
+

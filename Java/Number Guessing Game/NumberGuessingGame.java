@@ -6,13 +6,18 @@ public class NumberGuessingGame {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         
-        int lowerBound = 1;
-        int upperBound = 100;
+        System.out.println("Welcome to the Number Guessing Game!");
+
+        //We'll ask the user to input Upper bounds and Lower bounds.
+
+        System.out.print("Enter the Lower Bound: ");
+        int lowerBound = scanner.nextInt();
+        System.out.print("Enter the Upper Bound: ");
+        int upperBound = scanner.nextInt();
         int numberToGuess = random.nextInt(upperBound - lowerBound + 1) + lowerBound;
         int attempts = 0;
         int guess = 0;
         
-        System.out.println("Welcome to the Number Guessing Game!");
         System.out.println("I'm thinking of a number between " + lowerBound + " and " + upperBound + ".");
         
         while (guess != numberToGuess) {

@@ -1,0 +1,17 @@
+int dp[21][10002];
+    int solve(vector<int>&a,int ind,int diff){
+        if(ind>=a.size()){
+            return (diff==0) ? 0 : -1e4;
+        }
+        if(dp[ind][diff+5001]!=-1)
+        return dp[ind][diff+5001];
+        int op1=a[ind]+solve(a,ind+1,diff+a[ind]);
+        int op2=solve(a,ind+1,diff-a[ind]);
+        int op3=solve(a,ind+1,diff);
+        return dp[ind][diff+5001]=max(op1,max(op2,op3));
+    }
+    int tallestBillboard(vector<int>& a) {
+        memset(dp,-1,sizeof(dp));
+        return solve(a,0,0);
+
+    }

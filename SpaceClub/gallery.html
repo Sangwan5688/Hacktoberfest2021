@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style-footer.css">
+    <title>Gallery</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background: rgb(190, 188, 188);
+        }
+
+        .img-gallery{
+            width: 80%;
+            margin: 100px auto 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .img-gallery img{
+            width: 100%;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .img-gallery img:hover{
+            transform: scale(0.8) rotate(-15deg);
+            border-radius: 20px;
+            box-shadow: 0 32px 75px rgba(68,77,136,0.2);
+        }
+         
+        h1{
+            text-align: center;
+            margin: 0;
+            font-size: 4em;
+            font-family: "Booter - Zero Zero";
+            font-weight: normal;
+            color: black;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1> GALLERY </h1>
+    <div class="img-gallery">
+    <div> <a href="photos/photo1.jpg"> <img src="photos/photo1.jpg" height="400" width="300"> </a>   </div>  
+    <div> <a href="photos/photo2.jpg"> <img src="photos/photo2.jpg" height="400" width="300">  </a>  </div>  
+    <div> <a href="photos/photo3.jpg"> <img src="photos/photo3.jpg" height="400" width="300">  </a>  </div>
+    <div> <a href="photos/photo4.jpg"> <img src="photos/photo4.jpg" height="400" width="300">  </a>  </div>
+    <div> <a href="photos/photo5.jpg"> <img src="photos/photo5.jpg" height="400" width="300">  </a>  </div>
+    <div> <a href="photos/photo6.jpg"> <img src="photos/photo6.jpg" height="400" width="300">  </a>  </div>
+    <div> <a href="photos/photo7.jpg"> <img src="photos/photo7.jpg" height="400" width="300">  </a>  </div>
+    <div> <a href="photos/photo8.jpg"> <img src="photos/photo8.jpg" height="400" width="300">  </a>  </div>
+    <div> <a href="photos/photo9.jpg"> <img src="photos/photo9.jpg" height="400" width="300">  </a>  </div>
+    <div> <a href="photos/photo10.jpg"> <img src="photos/photo10.jpg" height="400" width="300"> </a> </div>    
+    <div> <a href="photos/photo11.jpg"> <img src="photos/photo11.jpg" height="400" width="300"> </a> </div> 
+    <div> <a href="photos/photo12.jpg"> <img src="photos/photo12.jpg" height="400" width="300"> </a> </div> 
+    </div>
+
+    <footer class="footer">
+        <div class="container1">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>space club</h4>
+                    <ul>
+                        <li><a href="#about">about us</a></li>
+                        <li><a href="#explore">explore</a></li>
+                        <li><a href="Privacy.html" target=_blank>privacy policy</a></li>
+                        <li><a href="gallery.html" target=_blank>gallery</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="FAQ.html" target=_blank>FAQ</a></li>
+                        <li><a href="ContactUs1.html" target=_blank>contact us</a></li>
+                        <li><a href="mailto:arushi0285.be21@chitkara.edu.in" target=_blank>mail us</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-col">
+                    <h4>Online Store</h4>
+                    <ul>
+                        
+                        <li><a href="shop/index.html" target=_blank>products</a></li>
+                        
+                    </ul>
+                </div>
+    
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/SPACEIndiaEdu/" target=_blank>
+                            <i class="fab fa-facebook-f"></i> </a>
+                        <a href="https://www.instagram.com/space_india/?hl=en" target=_blank>
+                            <i class="fab fa-instagram"></i> </a>
+                        <a href="https://twitter.com/spacian" target=_blank>
+                            <i class="fab fa-twitter"></i> </a>
+                        <a href="https://www.linkedin.com/in/spacegroup/?originalSubdomain=in%20" target=_blank>
+                            <i class="fab fa-linkedin-in"></i> </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

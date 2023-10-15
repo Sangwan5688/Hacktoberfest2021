@@ -1,1 +1,1 @@
-great-code-3 ---> minCostEndOfArray.kt
+great-code-4 ---> minCostEndOfArray.js

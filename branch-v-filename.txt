@@ -1,1 +1,1 @@
-great-code-2 ---> minCostEndOfArray.go
+great-code-3 ---> minCostEndOfArray.kt

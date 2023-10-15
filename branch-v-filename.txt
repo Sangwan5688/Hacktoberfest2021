@@ -1,1 +1,1 @@
-great-code-4 ---> minCostEndOfArray.js
+great-code-6 ---> longestSubstringWithoutRepeatingChars.kt

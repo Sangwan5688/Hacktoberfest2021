@@ -1,0 +1,30 @@
+//User function template for C++
+
+class Solution
+{
+  public:
+    long long solve(string &s, int k, int n){
+        vector<int> mp(26, 0);
+    	int i = 0, j = 0, cnt = 0;
+    	long long ans = 0;
+    	   
+    	while(j < n){
+    	    mp[s[j] - 'a']++;
+    	    if(mp[s[j] - 'a'] == 1) cnt++;
+    	    while(cnt > k){
+    	        mp[s[i] - 'a']--;
+    	        if(mp[s[i] - 'a'] == 0) cnt--;
+    	        i++;
+    	    }
+    	
+        	ans += (j - i + 1);
+        	j++;
+        }
+    	return ans;
+    }
+    
+    long long int substrCount (string s, int k){
+        int n = s.size();
+    	return solve(s, k, n) - solve(s, k - 1, n);	
+    }
+};

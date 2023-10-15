@@ -1,0 +1,13 @@
+int maxProduct(vector<int>& a) {
+        int ma=a[0],mi=a[0],ans=a[0];
+        if(a.size()==1)
+        return a[0];
+        for(int i=1;i<a.size();i++){
+            if(a[i]<0)
+            swap(ma,mi);
+            ma=max(a[i],a[i]*ma);
+            mi=min(a[i],a[i]*mi);
+            ans=max(ans,ma);
+        }
+        return max(a[0],ans);
+    }

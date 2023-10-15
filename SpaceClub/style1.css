@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    background-size: 100%;
+    z-index: -1;
+}
+
+.bgvideo2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 100%;
+}
+
+.main{
+    width: 400px;
+    margin: 10px auto 0px auto;
+    margin-bottom: 20px;
+}
+
+h2{
+    text-align: center;
+    padding: 20px;
+}
+
+.register{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(225, 225, 225, 0.3);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+form#register{
+    margin: 40px;
+}
+
+label{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.name{
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: rgb(231, 231, 231);
+    box-shadow: inset 1px 1px 0.5px
+    rgba(0, 0, 0, 0.3);
+    color:rgba(0, 0, 0, 0.637);
+}
+
+.sub{
+    width: 200px;
+    padding: 7px;
+    font-size: 16px;
+    background-color:rgba(255, 145, 0, 0.774);
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.sub:hover{
+    background-image:linear-gradient(rgb(0, 0, 0),rgb(39, 20, 36));
+    margin:auto;
+}
+
+label,span,h2{
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}

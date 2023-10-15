@@ -1,0 +1,23 @@
+class Solution {
+    int m = 1000000007;
+    
+    public int numWays(int steps, int arrLen) {
+        int[][] dp = new int[steps + 1][steps + 1];
+        for (int[] arr : dp) Arrays.fill(arr, -1);
+        return helper(arrLen, dp, 0, steps) % m;
+    }
+
+    public int helper(int arrLen, int[][] dp, int currPos, int steps) {
+        if (steps == 0 && currPos == 0) return 1;
+        if (steps == 0 && currPos != 0) return 0;
+
+        if (dp[currPos][steps] != -1) return dp[currPos][steps];
+
+        long stay = helper(arrLen, dp, currPos, steps - 1);
+        long left = 0;
+        long right = 0;
+        if (currPos > 0) left = helper(arrLen, dp, currPos - 1, steps - 1);
+        if (currPos < arrLen - 1) right = helper(arrLen, dp, currPos + 1, steps - 1);
+        return dp[currPos][steps] = (int)((stay + left + right) % m);
+    }
+}  

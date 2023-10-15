@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="jquery.js"></script>
+  <title>Document</title>
+  <style>
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 2.25rem;
+    }
+
+    body {
+      background-color: #f2f1ed;
+      color: #de4848;
+    }
+
+    .flip-card {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+      box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+      border-radius: .1em;
+    }
+
+    .top,
+    .bottom,
+    .flip-card .top-flip,
+    .flip-card .bottom-flip {
+      height: .75em;
+      line-height: 1;
+      padding: .25em;
+      overflow: hidden;
+    }
+
+    .top,
+    .flip-card .top-flip {
+      background-color: #f7f7f7;
+      border-top-right-radius: .1em;
+      border-top-left-radius: .1em;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .bottom,
+    .flip-card .bottom-flip {
+      background-color: white;
+      display: flex;
+      align-items: flex-end;
+      border-bottom-right-radius: .1em;
+      border-bottom-left-radius: .1em;
+    }
+
+    .flip-card .top-flip {
+      position: absolute;
+      width: 100%;
+      animation: flip-top 250ms ease-in;
+      transform-origin: bottom;
+    }
+
+    @keyframes flip-top {
+      100% {
+        transform: rotateX(90deg);
+      }
+    }
+
+    .flip-card .bottom-flip {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      animation: flip-bottom 250ms ease-out 250ms;
+      transform-origin: top;
+      transform: rotateX(90deg);
+    }
+
+    @keyframes flip-bottom {
+      100% {
+        transform: rotateX(0deg);
+      }
+    }
+
+    .container {
+      display: flex;
+      gap: .5em;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .container-segment {
+      display: flex;
+      flex-direction: column;
+      gap: .1em;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .segment {
+      display: flex;
+      gap: .1em;
+    }
+
+    .segment-title {
+      font-size: 1rem;
+    }
+
+    
+  </style>
+
+</head>
+<div class="page">
+ 
+
+  
+      < class="time">
+        <div class="container-segment">
+          <div class="segment-title">Hours</div>
+          <div class="segment">
+            <div class="flip-card" data-hours-tens>
+              <div class="top" id="Hour-tens-top">0</div>
+              <div class="bottom" id="Hour-tens-bottom">0</div>
+            </div>
+            <div class="flip-card" data-hours-ones>
+              <div class="top" id="Hour-ones-top">0</div>
+              <div class="bottom" id="Hour-ones-bottom">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="container-segment">
+          <div class="segment-title">Minutes</div>
+          <div class="segment">
+            <div class="flip-card" data-minutes-tens>
+              <div class="top" id="Min-tens-top">0</div>
+              <div class="bottom" id="Min-tens-bottom">0</div>
+            </div>
+            <div class="flip-card" data-minutes-ones>
+              <div class="top" id="Min-ones-top">0</div>
+              <div class="bottom" id="Min-ones-bottom">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="container-segment">
+          <div class="segment-title">Seconds</div>
+          <div class="segment">
+            <div class="flip-card" data-seconds-tens>
+              <div class="top" id="Sec-tens-top">0</div>
+              <div class="bottom" id="Sec-tens-bottom">0</div>
+            </div>
+            <div class="flip-card" data-seconds-ones>
+              <div class="top" id="Sec-ones-top">0</div>
+              <div class="bottom" id="Sec-ones-bottom">0</div>
+            </div>
+          </div>
+        </div>
+      
+     
+  
+</div>
+<button id="back">Back</button>
+
+</body>
+<script src="timer.js"></script>
+
+</html>

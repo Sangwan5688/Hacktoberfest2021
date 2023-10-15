@@ -56,5 +56,8 @@
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "java.compile.nullAnalysis.mode": "automatic"
+  "java.compile.nullAnalysis.mode": "automatic",
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "main"
+  ]
 }

@@ -1,0 +1,58 @@
+class Node {
+    int data;
+    Node next;
+
+    public Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class CyclicLinkedList {
+    Node head;
+
+    public CyclicLinkedList() {
+        this.head = null;
+    }
+
+    public void addNode(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+        } else {
+            Node current = head;
+            while (current.next != head) {
+                current = current.next;
+            }
+
+            current.next = newNode;
+            newNode.next = head;
+        }
+    }
+
+    public void printList() {
+        Node current = head;
+
+        do {
+            System.out.print(current.data + " ");
+            current = current.next;
+        } while (current != head);
+
+        System.out.println();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        CyclicLinkedList list = new CyclicLinkedList();
+
+        list.addNode(1);
+        list.addNode(2);
+        list.addNode(3);
+        list.addNode(4);
+
+        list.printList();
+    }
+}

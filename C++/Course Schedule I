@@ -1,0 +1,31 @@
+bool det(vector<int>adj[],vector<bool>&vis,vector<bool>&rec,int i){
+        vis[i]=true;
+        rec[i]=true;
+        for(int j:adj[i]){
+            if(!vis[j]){
+                if(det(adj,vis,rec,j))
+                return true;
+            }
+            else if(rec[j])
+            return true;
+        }
+        rec[i]=false;
+        return false;
+    }
+    bool canFinish(int n, vector<vector<int>>& pr) {
+        vector<int>adj[n];       
+        vector<bool>vis(n,false);
+        vector<bool>rec(n,false);
+        for(int i=0;i<pr.size();i++){
+            int a=pr[i][0],b=pr[i][1];
+    
+            adj[b].push_back(a);
+        }
+       for(int i=0;i<n;i++){
+           if(!vis[i]){
+              if(det(adj,vis,rec,i))
+              return false;
+           }
+       }
+       return true;
+    }

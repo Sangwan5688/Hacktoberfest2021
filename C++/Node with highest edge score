@@ -1,0 +1,24 @@
+int edgeScore(vector<int>& a) {
+        int n=a.size();
+        vector<int>adj[n];
+        for(int i=0;i<n;i++){
+           adj[a[i]].push_back(i);
+        }
+        uint sc[n],maxi=0;
+        for(int i=0;i<n;i++)
+        sc[i]=0;
+        for(int i=0;i<n;i++){
+            uint s=0;
+            for(uint j:adj[i]){
+                s+=j;
+            }
+            
+            sc[i]=s;
+            maxi=max(maxi,s);
+        }
+        for(int i=0;i<n;i++){
+            if(maxi==sc[i])
+            return i;
+        }
+        return -1;
+    }

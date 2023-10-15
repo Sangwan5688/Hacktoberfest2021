@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body, h1 , h2, h3 , h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(assets/img/bg-390.png);
+    background-size: cover;
+    height: 100dvh;
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+}
+
+/* Dealer/ Player Section */
+
+.title {
+    display: flex;
+    justify-content: center;
+    gap: 0 2rem;
+    align-items: center;
+    margin-block: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
+}
+
+
+.button-triggers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button, #trigger-section {
+    background-color: black;
+    border: none;
+    min-width: 6rem;
+    max-width: 13rem;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 2rem;
+}
+
+button:hover {
+    cursor: pointer;
+    border: .2rem rgb(237, 179, 32) solid;
+}
+
+button:active {
+    background-color: rgb(237, 179, 32);
+}

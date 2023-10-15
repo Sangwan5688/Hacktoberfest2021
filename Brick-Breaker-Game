@@ -1,0 +1,138 @@
+//#1695
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class BrickBreakerGame extends JPanel implements KeyListener, ActionListener {
+    private int ballX = 120;
+    private int ballY = 350;
+    private int ballXDirection = -1;
+    private int ballYDirection = -2;
+    private int playerX = 310;
+    private int ballDiameter = 20;
+    private boolean play = false;
+
+    public BrickBreakerGame() {
+        addKeyListener(this);
+        setFocusable(true);
+        setFocusTraversalKeysEnabled(false);
+        Timer timer = new Timer(5, this);
+        timer.start();
+    }
+
+    public void paint(Graphics g) {
+        // Background
+        g.setColor(Color.black);
+        g.fillRect(1, 1, 692, 592);
+
+        // Borders
+        g.setColor(Color.yellow);
+        g.fillRect(0, 0, 3, 592);
+        g.fillRect(0, 0, 692, 3);
+        g.fillRect(681, 0, 3, 592);
+
+        // Paddle
+        g.setColor(Color.green);
+        g.fillRect(playerX, 550, 100, 8);
+
+        // Ball
+        g.setColor(Color.yellow);
+        g.fillOval(ballX, ballY, ballDiameter, ballDiameter);
+
+        if (ballY > 570) {
+            play = false;
+            ballXDirection = 0;
+            ballYDirection = 0;
+            g.setColor(Color.RED);
+            g.setFont(new Font("serif", Font.BOLD, 30));
+            g.drawString("Game Over", 260, 300);
+
+            g.setFont(new Font("serif", Font.BOLD, 20));
+            g.drawString("Press Enter to Restart", 230, 350);
+        }
+
+        g.dispose();
+    }
+
+    public void keyTyped(KeyEvent e) {
+    }
+
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            if (playerX >= 600) {
+                playerX = 600;
+            } else {
+                moveRight();
+            }
+        }
+        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            if (playerX < 10) {
+                playerX = 10;
+            } else {
+                moveLeft();
+            }
+        }
+        if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+            if (!play) {
+                play = true;
+                ballX = 120;
+                ballY = 350;
+                ballXDirection = -1;
+                ballYDirection = -2;
+                playerX = 310;
+
+                repaint();
+            }
+        }
+    }
+
+    public void keyReleased(KeyEvent e) {
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if (play) {
+            if (new Rectangle(ballX, ballY, ballDiameter, ballDiameter).intersects(new Rectangle(playerX, 550, 100, 8)) {
+                ballYDirection = -ballYDirection;
+            }
+
+            ballX += ballXDirection;
+            ballY += ballYDirection;
+
+            if (ballX < 0) {
+                ballXDirection = -ballXDirection;
+            }
+            if (ballY < 0) {
+                ballYDirection = -ballYDirection;
+            }
+            if (ballX > 670) {
+                ballXDirection = -ballXDirection;
+            }
+
+            repaint();
+        }
+    }
+
+    public void moveRight() {
+        play = true;
+        playerX += 20;
+    }
+
+    public void moveLeft() {
+        play = true;
+        playerX -= 20;
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame();
+        BrickBreakerGame game = new BrickBreakerGame();
+        frame.setBounds(10, 10, 700, 600);
+        frame.setTitle("Brick Breaker Game");
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(game);
+        frame.setVisible(true);
+    }
+}

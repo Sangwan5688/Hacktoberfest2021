@@ -1,0 +1,32 @@
+int findNumberOfLIS(vector<int>& a) {
+        int n=a.size();
+        vector<int>ct(n);
+        vector<int>dp(n);
+        int maxi=INT_MIN;
+        for(int i=0;i<n;i++){
+            dp[i]=1;
+            ct[i]=1;
+            for(int j=0;j<i;j++){
+                if(a[j]>=a[i])
+                continue;
+                if(dp[i]==1+dp[j]){
+                  ct[i]+=ct[j];
+                }
+                else if(dp[i]<1+dp[j]){
+                dp[i]=1+dp[j];
+                ct[i]=ct[j];
+                }
+               // maxi=max(maxi,dp[i]);
+            }
+            maxi=max(maxi,dp[i]);
+        }
+        int ans=0;
+        for(int i=0;i<n;i++){
+            if(maxi==dp[i]){
+            ans+=ct[i];
+            
+            }
+        }
+    
+    return ans;
+    }

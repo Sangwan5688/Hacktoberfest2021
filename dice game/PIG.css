@@ -1,0 +1,212 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    max-width: 1280;
+    box-sizing: inherit;
+    
+  }
+  
+  body{
+    align-items: center;
+    justify-content: center;
+    background: url("img.jpg");
+    max-width: 12;
+  }
+  .Uname1{
+    z-index: 1;
+    position: absolute;
+  left: 118px;
+  font-size: 26;
+  top: 54px;
+  font-family: Roboto;
+  }
+  .Uname2{
+    z-index: 1;
+    position: absolute;
+  right: 118px;
+  top: 54px;
+  font-size: 26;
+  font-family: Roboto;
+  }
+  .hidden{
+    display: none;
+  }
+  .colChanger{
+    color:  rgb(255, 254, 187);
+    background-color: rgba(122, 122, 122, 0.6);
+    transition: 0.4s all 0s ease-out;
+  }
+  .winChanger{
+    color: yellow;
+    background-color: black;
+  }
+  .G_frame1{
+    position: absolute;
+    z-index: -4;
+    width: 710px;
+    height: 396px;
+    left: 285px;
+    top: 91px;
+    background: rgb(0, 255, 234);
+    border-radius: 10px;
+    box-shadow: 0px 0px 18px 11px rgba(0, 0, 0, 0.25);
+  }
+  
+  .New_Button{
+    position: absolute;
+  width: 123px;
+  height: 32px;
+  left: 293px;
+  top: 21px;
+  z-index: 999;
+  background: rgb(255, 255, 255);
+  border-radius: 18px;
+  border: none;
+  font-family: "roboto";
+  font-size: 15px;
+  }
+  .New_Button:focus{
+    outline: none;
+  }
+  .New_Button:active{
+    background-color: rgb(189, 189, 189)
+  }
+  .scoreLine1{
+    position: absolute;
+    z-index: 999;
+    font-family: 'roboto';
+    font-size: 18px;
+    font-weight: bold;
+  width: 134px;
+  height: 77px;
+  left: 104px;
+  top: 237px;
+  color: rgb(254, 255, 170);
+  background: rgb(17, 17, 17);
+  border-radius: 14px;
+  }
+  .scoreLine2{
+    position: absolute;
+  width: 134px;
+  z-index: 999;
+  font-family: 'roboto';
+    font-size: 18px;
+    font-weight: bold;
+  height: 77px;
+  left: 115px;
+  top: 237px;
+  color: rgb(254, 255, 170);
+  background: rgba(17, 17, 17);
+  border-radius: 14px;
+  }
+  #player{
+    position: absolute;
+    margin-top: 10px ;
+    margin-left: 27px;
+  }
+  #score1{
+    position: absolute;
+    font-size: 30px;
+    margin-left: 55px;
+    margin-top:10px;
+  }
+  #score2{
+    position: absolute;
+    font-size: 30px;
+    margin-left: 55px;
+    margin-top:10px;
+  }
+  .G_frame2{
+    position: absolute;
+  width: 355px;
+  height: 396px;
+  left: 355px;
+  z-index: -3;
+  border-radius: 0px 10px 10px 0px;
+  }
+  .G_frame3{
+    position: absolute;
+  width: 355px;
+  height: 396px;
+  z-index: -3;
+  border-radius: 10px 0px 0px 10px;
+  }
+  .ScoreP1{
+    position: absolute;
+    font-family: "Roboto";
+    z-index: 999;
+    font-size: 63px;
+    left: 153px;
+    top: 114px;
+  }
+  .ScoreP2{
+    position: absolute;
+    font-family: "Roboto";
+    z-index: 999;
+    font-size: 63px;
+    left: 160px;
+  top: 114px;
+  }
+  .ScorePa{
+    position: absolute;
+    font-family: "Roboto";
+    z-index: 999;
+    font-size: 63px;
+    left: 50px;
+    top: 114px;
+  }
+  .ScorePb{
+    position: absolute;
+    font-family: "Roboto";
+    z-index: 999;
+    font-size: 63px;
+    left: 70px;
+    top: 114px;
+  }
+  .DRoll{
+    z-index: 999;
+    position: absolute;
+    left: 284px;
+    top: 237px;
+    width: 142px;
+    font-family: "Roboto";
+    font-weight:normal;
+    font-size: 15px;
+    height: 32px;
+   background: rgb(255, 255, 255);
+   border-radius: 18px;
+   border: none;
+  }
+  .DRoll:focus{
+   outline: none;
+  }
+  .DRoll:active{
+    background-color: rgb(189, 189, 189);
+  }
+  .DHold{
+    z-index: 999;
+    position: absolute;
+    left: 305px;
+    bottom: 81px;
+    width: 99px;
+    height: 32px;
+    font-family: "Roboto";
+    position: absolute;
+    font-size: 15px;
+    background: rgb(255, 255, 255);
+    border-radius: 18px;
+    border: none;
+  }
+  .DHold:focus{
+    outline: none;
+  }
+  .DHold:active{
+    background-color: rgb(189, 189, 189);
+  }
+  .Dice{
+    position: absolute;
+    z-index: 999;
+    left: 602px;
+    top: 206px ;
+    box-shadow: 0px 0px 15px 6px rgba(0, 0, 0, 0.25);
+  }

@@ -1,0 +1,26 @@
+// Sliding window algorithm to find the maximum subarray sum.
+function maxSubarraySum(array, windowSize) {
+  let maxSum = 0;
+  let currentSum = 0;
+
+  // Initialize the sliding window.
+  for (let i = 0; i < windowSize; i++) {
+    currentSum += array[i];
+  }
+
+  // Slide the window over the array and update the maximum sum.
+  for (let i = windowSize; i < array.length; i++) {
+    currentSum += array[i] - array[i - windowSize];
+    maxSum = Math.max(maxSum, currentSum);
+  }
+
+  // Return the maximum sum.
+  return maxSum;
+}
+
+// Example usage:
+const array = [1, 2, 3, 4, 5];
+const windowSize = 3;
+const maxSum = maxSubarraySum(array, windowSize);
+
+console.log(`The maximum subarray sum is: ${maxSum}`);

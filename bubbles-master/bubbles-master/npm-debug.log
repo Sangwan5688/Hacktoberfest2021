@@ -1,0 +1,26 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'docs', 'coffeescript' ]
+info using npm@1.0.103
+info using node@v0.4.11
+verbose config file /Users/franzseo/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /usr/local/lib/node_modules/npm/npmrc
+verbose GET coffeescript/latest
+verbose raw, before any munging coffeescript/latest
+verbose url resolving [ 'https://registry.npmjs.org/',
+verbose url resolving   './coffeescript/latest' ]
+verbose url resolved https://registry.npmjs.org/coffeescript/latest
+ERR! Error: ECONNREFUSED, Could not contact DNS servers
+ERR!     at IOWatcher.callback (dns.js:74:15)
+ERR! Report this *entire* log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Darwin 11.2.0
+ERR! command "node" "/usr/local/bin/npm" "docs" "coffeescript"
+ERR! cwd /Users/franzseo/dev/games/g-one
+ERR! node -v v0.4.11
+ERR! npm -v 1.0.103
+ERR! code ECONNREFUSED
+verbose exit [ 1, true ]

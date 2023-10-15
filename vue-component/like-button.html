@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Contrast Like Button</title>
+    <!-- Include Vue.js from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <style>
+        /* Add your CSS styles here */
+        .like-button {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            padding: 8px;
+            border: 2px solid black; /* Add a border */
+            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        .heart-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 4px;
+            fill: black; /* Initial color, you can change this as needed */
+        }
+        .liked {
+            background-color: black; /* Change background color when liked */
+            color: white; /* Change text color when liked */
+            border-color: black; /* Change border color when liked */
+        }
+        .liked .heart-icon {
+            fill: white; /* Change heart color when liked */
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <like-button></like-button>
+    </div>
+
+    <script>
+        // Define the LikeButton component
+        Vue.component('like-button', {
+            data() {
+                return {
+                    liked: false,
+                    likeCount: 0,
+                };
+            },
+            methods: {
+                toggleLike() {
+                    this.liked = !this.liked;
+                    this.likeCount += this.liked ? 1 : -1;
+                },
+            },
+            template: `
+                <div :class="['like-button', { 'liked': liked }]" @click="toggleLike">
+                    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 16.15 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 7.65-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <span>{{ likeCount }}</span>
+                </div>
+            `,
+        });
+
+        // Create a Vue instance
+        new Vue({
+            el: '#app',
+        });
+    </script>
+</body>
+</html>

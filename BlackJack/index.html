@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> BlackJack </title>
+	<meta name="author" content="Kyle Magri">
+	<meta name="description" content="This is a blackjack game, played between a player and the dealer">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="dealer">
+                <div class="title">
+                    <h2>Dealer's Hand: </h2>
+                    <p id="dealer-count">Total Amount</p>
+                </div>
+                <div class="cards-container">
+                    <div id="dealer" class="cards">
+                        0
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-triggers">
+                <button id="start-button" onclick="startGame()" class="startGame">Start Game!</button>
+                <p id="trigger-section">What's your next move?</p>
+                <button id="stay-button" onclick="stay()">Stay</button>
+            </div>
+
+            <div class="player">
+                <div class="title">
+                    <h2>Player's Hand: </h2>
+                    <p id="player-count">Total Amount</p>
+                </div>
+                <div class="cards-container">
+                    <div id="player" class="cards">
+                        0
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="index.js" defer></script>
+</body>
+</html>

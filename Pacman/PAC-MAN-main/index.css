@@ -1,0 +1,26 @@
+body {
+    background-image: url('background.jpg');
+}
+h1 {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    margin: 8px;
+}

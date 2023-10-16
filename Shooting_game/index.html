@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas_game</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: black;
+        }
+        canvas{
+            margin: 0;
+        }
+        .scoreBox{
+            position: absolute;
+            color: white;
+            font-size: x-large;
+            top: 8px;
+            left: 8px;
+            user-select: none;
+        }
+        #scoreBoard{
+            position: fixed;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+        .scoreBoard2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            /* width: 300px; height: 200px; */
+            padding: 8px;
+        }
+        h1{
+            margin: 0px;
+        }
+        button{
+            background-color: #000069;
+            color: #fff;
+            padding: 12px;
+            width: 100%;
+            border: 0px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scoreBox">
+        <span>Score : </span><span id="score">0</span>
+        <br>
+        <span>SuperShoot : </span><span id="SuperShoot">0</span>
+    </div>
+
+    <div id="scoreBoard">
+        <div class="scoreBoard2">
+            <h1 id="BoardScore">0</h1>
+            <p>points</p>
+            <button id="startButton">START</button>
+        </div>
+    </div>
+    <canvas></canvas>
+    <script src="./index.js"></script>
+</body>
+</html>

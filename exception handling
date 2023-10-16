@@ -1,0 +1,12 @@
+#1998
+public class ExceptionHandlingExample {
+    public static void main(String[] args) {
+        try {
+            int result = 5 / 0; // Division by zero
+        } catch (ArithmeticException e) {
+            System.err.println("An error occurred: " + e.getMessage());
+        } finally {
+            System.out.println("Execution completed.");
+        }
+    }
+}

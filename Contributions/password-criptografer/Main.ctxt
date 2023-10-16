@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Main
+comment0.text=\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ Main\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (um\ n\u00FAmero\ da\ vers\u00E3o\ ou\ uma\ data)\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment10.params=fraseRev
+comment10.target=java.lang.String\ criptografiaInversa(java.lang.String)
+comment11.params=fraseRev
+comment11.target=java.lang.String\ decriptografiaInversa(java.lang.String)
+comment2.params=
+comment2.target=int\ verifica_se_o_numero_e_inteiro()
+comment3.params=
+comment3.target=java.lang.String\ continua_pedindo_ate_nao_ter_acento()
+comment4.params=texto
+comment4.target=boolean\ temAcento(java.lang.String)
+comment5.params=esc
+comment5.target=boolean\ verifica_escolha(int)
+comment6.params=
+comment6.target=int\ pede_escolha()
+comment7.params=palavra
+comment7.target=java.lang.String\ criptografar(java.lang.String)
+comment8.params=palavra
+comment8.target=java.lang.String\ descriptografar(java.lang.String)
+comment9.params=palavra
+comment9.target=java.lang.String\ stringReverse(java.lang.String)
+numComments=12

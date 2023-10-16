@@ -1,0 +1,31 @@
+Class documentation
+<---- javadoc command: ---->
+/snap/bluej/314/usr/share/bluej/jdk/bin/javadoc
+-author
+-version
+-nodeprecated
+-package
+-Xdoclint:none
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+17
+-classpath
+/snap/bluej/314/usr/share/bluej/bluejcore.jar:/snap/bluej/314/usr/share/bluej/javafx-base-20.0.1-linux.jar:/snap/bluej/314/usr/share/bluej/javafx-base-20.0.1.jar:/snap/bluej/314/usr/share/bluej/javafx-controls-20.0.1-linux.jar:/snap/bluej/314/usr/share/bluej/javafx-controls-20.0.1.jar:/snap/bluej/314/usr/share/bluej/javafx-fxml-20.0.1-linux.jar:/snap/bluej/314/usr/share/bluej/javafx-graphics-20.0.1-linux.jar:/snap/bluej/314/usr/share/bluej/javafx-graphics-20.0.1.jar:/snap/bluej/314/usr/share/bluej/javafx-media-20.0.1-linux.jar:/snap/bluej/314/usr/share/bluej/javafx-media-20.0.1.jar:/snap/bluej/314/usr/share/bluej/javafx-swing-20.0.1-linux.jar:/snap/bluej/314/usr/share/bluej/javafx-web-20.0.1-linux.jar:/snap/bluej/314/usr/share/bluej/junit-4.12.jar:/snap/bluej/314/usr/share/bluej/junit-jupiter-5.5.2.jar:/snap/bluej/314/usr/share/bluej/junit-jupiter-api-5.5.2.jar:/snap/bluej/314/usr/share/bluej/junit-jupiter-engine-5.5.2.jar:/snap/bluej/314/usr/share/bluej/junit-jupiter-params-5.5.2.jar:/snap/bluej/314/usr/share/bluej/junit-platform-commons-1.5.2.jar:/snap/bluej/314/usr/share/bluej/junit-platform-engine-1.5.2.jar:/snap/bluej/314/usr/share/bluej/junit-platform-launcher-1.5.2.jar:/snap/bluej/314/usr/share/bluej/junit-platform-suite-api-1.5.2.jar:/snap/bluej/314/usr/share/bluej/junit-vintage-engine-5.5.2.jar:/snap/bluej/314/usr/share/bluej/hamcrest-core-1.3.jar:/snap/bluej/314/usr/share/bluej/opentest4j-1.2.0.jar:/snap/bluej/314/usr/share/bluej/lang-stride.jar:/home/brisolara/Documents/Faculdade/2023.2/fprog/trabalho-criptografia
+-d
+/home/brisolara/Documents/Faculdade/2023.2/fprog/trabalho-criptografia/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+/home/brisolara/Documents/Faculdade/2023.2/fprog/trabalho-criptografia/Main.java
+<---- end of javadoc command ---->
+Loading source file /home/brisolara/Documents/Faculdade/2023.2/fprog/trabalho-criptografia/Main.java...
+Constructing Javadoc information...
+Standard Doclet version 17.0.4.1+1
+Building tree for all the packages and classes...
+Generating /home/brisolara/Documents/Faculdade/2023.2/fprog/trabalho-criptografia/doc/Main.html...
+Generating /home/brisolara/Documents/Faculdade/2023.2/fprog/trabalho-criptografia/doc/package-summary.html...
+Generating /home/brisolara/Documents/Faculdade/2023.2/fprog/trabalho-criptografia/doc/index.html...

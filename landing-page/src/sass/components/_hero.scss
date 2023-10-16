@@ -1,0 +1,115 @@
+// TODO : Refactor Hero
+// --> Find another type of more efficient resposive solution
+// --> $image-mockups
+// --> $bg-intro-mobile
+// --> $bg-intro-desktop
+
+.hero {
+  background: var(--veryLightGray);
+  text-align: center;
+  padding-bottom: 4.8em;
+  &__image {
+    background: url($image-mockups) center bottom no-repeat,
+      url($bg-intro-mobile) center no-repeat;
+    background-size: calc(var(--mobile) - (var(--wrapper) * 2 - 18px)), cover;
+    height: 300px;
+    margin: 0 calc(-1 * var(--wrapper));
+    margin-bottom: 1.4em;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 0;
+    &__main {
+      background: url($bg-intro-desktop) left 35vw top 75% no-repeat;
+      background-size: 1230px;
+    }
+    &__grid {
+      // border: 1px solid blue;
+      display: grid;
+      grid-template-columns: 315px 1fr;
+      grid-template-areas: 'content image';
+      min-height: 656px;
+      align-items: center;
+    }
+    &__image {
+      // border: 1px solid green;
+      grid-area: image;
+      background: none;
+      position: absolute;
+      background: url($image-mockups) left 25px top -124px no-repeat;
+      background-size: auto;
+      height: 818px;
+      width: 367px;
+      right: 0;
+      margin: 0;
+    }
+    &__content {
+      // border: 1px solid green;
+      grid-area: content;
+      text-align: left;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .title__primary {
+      font-size: 2.4em;
+    }
+    .description {
+      font-size: 1em;
+    }
+    &__main {
+      background: url($bg-intro-desktop) left 44vw top 71% no-repeat;
+    }
+    &__grid {
+      grid-template-columns: 460px 1fr;
+    }
+    &__image {
+      // border: 1px solid brown;
+      background: url($image-mockups) left 188px top -124px no-repeat;
+      width: 567px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    &__main {
+      background: url($bg-intro-desktop) left 43vw top 70% no-repeat;
+    }
+    &__image {
+      // border: 1px solid purple;
+      background: url($image-mockups) left 168px top -124px no-repeat;
+      width: 667px;
+    }
+  }
+  @media screen and (min-width: 1366px) {
+    &__main {
+      background: url($bg-intro-desktop) left 41vw top 70% no-repeat;
+    }
+    &__image {
+      // border: 1px solid cyan;
+      background: url($image-mockups) left 148px top -124px no-repeat;
+      width: 767px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    &__main {
+      background: url($bg-intro-desktop) left 43vw top 72% no-repeat;
+    }
+    &__image {
+      // border: 1px solid yellow;
+      background: url($image-mockups) left 84px top -124px no-repeat;
+      width: auto;
+      left: 50%;
+    }
+  }
+
+  @media screen and (min-width: 1920px) {
+    &__main {
+      background: url($bg-intro-desktop) left 47vw top 70% no-repeat;
+    }
+    &__image {
+      // border: 1px solid red;
+      background: url($image-mockups) left 132px top -124px no-repeat;
+    }
+  }
+}

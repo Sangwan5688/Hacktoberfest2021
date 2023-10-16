@@ -1,0 +1,52 @@
+.why-easybank {
+  background: var(--lightGrayishBlue);
+  text-align: center;
+  padding-top: 4em;
+  padding-bottom: 3em;
+  &__description {
+    @extend .description;
+    margin-bottom: 4em;
+  }
+  &__grid {
+    display: grid;
+    grid-gap: 1.6em;
+  }
+  &__feature {
+    img {
+      margin-bottom: 1.5em;
+    }
+    .description {
+      margin-bottom: 2em;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 5em;
+    text-align: left;
+    &__description {
+      max-width: 90%;
+      font-size: 1em;
+    }
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    &__description {
+      max-width: 65%;
+    }
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    &__description {
+      max-width: 60%;
+    }
+    &__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

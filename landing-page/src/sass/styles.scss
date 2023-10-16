@@ -1,0 +1,20 @@
+/*!
+ * Easybank landing page
+ */
+
+// scss-docs-start import-stack
+// Configuration
+@import 'variables';
+
+// Layout & components
+@import 'root';
+@import 'globals';
+@import 'components/button';
+@import 'components/header';
+@import 'components/hero';
+@import 'components/why-easybank';
+@import 'components/latest-articles';
+@import 'components/footer';
+
+// Utilities
+// scss-docs-end import-stack

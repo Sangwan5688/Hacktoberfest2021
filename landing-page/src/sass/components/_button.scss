@@ -1,0 +1,21 @@
+.btn {
+  background-image: linear-gradient(
+    to right,
+    var(--limeGreen) 0%,
+    var(--brightCyan) 100%
+  );
+  color: var(--veryLightGray);
+  border: none;
+  padding: 1em 2.5em;
+  border-radius: 2em;
+  font-size: 0.8em;
+  font-weight: 500;
+  user-select: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}

@@ -1,0 +1,26 @@
+@import 'menu';
+
+.header {
+  display: flex;
+  background: var(--white);
+  padding: 1.2em var(--wrapper);
+  justify-content: space-between;
+  max-width: var(--desktop);
+  position: relative;
+  margin: auto;
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+  .btn {
+    display: none;
+    align-self: center;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 1em var(--wrapper);
+    .btn {
+      display: block;
+    }
+  }
+}

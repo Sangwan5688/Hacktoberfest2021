@@ -1,0 +1,32 @@
+@mixin icon($background-image) {
+  width: 25px;
+  height: 25px;
+  background-image: url($background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-flex;
+
+  @media screen and (min-width: 1024px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.icon {
+  &__facebook {
+    @include icon($icon-facebook);
+  }
+  &__youtube {
+    @include icon($icon-youtube);
+  }
+  &__twitter {
+    @include icon($icon-twitter);
+  }
+  &__pinterest {
+    @include icon($icon-pinterest);
+  }
+  &__instagram {
+    @include icon($icon-instagram);
+  }
+}

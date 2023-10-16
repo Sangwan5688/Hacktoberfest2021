@@ -1,0 +1,17 @@
+:root {
+  /* Primary colors */
+  --darkBlue: hsl(233, 26%, 24%);
+  --limeGreen: hsl(136, 65%, 51%);
+  --brightCyan: hsl(192, 70%, 51%);
+
+  /* Neutral colors */
+  --grayishBlue: hsl(233, 8%, 62%);
+  --lightGrayishBlue: hsl(220, 16%, 96%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Layout */
+  --mobile: 375px;
+  --desktop: 1112px;
+  --wrapper: 24px;
+}

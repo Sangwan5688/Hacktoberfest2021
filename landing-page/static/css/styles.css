@@ -1,0 +1,481 @@
+/*!
+ * Easybank landing page
+ */
+:root {
+  /* Primary colors */
+  --darkBlue: hsl(233, 26%, 24%);
+  --limeGreen: hsl(136, 65%, 51%);
+  --brightCyan: hsl(192, 70%, 51%);
+  /* Neutral colors */
+  --grayishBlue: hsl(233, 8%, 62%);
+  --lightGrayishBlue: hsl(220, 16%, 96%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+  /* Layout */
+  --mobile: 375px;
+  --desktop: 1112px;
+  --wrapper: 24px;
+}
+
+body {
+  margin: 0;
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--grayishBlue);
+  background-color: var(--white);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.wrapper {
+  padding: 0 var(--wrapper);
+  max-width: var(--desktop);
+  margin: auto;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.title__primary {
+  color: var(--darkBlue);
+  font-size: 2em;
+  font-weight: 400;
+}
+.title__secondary {
+  color: var(--darkBlue);
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.title__tertiary {
+  color: var(--darkBlue);
+  font-size: 0.85em;
+  font-weight: 400;
+}
+
+.description, .why-easybank__description {
+  font-size: 0.8em;
+  line-height: 1.6;
+  margin-bottom: 3em;
+  margin-top: 1.5em;
+  font-weight: 400;
+}
+
+.btn {
+  background-image: linear-gradient(to right, var(--limeGreen) 0%, var(--brightCyan) 100%);
+  color: var(--veryLightGray);
+  border: none;
+  padding: 1em 2.5em;
+  border-radius: 2em;
+  font-size: 0.8em;
+  font-weight: 500;
+  user-select: none;
+  cursor: pointer;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+.menu {
+  display: none;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.menu__item {
+  padding: 0 1em;
+}
+.menu__link {
+  color: var(--grayishBlue);
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+.menu__hamburger {
+  background: url("../images/icon-hamburger.svg") no-repeat center;
+  width: 24px;
+}
+.menu__checkbox {
+  display: none;
+}
+.menu__checkbox:checked ~ .menu {
+  display: block;
+  background: linear-gradient(to bottom, var(--darkBlue) 0%, transparent 100%);
+  position: absolute;
+  height: 100vh;
+  padding: var(--wrapper) var(--wrapper);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.menu__checkbox:checked ~ .menu__hamburger {
+  background: url("../images/icon-close.svg") no-repeat center;
+}
+.menu__checkbox:checked ~ .menu .menu__item {
+  padding: 0;
+  background: var(--white);
+}
+.menu__checkbox:checked ~ .menu .menu__item:first-child {
+  padding-top: 0.8em;
+  border-radius: 0.3em 0.3em 0 0;
+}
+.menu__checkbox:checked ~ .menu .menu__item:last-child {
+  padding-bottom: 0.8em;
+  border-radius: 0 0 0.3em 0.3em;
+}
+.menu__checkbox:checked ~ .menu .menu__link {
+  padding: 0.6em 1em;
+  display: block;
+  color: var(--darkBlue);
+  font-size: 1em;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: flex;
+  }
+  .menu__hamburger {
+    display: none;
+  }
+}
+
+.header {
+  display: flex;
+  background: var(--white);
+  padding: 1.2em var(--wrapper);
+  justify-content: space-between;
+  max-width: var(--desktop);
+  position: relative;
+  margin: auto;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.header .btn {
+  display: none;
+  align-self: center;
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 1em var(--wrapper);
+  }
+  .header .btn {
+    display: block;
+  }
+}
+
+.hero {
+  background: var(--veryLightGray);
+  text-align: center;
+  padding-bottom: 4.8em;
+}
+.hero__image {
+  background: url("../images/image-mockups.png") center bottom no-repeat, url("../images/bg-intro-mobile.svg") center no-repeat;
+  background-size: calc(var(--mobile) - (var(--wrapper) * 2 - 18px)), cover;
+  height: 300px;
+  margin: 0 calc(-1 * var(--wrapper));
+  margin-bottom: 1.4em;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-bottom: 0;
+  }
+  .hero__main {
+    background: url("../images/bg-intro-desktop.svg") left 35vw top 75% no-repeat;
+    background-size: 1230px;
+  }
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 315px 1fr;
+    grid-template-areas: "content image";
+    min-height: 656px;
+    align-items: center;
+  }
+  .hero__image {
+    grid-area: image;
+    background: none;
+    position: absolute;
+    background: url("../images/image-mockups.png") left 25px top -124px no-repeat;
+    background-size: auto;
+    height: 818px;
+    width: 367px;
+    right: 0;
+    margin: 0;
+  }
+  .hero__content {
+    grid-area: content;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero .title__primary {
+    font-size: 2.4em;
+  }
+  .hero .description, .hero .why-easybank__description {
+    font-size: 1em;
+  }
+  .hero__main {
+    background: url("../images/bg-intro-desktop.svg") left 44vw top 71% no-repeat;
+  }
+  .hero__grid {
+    grid-template-columns: 460px 1fr;
+  }
+  .hero__image {
+    background: url("../images/image-mockups.png") left 188px top -124px no-repeat;
+    width: 567px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__main {
+    background: url("../images/bg-intro-desktop.svg") left 43vw top 70% no-repeat;
+  }
+  .hero__image {
+    background: url("../images/image-mockups.png") left 168px top -124px no-repeat;
+    width: 667px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .hero__main {
+    background: url("../images/bg-intro-desktop.svg") left 41vw top 70% no-repeat;
+  }
+  .hero__image {
+    background: url("../images/image-mockups.png") left 148px top -124px no-repeat;
+    width: 767px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero__main {
+    background: url("../images/bg-intro-desktop.svg") left 43vw top 72% no-repeat;
+  }
+  .hero__image {
+    background: url("../images/image-mockups.png") left 84px top -124px no-repeat;
+    width: auto;
+    left: 50%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .hero__main {
+    background: url("../images/bg-intro-desktop.svg") left 47vw top 70% no-repeat;
+  }
+  .hero__image {
+    background: url("../images/image-mockups.png") left 132px top -124px no-repeat;
+  }
+}
+
+.why-easybank {
+  background: var(--lightGrayishBlue);
+  text-align: center;
+  padding-top: 4em;
+  padding-bottom: 3em;
+}
+.why-easybank__description {
+  margin-bottom: 4em;
+}
+.why-easybank__grid {
+  display: grid;
+  grid-gap: 1.6em;
+}
+.why-easybank__feature img {
+  margin-bottom: 1.5em;
+}
+.why-easybank__feature .description, .why-easybank__feature .why-easybank__description {
+  margin-bottom: 2em;
+}
+@media screen and (min-width: 768px) {
+  .why-easybank {
+    padding-top: 5em;
+    text-align: left;
+  }
+  .why-easybank__description {
+    max-width: 90%;
+    font-size: 1em;
+  }
+  .why-easybank__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .why-easybank__description {
+    max-width: 65%;
+  }
+  .why-easybank__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .why-easybank__description {
+    max-width: 60%;
+  }
+  .why-easybank__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.latest-articles {
+  background: var(--veryLightGray);
+  padding-top: 4.5em;
+  padding-bottom: 4em;
+}
+.latest-articles .title__primary {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 1.8em;
+}
+.latest-articles__grid {
+  display: grid;
+  grid-gap: 1.6em;
+}
+.latest-articles__item {
+  background: var(--white);
+  border-radius: 0.5em;
+  overflow: hidden;
+  box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+}
+.latest-articles__item img {
+  width: 100%;
+  object-fit: cover;
+}
+.latest-articles__item-content {
+  padding: 1em 1.8em;
+}
+.latest-articles__item-autor {
+  font-size: 0.7em;
+  margin-bottom: 1em;
+  display: block;
+}
+.latest-articles__item-description {
+  font-size: 0.7em;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+}
+@media screen and (min-width: 768px) {
+  .latest-articles .title__primary {
+    text-align: left;
+  }
+  .latest-articles__item-content {
+    padding: 1em 1.4em;
+  }
+  .latest-articles__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .latest-articles__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .latest-articles__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer {
+  background: var(--darkBlue);
+  text-align: center;
+  padding: 2.3em 0;
+}
+.footer__grid {
+  display: grid;
+  grid-column-gap: 5em;
+}
+.footer__logo {
+  display: block;
+  margin-bottom: 1.5em;
+}
+.footer__social {
+  display: grid;
+  grid-template-columns: repeat(5, 20px);
+  grid-column-gap: 1.2em;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+.footer__icon {
+  width: 25px;
+  height: 25px;
+  display: inline-flex;
+}
+.footer__link {
+  display: block;
+  color: var(--lightGrayishBlue);
+  font-size: 0.9em;
+  font-weight: 400;
+  text-decoration: none;
+  margin-bottom: 0.6em;
+}
+.footer__link:last-of-type {
+  margin-bottom: 2em;
+}
+.footer__copyright {
+  font-size: 0.8em;
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding-top: 3em;
+  }
+  .footer__link {
+    margin-bottom: 0.8em;
+  }
+  .footer__link:last-of-type {
+    margin-bottom: 0;
+  }
+  .footer__grid {
+    grid-template-columns: 200px 1fr 220px;
+    grid-template-areas: "logo links button " "social links copyright";
+  }
+  .footer__logo {
+    grid-area: logo;
+    text-align: left;
+  }
+  .footer__social {
+    grid-area: social;
+    justify-content: start;
+    align-content: center;
+    margin-bottom: 0;
+  }
+  .footer__icon {
+    width: 20px;
+    height: 20px;
+  }
+  .footer__links {
+    grid-area: links;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 160px 180px;
+    grid-auto-flow: column;
+    justify-items: start;
+  }
+  .footer__button {
+    grid-area: button;
+    text-align: right;
+  }
+  .footer__copyright {
+    grid-area: copyright;
+    text-align: right;
+    margin-top: 1em;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,9 @@
+<h1 class="task-header">
+  Editing <%= @task.task %>
+</h1>
+
+<%= link_to 'Go back', tasks_path, class: ['action-button', 'back-button'] %>
+
+<%= link_to 'Log out', destroy_user_session_path, method: :delete, class: ['action-button', 'log-out-button'] %>﻿
+
+<%= render 'form', task: @task, readonly: false %>

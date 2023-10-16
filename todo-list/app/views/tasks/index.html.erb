@@ -1,0 +1,54 @@
+<h1 class="tasks-header">
+  iTasks
+</h1>
+
+<p class="notice-container"><%= notice %></p>
+
+<%= link_to 'Log out', destroy_user_session_path, method: :delete, class: ['action-button', 'log-out-button'] %>﻿
+
+<div class="tasks-container">
+  <div class="tasks-todo">
+    <h2 class="tasks-status">
+      To-Do
+    </h2>
+
+    <ul class="tasks-list">
+      <% @tasks.todo.each do |task| %>
+        <% if task.user == current_user %>
+          <li class="tasks-item">
+            <%= render 'task', task: task %>
+            <div class="task-buttons">
+              <%= link_to fa_icon("pencil"), edit_task_path(task), class: 'task-button' %>
+              <%= link_to fa_icon("trash-o"), task, class: 'task-button',
+                          method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="tasks-buttons">
+    <%= link_to 'New task', new_task_path, class: "action-button" %>
+  </div>
+
+  <div class="tasks-completed">
+    <h2 class="tasks-status">
+      Completed
+    </h2>
+
+    <ul class="tasks-list">
+      <% @tasks.completed.each do |task| %>
+        <% if task.user == current_user %>
+          <li class="tasks-item">
+            <%= render 'task', task: task %>
+            <div class="task-buttons">
+              <%= link_to fa_icon("trash-o"), task, class: 'task-button',
+                          method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

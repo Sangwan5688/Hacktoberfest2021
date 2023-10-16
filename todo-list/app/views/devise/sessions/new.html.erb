@@ -1,0 +1,42 @@
+<%= render 'user_session_buttons' %>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-container form-sessions">
+    <h1>Log in</h1>
+
+    <div class="field form-field">
+      <div class="form-label-container">
+        <%= f.label :email %>
+      </div>
+      <div class="form-input-container">
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+    </div>
+
+    <div class="field form-field">
+      <div class="form-label-container">
+        <%= f.label :password %>
+      </div>
+      <div class="form-input-container">
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div class="field form-field">
+        <div class="form-checkbox">
+          <%= f.check_box :remember_me %>
+        </div>
+        <%= f.label :remember_me %>
+      </div>
+    <% end -%>
+
+    <div class="field form-buttons">
+      <%= f.submit 'Log in', class: 'action-button' %>
+    </div>
+
+    <div class="form-links-sessions">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+<% end %>

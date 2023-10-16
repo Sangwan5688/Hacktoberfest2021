@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+validTask:
+  task: Task1
+  completed: false
+  user: userOne
+
+taskWithoutName:
+  completed: false
+  user: userOne
+
+taskWithShortName:
+  task: Ta
+  completed: false
+  user: userOne

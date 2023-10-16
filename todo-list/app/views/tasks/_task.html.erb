@@ -1,0 +1,8 @@
+<%= link_to task, class: 'task-name' do %>
+  <%= task.task %>
+  <% if task.due_date.present? %>
+    <time class="task-time <%= task.due_date <= Date.today ? 'is-due' : '' %>" datetime="<%= task.due_date.strftime('%FT%T') %>">
+      <%= task.due_date.strftime("%m/%d") %>
+    </time>
+  <% end %>
+<% end %>

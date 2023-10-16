@@ -1,0 +1,211 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Tasks */
+
+.tasks-container {
+  margin: 40px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.tasks-header,
+.task-header {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 25px;
+}
+
+.tasks-header {
+  font-size: 3em;
+}
+
+.tasks-status {
+  font-size: 2em;
+}
+
+.tasks-completed {
+  margin-top: 50px;
+}
+
+.tasks-list {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.tasks-item {
+  border: thin solid #d3d3d3;
+  display: grid;
+  font-size: 1.5em;
+  grid-template-columns: [col] 70% [col] 30%;
+  margin-top: 10px;
+  padding: 15px;
+  text-align: left;
+}
+
+.task-name {
+  color: inherit;
+  grid-column: col 1;
+  text-decoration: none;
+}
+
+.task-name:hover {
+  color: #76ac26;
+}
+
+.task-time {
+  color: #d3d3d3;
+}
+
+.task-time.is-due {
+  color: #cc0000;
+}
+
+.tasks-buttons {
+  margin-top: 40px;
+}
+
+.task-buttons {
+  grid-column: col 2;
+  text-align: right;
+}
+
+.task-button,
+.task-button:visited {
+  color: #76ac26;
+  margin-left: 15px;
+}
+
+.task-button:hover {
+  color: #000;
+}
+
+/* Form */
+
+.form-container {
+  margin: 100px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.form-sessions {
+  max-width: 400px;
+}
+
+.form-field {
+  display: grid;
+  font-size: 1.5em;
+  grid-template-columns: [col] 30% [col] 70%;
+  margin-top: 20px;
+}
+
+.form-label-container {
+  align-self: center;
+  grid-column: col 1;
+  margin-right: 15px;
+  text-align: left;
+}
+
+.form-input-container {
+  align-self: center;
+  grid-column: col 2;
+}
+
+.form-checkbox {
+  margin-right: 10px;
+  text-align: right;
+}
+
+.form-label {
+  font-size: inherit;
+}
+
+.form-input {
+  background-color: #fff;
+  border: thin solid #76ac26;
+  display: block;
+  font-size: inherit;
+  text-align: left;
+  padding: 15px;
+  width: 100%;
+}
+
+.form-input-container em {
+  font-size: 0.6em;
+}
+
+.form-buttons {
+  margin-top: 40px;
+}
+
+.form-links-sessions {
+  margin-top: 30px;
+}
+
+.form-links-sessions a {
+  color: #76ac26;
+  grid-column: col 1;
+  text-decoration: none;
+}
+
+.form-links-sessions a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Generic buttons */
+
+.back-button {
+  float: right;
+  position: absolute;
+  top: 25px;
+  right: 125px;
+}
+
+.action-button {
+  background-color: #76ac26;
+  border: thin solid transparent;
+  color: #fff;
+  font-size: inherit;
+  text-decoration: none;
+  padding: 10px 25px;
+}
+
+.action-button:hover {
+  background-color: #fff;
+  border-color: #76ac26;
+  color: #76ac26;
+}
+
+.user-session-buttons {
+  display: grid;
+  float: right;
+  font-size: 1em;
+  grid-template-columns: [col] 60% [col] 60%;
+  grid-gap: 10px;
+  position: absolute;
+  text-align: center;
+  top: 25px;
+  right: 65px;
+}
+
+.sign-up-button {
+  grid-column: col 1;
+  padding: 10px;
+}
+
+.log-in-button {
+  grid-column: col 2;
+  padding: 10px;
+}
+
+.log-out-button {
+  cursor: pointer;
+  float: right;
+  padding: 10px 15px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}

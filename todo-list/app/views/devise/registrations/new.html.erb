@@ -1,0 +1,45 @@
+<%= render 'user_session_buttons' %>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <div class="form-container form-sessions">
+    <h1>Sign up</h1>
+
+    <div class="field form-field">
+      <div class="form-label-container">
+        <%= f.label :email %><br />
+      </div>
+      <div class="form-input-container">
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+    </div>
+
+    <div class="field form-field">
+      <div class="form-label-container">
+        <%= f.label :password %>
+      </div>
+      <div class="form-input-container">
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+    </div>
+
+    <div class="field form-field">
+      <div class="form-label-container">
+        <%= f.label :password_confirmation %><br />
+      </div>
+      <div class="form-input-container">
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+    </div>
+
+    <div class="field form-buttons">
+      <%= f.submit 'Sign up', class: 'action-button' %>
+    </div>
+    <div class="form-links-sessions">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+<% end %>

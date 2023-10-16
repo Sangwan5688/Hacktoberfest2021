@@ -1,0 +1,17 @@
+p {
+  background-color: rgb(243, 236, 236);
+  font-family: Street2, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  color: #404040;
+  font-weight: 200;
+  font-size: 0.875rem;
+}
+
+.character {
+  background-color: rgb(243, 236, 236);
+}
+
+body {
+  background-color: rgb(243, 236, 236);
+}

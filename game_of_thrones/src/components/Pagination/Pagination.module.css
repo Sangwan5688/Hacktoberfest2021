@@ -1,0 +1,32 @@
+/* styles.css */
+.pagination {
+  background-color: rgb(189, 173, 173);
+  color: black;
+  padding: 5px;
+  border: 1px solid rgb(160, 155, 155);
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.pagination:hover {
+  box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.7);
+  transform: translate(-2px, -2px);
+  background-color: #b0b0b0; /* Change the background color on hover */
+}
+
+.paginationContainer {
+  margin: 25px;
+  text-align: center;
+}
+
+.currentPage {
+  padding: 10px;
+  font-weight: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* margin: 20px; */
+}

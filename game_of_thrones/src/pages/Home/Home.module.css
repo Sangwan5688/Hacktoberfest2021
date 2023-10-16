@@ -1,0 +1,37 @@
+/* .home-body {
+  background-position: center;
+  background-color: rgb(243, 236, 236);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+} */
+
+.home-h1 {
+  background-color: rgb(243, 236, 236);
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-family: Street2, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.home-sec1,
+.home-sec2,
+.home-sec3 {
+  background-color: rgb(243, 236, 236);
+  font-family: Street2, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  color: #404040;
+  font-weight: 200;
+  font-size: 0.875rem;
+}
+.homeImg {
+  display: flex;
+  justify-content: center;
+  /* object-fit: cover; Maintain aspect ratio and cover the entire viewport */
+}
+
+img {
+  width: 500px;
+}

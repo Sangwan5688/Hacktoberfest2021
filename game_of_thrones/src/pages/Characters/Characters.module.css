@@ -1,0 +1,60 @@
+.character-list,
+.sectionImg {
+  display: flex;
+  justify-content: center;
+}
+
+h5 {
+  padding: 0;
+  margin: 5px;
+  color: rgb(99, 26, 26);
+}
+
+.characters-sec2 {
+  background-color: rgb(243, 236, 236);
+  font-family: Street2, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  color: #404040;
+  font-weight: 200;
+  font-size: 0.875rem;
+}
+
+.characterCardHe,
+.characterCardShe {
+  display: inline-block;
+  width: 20%;
+  color: rgb(66, 64, 60);
+  text-decoration: none;
+  margin: 5px;
+  /* padding: 5px; */
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.5s, background-color 0.5s;
+}
+
+.characterCardHe {
+  background-color: #b19999a9;
+}
+
+.characterCardShe {
+  background-color: #a7606c96;
+}
+
+.characterCardHe:hover {
+  box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.7);
+  transform: translate(-2px, -2px);
+  background-color: #8b9da7b0;
+  color: rgb(97, 91, 91);
+}
+
+.characterCardShe:hover {
+  box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.7);
+  transform: translate(-2px, -2px);
+  background-color: #8a5a7f;
+  color: rgb(216, 203, 203);
+}

@@ -1,0 +1,29 @@
+nav {
+  background-color: rgba(173, 132, 108, 0.226);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav-link {
+  color: #404040;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  margin: 0 150px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+img {
+  width: 400px;
+  align-items: center;
+}
+
+.navlogo {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 300px;
+}

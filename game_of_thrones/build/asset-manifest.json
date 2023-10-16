@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gameofthrones/static/css/main.930f41ab.css",
+    "main.js": "/gameofthrones/static/js/main.a018d5d1.js",
+    "index.html": "/gameofthrones/index.html",
+    "main.930f41ab.css.map": "/gameofthrones/static/css/main.930f41ab.css.map",
+    "main.a018d5d1.js.map": "/gameofthrones/static/js/main.a018d5d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.930f41ab.css",
+    "static/js/main.a018d5d1.js"
+  ]
+}

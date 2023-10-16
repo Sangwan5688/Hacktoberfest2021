@@ -1,0 +1,29 @@
+fixes-#1989
+//html
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <button class="hover-button">Hover Me</button>
+</body>
+</html>
+//css
+/* Default button styles */
+.hover-button {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Button styles on hover */
+.hover-button:hover {
+    background-color: #2980b9;
+    color: #f0f0f0;
+}
+

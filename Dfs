@@ -1,0 +1,47 @@
+fixes-#1368
+import java.util.ArrayList;
+import java.util.List;
+
+class TreeNode {
+    int val;
+    List<TreeNode> children;
+
+    public TreeNode(int val) {
+        this.val = val;
+        children = new ArrayList<>();
+    }
+}
+
+public class NaryTreeDFS {
+    public void dfs(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        System.out.print(root.val + " "); // Process the current node
+
+        for (TreeNode child : root.children) {
+            dfs(child); // Recursively visit child nodes
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create an example n-ary tree:
+        //        1
+        //       /|\
+        //      3 2 4
+        //     / \
+        //    5   6
+
+        TreeNode root = new TreeNode(1);
+        root.children.add(new TreeNode(3));
+        root.children.add(new TreeNode(2));
+        root.children.add(new TreeNode(4));
+        root.children.get(0).children.add(new TreeNode(5));
+        root.children.get(0).children.add(new TreeNode(6));
+
+        NaryTreeDFS dfs = new NaryTreeDFS();
+        System.out.println("DFS traversal of the n-ary tree:");
+        dfs.dfs(root);
+    }
+}

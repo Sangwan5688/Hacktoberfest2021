@@ -1,0 +1,158 @@
+html {
+  --max-cell-size: 75px;
+  --vertical-cells: 7;
+  --horizontal-cells: 7;
+  --available-game-field-height: 100px;
+
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  user-select: none;
+  background-color: rgb(185, 175, 175);
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+select {
+  height: 3rem;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  min-width: 12rem;
+  margin: 2rem 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  min-width: 100px;
+  padding: 8px;
+  font-size: 1rem;
+  --webkit-appearance: none;
+}
+
+.gameFieldWrapper {
+  margin: 16px 0;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gameField {
+  --cell-size-based-on-available-width: calc(100vw / var(--horizontal-cells));
+  --cell-size-based-on-available-height: calc(
+    var(--available-game-field-height) / var(--vertical-cells)
+  );
+
+  --calculated-cell-size: min(
+    var(--max-cell-size),
+    var(--cell-size-based-on-available-width),
+    var(--cell-size-based-on-available-height)
+  );
+
+  background: white;
+}
+
+.gameField.won .cell_2::after,
+.gameField.won .cell_8::after {
+  content: "🥳";
+}
+
+.gameField.won .cell_3::after,
+.gameField.won .cell_9::after {
+  content: "🎁";
+}
+
+.row {
+  display: flex;
+  overflow: hidden;
+}
+
+.cell {
+  border: 1px solid #00000010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--calculated-cell-size) - 2px);
+  height: calc(var(--calculated-cell-size) - 2px);
+  font-size: calc(var(--calculated-cell-size) * 0.8);
+}
+
+.cell_1 {
+  background: brown;
+}
+
+.cell_2::after,
+.cell_8::after {
+  content: "😃";
+}
+
+.cell_3::after,
+.cell_9::after {
+  content: "📦";
+}
+
+.cell_7,
+.cell_8 {
+  background: khaki;
+}
+
+.cell_9 {
+  background: yellowgreen;
+}
+
+.joystick {
+  --joystick-button-size: 100px;
+
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.joystickButton {
+  width: var(--joystick-button-size);
+  height: var(--joystick-button-size);
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+.joystick_middle_row {
+  display: flex;
+  gap: calc(var(--joystick-button-size) / 2);
+  margin: calc(var(--joystick-button-size) / -4) 0;
+}
+
+.joystickButton:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.joystickButton:active {
+  background: rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,180 @@
+body{
+    background: url('./image/gtav.jpg');
+    /* overflow: hidden; */
+    /* position: relative */
+}
+
+.frame{
+    width: 700px;
+    height: 480px;
+    border: 5px black solid;
+    margin: auto;
+    margin-top: 90px;
+    border-radius: 25px;
+    background-color: #393d3f;
+    position: relative;
+}
+
+
+.inner{
+    width: 670px;
+    height: 400px;
+    border: 5px black solid;
+    margin: auto;
+    border-radius: 12px;
+    background-color: black;
+    margin-top: 5px;
+    display: flex;
+}
+
+.box{
+    height: 38px;
+    width: 38px;
+    background-color: #27292b;
+    display: inline-block;
+    border-radius: 8px;
+    margin-left: 6px;
+    margin-top: 10px;
+    left: 10px;
+}
+
+div.box:nth-child(2){
+    margin-left: 10px;
+}
+
+
+.score{
+    position: absolute;
+    left: 10px;
+}
+
+
+
+.col{
+    flex-grow: 1;
+}
+
+
+li{
+    height: 50px;
+    width: 50px;
+    background-color: #2d42a4;
+    list-style-type: none;
+    margin: 25px 25px;
+    border-radius: 5px;
+}
+
+.col{
+    display: inline-block;
+} */
+
+.selectedli{
+    background-color: white;
+}
+
+
+.popup-wrapper{
+    position: absolute;
+    width: 670px;
+    height: 410px;
+    margin: auto;
+    background-color: rgb(0, 0, 0, 0.4);
+    margin-top: 5px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: none;
+
+}
+
+#failed{
+  background-color: red;
+}
+
+#completed{
+  background-color: green;
+}
+
+.popup-message{
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 135px;
+    left: 215px;
+    font-size: 17px;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.refresh{
+    position: absolute;
+    top: 285px;
+    left: 284px;
+    padding: 5px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    background-color:wheat;
+    border: 2px solid wheat;
+    border-radius: 4px;
+}
+
+
+.popup-wrapper {
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;  
+  }
+  
+  
+  @keyframes fadeIn{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+
+
+

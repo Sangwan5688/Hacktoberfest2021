@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+:root {
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body {
+
+    background: radial-gradient(circle, rgba(86,116,221,1) 0%, rgba(42,13,52,1) 80%);
+}
+

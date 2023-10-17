@@ -1,0 +1,171 @@
+@import "settings"; //on importe setting pour la gestion des variables (qui sont déclaré dans setting)
+
+.game {
+    display: flex;
+    justify-content: space-between;
+    font-family:'Pixelify Sans', sans-serif;
+    
+
+
+    h2{
+        font-size:30px;
+        color: white;
+    }
+}
+
+
+h1 {
+    margin-top: 3vh;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    font-family:'Pixelify Sans', sans-serif;
+}
+
+
+
+.buttonComponent {
+    display:flex;
+    margin-left: 30px;
+    position: relative;
+   
+    
+
+
+    .submit {
+        display:flex;
+        gap:20px;
+        flex-direction:column;
+        margin-top:10vh;
+        margin-left: 5vw;
+    }
+
+    input{
+        width:20vw;
+        border-radius: 10px;
+        height: 5vh;
+        font-size: 30px;
+        font-family:'Pixelify Sans', sans-serif;
+    }
+
+    button {
+        background-color:black;
+        padding: 5px;
+        border-radius: 10px ;
+        color:white;
+        font-size: 25px;
+        height: 5vh;
+        font-family:'Pixelify Sans', sans-serif;
+    }
+
+    .firstAnswer {
+        background-image: url("src/images/answerBall8-v2.png"); // image de la grosse boule 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        width: 40vw;
+        height: 77vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top:10vh;
+        left:30vw;
+
+        p{
+            font-size: 30px;
+        }
+        
+    }
+
+}
+
+.animationImg { //animation de la grosse boule 
+    animation-duration: 3s;
+    animation-name: slidein, rotating;
+}
+
+@keyframes slidein { 
+    from {
+        margin-left: 250%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+@keyframes rotating {
+    
+    from {
+        transform: rotate(0deg);
+        scale:0.5;
+    }
+    to {
+        transform: rotate(-360deg);
+        scale:1;
+    }
+}
+
+.historyTable {
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow:  4px 4px 0px #3a3838;
+    display:flex;
+    width:45vh;
+    flex-direction: column;
+    margin-right: 5vh;
+    align-items: center;
+
+    h1 {
+        padding: 10px 0 10px 0;
+        font-size: 30px;
+        color: rgb(17, 17, 133); 
+    }
+
+  
+    
+}
+
+.boxHalfWidth { //bare de séparation
+    border-bottom: solid black 2px;
+    width: 15vh;
+    height: 1px;
+    border-bottom: 3px solid #807a7a;
+    border-radius: 20px;
+    margin:5px;
+    
+}
+
+.h1boxHalfWidth { //bare de séparation
+    border-bottom: solid black 2px;
+    width: 30vh;
+    height: 1px;
+    border-bottom: 3px solid #807a7a;
+    border-radius: 20px;
+    margin:5px;
+    
+}
+
+.QR {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+#R {
+    color: rgb(17, 17, 133); 
+    padding : 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#Q {
+    color: rgb(17, 17, 133); 
+    padding : 10px;
+    font-weight: bold;
+    font-size: 20px;
+
+}

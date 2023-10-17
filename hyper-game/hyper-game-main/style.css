@@ -1,0 +1,313 @@
+@font-face{
+	font-family:"Pixelated MS Sans Serif";
+	font-style:normal;
+	src:url(fonts/ms_sans_serif_mono.woff) format("woff");
+}
+
+body {
+	background-color: #010;
+	color: #7c5;
+	font-family: "Pixelated MS Sans Serif", Arial;
+	overflow-X: hidden;
+}
+
+h1 {
+	font-size: 48px;
+	white-space: nowrap;
+}
+
+h2 {
+	font-size: 36px;
+	margin: 4px;
+}
+
+hr {
+	color: #7c5;
+}
+
+button {
+	border: 2px solid #2c2;
+	background-color: rgba(0,0,0,0);
+	color: #2c2;
+	font-family: monospace;
+	margin-bottom: 6px;
+	padding: 2px;
+	
+}
+
+button:hover {
+	cursor: pointer;
+	
+}
+
+.tabButton:hover, .hyperESubTabButton:hover, .cascadeSubTabButton:hover {
+	transform: translateY(-2px);
+}
+
+#game {
+	width: 1100px;
+	max-width: 100vw;
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#number {
+	user-select: none;
+	min-height: 70px;
+	white-space: nowrap;
+}
+
+#clusterProgressBar {
+	width: 600px;
+	height: 6px;
+	background-color: black;
+	border: 1px solid #555;
+}
+
+#challengeProgressBar {
+	width: 500px;
+	height: 6px;
+	background-color: black;
+	border: 1px solid #555;
+	margin-top: 12px;
+	margin-bottom: 6px;
+}
+
+#clusterProgressBarInner, #challengeProgressBarInner {
+	margin: 0;
+	height: 100%;
+	background-color: #0b0;
+}
+
+#clusterRespecButton {
+	border: 2px solid #c53;
+	color: #c53;
+	background-color: #180600;
+	width: 300px;
+}
+
+#clusterUpgrades {
+	display: grid;
+	width: 750px;
+	max-width: 100vw;
+	grid-gap: 4px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.clusterUpgrade, .clusterUnlock {
+	border: 2px solid #c53;
+	color: #f85;
+	background-color: #180600;
+	min-height: 80px;
+	vertical-align: middle;
+}
+
+#challenges {
+	display: grid;
+	width: 500px;
+	max-width: 100vw;
+	grid-gap: 4px;
+	grid-template-columns: 1fr 1fr;
+}
+
+.challengeButton {
+	min-height: 120px;
+	border: 2px solid #bbb;
+	color: #bbb;
+}
+
+#exitChallengeButton {
+	border: 2px solid #bbb;
+	color: #bbb;
+	width: 300px;
+}
+
+#vectorGainButton {
+	border: 2px solid #2bb;
+	color: #2bb;
+	width: 300px;
+}
+
+#vectorUpgrades {
+	display: grid;
+	width: 400px;
+	max-width: 100vw;
+	grid-gap: 4px;
+	grid-template-columns: 1fr 1fr;
+}
+
+.vectorUpgrade {
+	border: 2px solid #2bb;
+	color: #2bb;
+	background-color: #022;
+	min-height: 100px;
+	vertical-align: middle;
+}
+
+#basedverseButton {
+	border: 2px solid #47e;
+	color: #47e;
+	background-color: #002;
+	padding: 6px;
+}
+
+.milestones {
+	display: grid;
+	width: 900px;
+	max-width: 100vw;
+	grid-gap: 4px;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	overflow-Y: auto;
+}
+
+.cascadeMilestone {
+	min-height: 80px;
+	border: 2px solid #eb2;
+	color: #eb2;
+	background-color: #320;
+	vertical-align: middle;
+	display: inline-block;
+  justify-content: center;
+  align-items: center;
+	padding: 4px;
+	padding-top: 8px;
+}
+
+.shadowMilestone {
+	min-height: 80px;
+	border: 2px solid #444;
+	color: #999;
+	background-color: #111;
+	vertical-align: middle;
+	display: inline-block;
+  justify-content: center;
+  align-items: center;
+	padding: 4px;
+	padding-top: 8px;
+}
+
+#postCascadeUpgrades {
+	display: grid;
+	width: 600px;
+	max-width: 100vw;
+	grid-gap: 4px;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.postCascadeUpgrade {
+	border: 2px solid #e72;
+	color: #e72;
+	background-color: #210;
+	min-height: 100px;
+	vertical-align: middle;
+}
+
+.flavourUnlockButton, .flavourButton {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.flavour, .flavourEffect {
+	color: #ddd;
+}
+
+#shadowPowerBar {
+	width: 100%;
+	height: 20px;
+	background-color: #111;
+	border: 2px solid #666;
+}
+
+#shadowPowerBarInner {
+	width: 50%;
+	height: 100%;
+	background-image: linear-gradient(to bottom, #666, #111);
+}
+
+.unknownBar {
+	width: 100%;
+	height: 20px;
+	background-color: #333;
+	border: 2px solid #999;
+	margin-bottom: 70px;
+}
+
+.shadowUpgrade {
+	border: 2px solid #444;
+	color: #999;
+	background-color: #111;
+	width: 180px;
+	min-height: 100px;
+	vertical-align: middle;
+}
+
+#bloodPowerBar {
+	width: 100%;
+	height: 20px;
+	background-color: #300;
+	border: 2px solid #b00;
+}
+
+#bloodPowerBarInner {
+	width: 50%;
+	height: 100%;
+	background-image: linear-gradient(to bottom, #b00, #300);
+}
+
+.bloodUpgrade {
+	border: 2px solid #a22;
+	color: #f33;
+	background-color: #200;
+	width: 180px;
+	min-height: 100px;
+	vertical-align: middle;
+	display: none;
+}
+
+#divinePowerBar {
+	width: 100%;
+	height: 20px;
+	background-color: #330;
+	border: 2px solid #dd6;
+}
+
+#divinePowerBarInner {
+	width: 50%;
+	height: 100%;
+	background-image: linear-gradient(to bottom, #dd6, #330);
+}
+
+.divineUpgrade {
+	border: 2px solid #dd6;
+	color: #ffb;
+	background-color: #220;
+	width: 180px;
+	min-height: 100px;
+	vertical-align: middle;
+	display: none;
+}
+
+
+
+
+#achievements {
+	display: grid;
+	width: 800px;
+	max-width: 100vw;
+	grid-gap: 4px;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	overflow-Y: auto;
+}
+
+.achievement {
+	min-height: 80px;
+	border: 2px solid #ca8;
+	color: #ca8;
+	background-color: #201810;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	padding: 4px;
+}

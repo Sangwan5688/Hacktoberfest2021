@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Days One', sans-serif;
+}
+
+/* Mobile */
+
+main {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* background-color: rgb(255, 255, 255); */
+}
+
+.game-scene {
+  background-color: rgba(0, 0, 255, 0.443);
+  height: 85%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+}
+
+.player-section {
+  /* background-color: rgba(255, 0, 0, 0.5); */
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  padding: 1.25rem;
+}
+
+.enemy-section {
+  /* background-color: rgba(0, 0, 255, 0.5); */
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  position: relative;
+  z-index: 2;
+}
+
+.move-selection {
+  background-color: rgba(255, 0, 0, 0.516);
+  height: 35%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+
+.move-grid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.62rem;
+  padding: 0.62rem;
+}
+
+.player {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: green;
+  width: 40%;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.38rem;
+  justify-content: center;
+}
+
+.player-speech-bubble {
+  display: flex;
+  /* background-color: pink; */
+  width: 60%;
+}
+
+.bar {
+  width: 100%;
+  background-color: blue;
+  height: 1rem;
+}
+
+.player-sprite {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.player-sprite img {
+  object-fit: cover;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+
+}
+
+
+
+

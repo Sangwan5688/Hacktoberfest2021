@@ -1,0 +1,209 @@
+:root{
+    --board: #cdc1b5;
+    --border-color: #bbaDa0;
+    --bg-color-tile-02: #eee4da;
+    --bg-color-tile-04: #ece0ca;
+    --bg-color-tile-08: #f4b17a;
+    --bg-color-tile-16: #f59575;
+    --bg-color-tile-32: #f57c5f;
+    --bg-color-tile-64: #f65d3b;
+    --bg-color-tile-128: #edce71;
+    --bg-color-tile-256: #edcc63;
+    --bg-color-tile-512: #edc651;
+    --bg-color-tile-1024: #eec744;
+    --bg-color-tile-2048: #eec230;
+    --bg-color-tile-4096: #fe3d3d;
+    --bg-color-tile-8192: #ff2020;
+
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #ebe1d8;
+}
+.container{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.score-container {
+    margin: 10px 0;
+    height: 57px;
+    font-weight: 600;
+}
+
+.score-container {
+    align-items: flex-start;
+}
+
+#score {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.score-label {
+    margin-bottom: 2px;
+}
+
+h5{
+    margin:0;
+    margin-bottom: 10px;
+}
+h1{
+    margin:0;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+hr{
+    max-width: 480px;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+#board{
+    width: 400px;
+    height: 400px;
+    background-color: var(--board);
+    border: 6px solid var(--border-color);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile{
+    width: 90px;
+    height: 90px;
+    border: 5px solid var(--border-color);
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add styling to the numbers */
+.x2{
+    background-color: var(--bg-color-tile-02);
+    color: #727371; 
+}
+
+.x4{
+    background-color: var(--bg-color-tile-04);
+    color: #727371; 
+}
+
+.x8{
+    background-color: var(--bg-color-tile-08);
+    color: white; 
+}
+
+.x16{
+    background-color: var(--bg-color-tile-16);
+    color: white; 
+}
+
+.x32{
+    background-color: var(--bg-color-tile-32);
+    color: white; 
+}
+
+.x64{
+    background-color: var(--bg-color-tile-64);
+    color: white; 
+}
+
+.x128{
+    background-color: var(--bg-color-tile-128);
+    color: white; 
+}
+
+.x256{
+    background-color: var(--bg-color-tile-256);
+    color: white; 
+}
+
+.x512{
+    background-color: var(--bg-color-tile-512);
+    color: white; 
+}
+
+.x1024{
+    background-color: var(--bg-color-tile-1024);
+    color: white;
+}
+
+.x2048{
+    background-color: var(--bg-color-tile-2048);
+    color: white;
+}
+
+.x4096{
+    background-color: var(--bg-color-tile-4096);
+    color: white;
+}
+
+.x8192{
+    background-color: var(--bg-color-tile-8192);
+    color: white;
+}
+
+/* SETTING ANIMATION IN OUR SLIDES */
+@keyframes slide-from-right{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-from-left{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-from-top{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-from-bottom{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 415px) {
+    #board{
+        margin-top: 8px;
+        width: 90vw;
+        max-width: 400px;
+        height: 90vw;
+        max-height: 400px;
+    }
+
+    .tile{
+        box-sizing: border-box;
+        width: 25%;
+        height: 25%;
+    }
+
+    h1{
+        font-size: 40px;
+        font-weight: 700;
+    }
+}

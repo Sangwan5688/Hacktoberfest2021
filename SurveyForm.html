@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey form</title>
+ <style>
+  *{
+    margin: 0;
+    padding: 0;
+    color: rgb(250, 246, 246);
+   }
+   #bg{
+       opacity:40%;
+       width:100vw;
+       height:100vh;
+       z-index: -1;
+       position:fixed;
+   }
+   
+   .container{
+       background-color: rgba(0,0,0,0.5);
+       width:75%;
+       margin:auto;
+       padding-top:5vh;
+       display:flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       
+   }
+   
+   .head{
+       text-align:center;
+       width:80%;
+       padding-bottom:5vh;
+   }
+   .head>h1{
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       font-size:70px;
+       padding-bottom: 20px;
+   }
+   
+   .head>p{
+       font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       font-size:40px;
+   }
+   
+   #survey-form> fieldset{
+       background-color: rgba(0,0,0,0.5);
+       display: flex;
+       flex-direction: column;
+       margin:auto;
+       font-size: 50px;
+       width:80%;
+       /* text-align: center; */
+       padding-right:30px;
+       border-radius: 20px;
+   }
+   
+   #name-label,#email-label,#number-label{
+       display: flex;
+       flex-direction: column;
+       padding:20px;
+   }
+   #name-label>input,#email-label>input,#number-label>input{
+      font-size:30px;
+      margin:10px auto;
+      width:100%;
+      padding:10px;
+   }
+   
+   #dropdown{
+       display: flex;
+       flex-direction: column;
+       font-size:30px;
+       padding: 10px;
+       margin:10px 15px;
+       width:100%;
+       color:black;
+   
+   }
+   
+   #dropdown>option{
+       color:grey;
+   }
+   .radio{
+       display: flex;
+       flex-direction: column;
+       padding:20px 0px;
+      
+   }
+   
+   .set0,.set1,.set2{
+       display: flex;
+       font-size:40px;
+       padding-left:20px;}
+   
+   .set0>input,.set1>input,.set2>input{
+       transform: scale(2);
+       margin-right:20px;
+   }
+   
+   .check{
+       display: flex;
+       flex-direction: column;
+       padding:20px 0px;
+      
+   }
+   
+   textarea{
+      margin-left:15px;
+       height:100px;
+       width:100%;
+       color:black;
+       font-size:20px;
+   
+     
+   }
+   
+   input[type="submit"]{
+       background-color: rgb(91, 243, 16);
+       font-size:40px;
+       width:80%;
+       padding:20px;
+       margin: 30px auto;
+       color:black;
+   }
+   
+   label>p{
+       margin-left:20px;
+       margin-bottom: 20px;
+   }
+   .sub{
+      font-size: 20px;
+      font-weight:bold;
+   }
+   
+   input{
+       border-radius: 10px;
+       color:black;
+       outline:none;
+   }
+   @media screen and (max-width:800px) {
+        
+   .head>h1{
+           font-size: 30px;
+        }
+        .head>p{
+            font-size: 20px;
+        }
+       #survey-form> fieldset{
+            font-size: 20px;
+           width:80%;
+       }
+       .set0,.set1,.set2{
+        font-size: 15px;
+       }
+
+       #name-label>input,#email-label>input,#number-label>input{
+        font-size: 15px;
+       }
+
+       .set0>input,.set1>input,.set2>input{
+        transform: scale(1.2);
+        margin-right:20px;
+    }
+    
+    #dropdown{
+        font-size:20px;
+    }
+
+
+    input[type="submit"]{
+        font-size:20px;
+        padding: 10px;
+        width:60%;
+    }
+   }
+ </style>
+</head>
+<body>
+  <img id="bg" src="https://www.betterup.com/hubfs/Google%20Drive%20Integration/Delivery%20URL%20-%20BetterUp%20-%20importance%20of%20teamwork%20%5BARTICLE%5D-3.jpeg">
+ <div class="container">
+   <header class="head">
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform </p>
+   </header>
+   <main>
+    <form id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label" >Name
+          <input type="text" id="name" placeholder="Enter your name" required >
+        </label>
+        <label for="email" id="email-label">E-mail
+          <input type="email" id="email" pattern="[a-z0-9]{8,}" placeholder="Enter your email" required>
+        </label>
+        <label for="number" id="number-label">Age (optional)
+          <input type="number" id="number" min=13 max=120 placeholder="Enter your age"required>
+        </label>
+        <label><p>Which option best describes your current role?</p>
+          <select id="dropdown">
+         <option value=''>Select current role</option>
+          <option value=1>Student</option>
+         <option value=2>Full time job</option>
+      <option value=3>Full time learner</option>
+       <option value=4>Prefer not to say</option>
+       <option value=5>Others</option>
+          </select>
+        </label >
+        <label class="radio"><p>Would you recommend freeCodeCamp to a friend?</p>
+      <span class="set0">    <input type="radio" name="radio" value=0>Definitely</span>
+      <span class="set1">   <input type="radio" name="radio" value=1>Maybe</span>
+      <span class="set2"> <input type="radio" name="radio" value=2 >Not Sure</span>
+        </label>
+        <label class="check"><p>What would you like to see improved? <p class="sub"> (Check all that apply)</p></p>
+          <span class="set0"><input type="checkbox" name="checkbox" value=0>Front-end Projects</span>
+          <span class="set1"><input type="checkbox" name="checkbox" value=0>Back-end Projects </span>
+          <span class="set2"><input type="checkbox" name="checkbox" value=0>Wiki</span>
+          <span class="set2"><input type="checkbox" name="checkbox" value=0>Additional Courses</span>
+          </label>
+        <label>
+          <p>Any comments or suggestions?</p>
+          <textarea name="comments" rows=3 cols=20></textarea>
+          </label>
+      </filedset>
+      <input type="submit" id="submit" value="Submit">
+    </form>
+   </main>
+ </div>
+</body>
+</html>

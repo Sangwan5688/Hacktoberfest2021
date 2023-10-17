@@ -1,0 +1,39 @@
+<!--BY Engineer Elhamuddin Taheri   -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel='stylesheet' type="text/css" href='bootstrap.min.css'>
+    <link rel='stylesheet' type="text/css" href='stop-watch.css'>
+</head>
+<body>
+    <h1 class="text-center header" style="margin-top: 20px;">Stop Watch</h1>
+    <div class="container w-50">
+        
+    <div class="timer text-center">
+        <span id="hours">00 </span>
+        <span> : </span>
+        <span id="minutes"> 00 </span>
+        <span> : </span>
+        <span id="seconds"> 00 </span>
+        <span> : </span>
+        <span id="mseconds"> 00</span>
+    </div>
+        
+    <div id="buttons" class="text-center">
+        <button class="btn btn-warning w-25" id="start">Start</button>
+        <button class="btn btn-warning w-25" id="pause">Pause</button>
+        <button class="btn btn-warning w-25" id="reset">Reset</button>
+        <button class="btn btn-warning w-25" id="submit">Submit</button>   
+    </div>
+    <hr>
+    <div class="text-center">
+        <h3 class="header text-center">Your Submitted Laps</h3>
+        <br><br>
+        <h2><span id="laps"></span></h2>
+    </div>
+       
+    </div>
+<script src="stop-watch.js"></script>
+</body> 
+</html>

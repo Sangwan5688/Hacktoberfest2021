@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .hide{
+        display: none;
+    }
+    .car{
+        width: 50px;
+        height: 70px;
+        background-color: red;
+        position: absolute;
+        left: 550px;
+    }
+
+    .enemy{
+        width: 50px;
+        height: 70px;
+        background-color: blue;
+        position: absolute;
+    }
+
+    .GameArea{
+        width:500px;
+        height:100vh;
+        background: #1e272e; 
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+    }
+    .line{
+        width:10px;
+        height:100px;
+        background-color: white;
+        position: absolute;
+        margin-left: 245px; 
+    }
+</style>
+<body>
+    <div class="CarGame">
+        <div class="score"></div>
+        <div class="startScreen">
+            <p>Press here to start <br>
+                Arrow key to Move
+                if You hit another car you will lose
+            </p>
+        </div>
+    </div>
+    <div class="GameArea hide"></div>
+</body>
+</html>
+<script src="./scripts.js"></script>

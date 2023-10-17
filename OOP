@@ -1,0 +1,22 @@
+fixes-#1993
+class Car {
+    String make;
+    String model;
+
+    Car(String make, String model) {
+        this.make = make;
+        this.model = model;
+    }
+
+    void displayInfo() {
+        System.out.println("Make: " + make);
+        System.out.println("Model: " + model);
+    }
+}
+
+public class OOPExample {
+    public static void main(String[] args) {
+        Car myCar = new Car("Toyota", "Camry");
+        myCar.displayInfo();
+    }
+}

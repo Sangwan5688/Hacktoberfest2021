@@ -1,0 +1,119 @@
+.shaking-text {
+  font-size: 1.3rem;
+}
+
+.shaking-letter {
+  display: inline-block;
+  white-space: pre;
+}
+
+.shake-1 {
+    animation: shake-1 2s infinite;
+  }
+  
+  .shake-2 {
+    animation: shake-1 2s infinite;
+  }
+  
+  .shake-3 {
+    animation: shake-1 2s infinite;
+  }
+  
+  .shake-4 {
+    animation: shake-1 2s infinite;
+  }
+  
+  .shake-5 {
+    animation: shake-1 2s infinite;
+  }
+  
+  @keyframes shake-1 {
+    0% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(2px) translateY(2px) rotate(5deg);
+      
+    }
+    50% {
+        transform: translateX(-2px) translateY(-2px) rotate(-5deg);
+    }
+    75% {
+      transform: translateX(-2px) translateY(-2px) rotate(-5deg);
+    }
+    100% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+  }
+  
+  @keyframes shake-2 {
+    0% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateX(-1px) translateY(-1px) rotate(-3deg);
+    }
+    50% {
+      transform: translateX(-1px) translateY(-1px) rotate(-3deg);
+    }
+    75% {
+        transform: translateX(1px) translateY(1px) rotate(3deg);
+    }
+    100% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+  }
+  
+  @keyframes shake-3 {
+    0% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateX(-3px) translateY(-3px) rotate(-7deg);
+    }
+    50% {
+      transform: translateX(3px) translateY(3px) rotate(7deg);
+    }
+    75% {
+      transform: translateX(-3px) translateY(-3px) rotate(-7deg);
+    }
+    100% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+  }
+  
+  @keyframes shake-4 {
+    0% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateX(-1px) translateY(-1px) rotate(-6deg);
+    }
+    50% {
+      transform: translateX(1px) translateY(1px) rotate(6deg);
+    }
+    75% {
+      transform: translateX(-1px) translateY(-1px) rotate(-6deg);
+    }
+    100% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+  }
+  
+  @keyframes shake-5 {
+    0% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateX(-2px) translateY(-2px) rotate(-8deg);
+    }
+    50% {
+      transform: translateX(2px) translateY(2px) rotate(8deg);
+    }
+    75% {
+      transform: translateX(-2px) translateY(-2px) rotate(-8deg);
+    }
+    100% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+  }

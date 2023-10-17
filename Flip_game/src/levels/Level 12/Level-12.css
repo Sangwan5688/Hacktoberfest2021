@@ -1,0 +1,67 @@
+.App {
+  max-width: 860px;
+  margin: 40px auto;
+}
+
+.Head {
+  color: #181818;
+}
+
+.Turn {
+  color:#181818;
+}
+
+button {
+  background: none;
+  border: 2px solid #181818;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #181818;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+}
+button:hover {
+  background: #c23866;
+  color: #fff;
+}
+.card-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.celebration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firework {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff0;
+  position: absolute;
+  animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(20);
+    opacity: 0;
+  }
+}
+

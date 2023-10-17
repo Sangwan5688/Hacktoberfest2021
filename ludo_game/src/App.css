@@ -1,0 +1,18 @@
+
+.header_list_li li{
+    list-style-type: none;
+}
+.header_list_li li:hover{
+    color: lightgreen;
+    font-size: 20px;
+}
+
+.playButtonStyle:hover{
+    background-color: red;
+}
+
+.Body {
+    background-image: url("./assets/bodybgImage.jpg");
+}
+
+

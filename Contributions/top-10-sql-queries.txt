@@ -1,0 +1,100 @@
+1. Create a Table
+CREATE statement in SQL is used to create a new table in your database. 
+
+Syntax to CREATE a table: 
+
+CREATE TABLE table_name(column1 datatype, column2 datatype, … columnN datatype);
+
+2. Select Query
+SELECT is the most commonly used statement in SQL. The SELECT Statement in SQL is used for viewing all records from a table. The data returned is stored in a result table. These result tables are called result sets. 
+
+Syntax to SELECT a query:
+
+SELECT column1, column2, columnN FROM table_name;
+where, column1, column2… are the names of fields of a table, table_name is from where we will fetch the records.
+
+Below is the query to fetch the fields EMP_ID, NAME, and AGE from the table Employee:
+
+SELECT EMP_ID, NAME, AGE FROM Employee;                                                         
+
+Below is the given syntax, if you want to fetch all the fields in the table:
+
+SELECT * FROM table_name;
+To fetch all the fields from the table Employee:
+
+SELECT * FROM Employee;
+
+3. Insert Query
+The INSERT Statement in SQL is used to insert records into a table. The INSERT INTO declaration is used to insert new records in a table. 
+
+Syntax to INSERT a tuple:
+
+INSERT INTO table_name (column1, column2, … columnN) VALUES (value1, value2, … valueN;
+Here, column1, and column2… are the names of fields of a table.
+
+Below is the query to add the fields EMP_ID, NAME, and AGE in the table Employee:
+
+INSERT INTO employee (EMP_ID, NAME, SALARY, AGE) VALUES ('1', 'Rajesh', 25000, 30);      
+INSERT INTO employee (EMP_ID, NAME, SALARY, AGE) VALUES ('2', 'Suresh', 30000, 45);
+INSERT INTO employee (EMP_ID, NAME, SALARY, AGE) VALUES ('3', 'Andy', 28000, 40);   
+
+4. Delete Records From a Table
+The DELETE Statement in SQL is used to delete some selected records from a table. 
+
+Syntax to DELETE a record:
+
+DELETE FROM employee WHERE [condition];
+Below is the query to delete the record from the table Employee:
+
+DELETE FROM employee WHERE EMP_ID = '1';                                                         
+
+5. Update Data in Records From a Table
+The UPDATE Statement in SQL is used to update/modify the data in the existing records from a table. 
+
+Syntax to UPDATE records:
+
+UPDATE table_name SET column1 = value1, column2 = value2, … WHERE [condition];
+Below is the query to delete the record from the table Employee:
+
+UPDATE employee SET age = 38 WHERE EMP_ID = '4';                
+SELECT * FROM employee;                                     
+
+6. Viewing Only Selected Records From a Table
+Using this query, we can get only the selected records from the table.
+
+Syntax to view only the selected records:
+
+SELECT COUNT (1) FROM table_name;
+Below is the query to view only the selected records from the table Employee:
+
+SELECT COUNT (1) FROM employee;                                      
+
+7. Viewing Records From a Table
+Using this query, we can get the selected records without knowing the exact details from the table.
+
+Syntax to UPDATE records:
+
+SELECT * FROM table_name WHERE [condition];
+Below is the query to view the records from the table Employee without knowing the details:
+
+SELECT * FROM employee WHERE name LIKE 'a%y';                
+
+8. Where Query
+Below is the query to retrieve records using more than one condition using the WHERE statement from the table:
+
+SELECT * FROM employee WHERE name = 'Andy' AND age = 40;                
+
+
+9. Viewing Only Selected Columns From a Table
+Below is the query to view only the selected columns from the table Employee:
+
+SELECT name FROM employee WHERE age > 39;                
+
+You can also select more than one column from the table:
+
+SELECT name, emp_id FROM employee WHERE age > 39;            
+
+10. Performance of the Query
+Below is the advanced query which is useful if you need to get why a query is so slow.
+
+EXPLAIN QUERY PLAN SELECT * FROM EMPLOYEE;   

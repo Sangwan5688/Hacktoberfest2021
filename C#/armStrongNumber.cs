@@ -11,7 +11,7 @@ using System;
        {      
         r=n%10;      
         sum=sum+(r*r*r);      
-        n=n/10;      
+        n/=10;      
        }      
        if(temp==sum)      
         Console.Write("Armstrong Number.");      

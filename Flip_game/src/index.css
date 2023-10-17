@@ -1,0 +1,19 @@
+  
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* base styles */
+body {
+  font-family: Raleway, sans-serif;
+  margin: 0;
+  font-size: 1.5em;
+  text-align: center;
+  background: #C2FCD9;
+  color: #fff;
+}
+
+.Current-level{
+  position: absolute;
+  font-size: 50px;
+  color: #181818;
+  transform: translate(-130%,-70%);
+}

@@ -1,0 +1,54 @@
+@import "https://fonts.googleapis.com/css?family=Lato";
+
+body {
+  width: 70%;
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#controls,
+table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+table,
+td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+td {
+  width: 50px;
+  height: 50px;
+}
+
+.selected {
+  background-color: blue;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+span {
+  color: blue;
+}

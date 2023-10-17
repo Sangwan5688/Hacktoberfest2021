@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+@font-face {
+    font-family: 'kraash';
+    src: url('kraash.TTF')
+}
+
+body {
+    background-color: #757362;
+}
+
+.container {
+    height: 400px;
+    width: 590px;
+    
+    margin: auto;
+    margin-top: 90px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    box-shadow: 1px 1px 9px 7px #470ddb;
+}
+
+.heading {
+    height: 150px;
+    width: auto;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: #587dc6;
+    padding-top: 5px;
+    
+}
+
+#text {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'kraash';
+    margin-top: 45px;
+    
+}
+
+.keys {
+    height: 250px;
+    width: 590px;
+    padding: 0;
+    
+}
+
+.key {
+    height: 250px;
+    width: 50px;
+    display: inline-block;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    margin: 0;
+}
+
+.keyBlack {
+    background-color: black;
+}
+
+.keyWhite {
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

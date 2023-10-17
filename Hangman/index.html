@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <title>Ahorcado......</title>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <!-- para los botones, para la imagen y para la palabra secreta-->
+      <!-- para las imagenes-->
+      <div class="col-4">
+        <img class="img" src="imagenes/ahorcado_6.png" id="imagen">
+        <div class="row mt-2">
+          <div class="col text-primary text-center">
+            <p class="intentos">Intentos:
+              <span id="intentos">6</span>
+            </p>
+            <span id="clue" class="message"></span>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col text-danger text-center">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-8 mt-3 rr">
+        <!-- Para los botones -->
+        <div class="row justify-content-around align-items-center">
+          <div class="col-12 text-center" id="botonera">
+            <!-- AQUI AÑADIMOS LOS BOTONES DE LAS LETRAS -->
+
+          </div>
+        </div>
+        <!-- para la palabra secreta -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <p class="palabra" id="palabra">
+              <!-- AÑADIR LOS GUIONES -->
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col-12 mt-5" id="botones">
+            <button class="btn btn-lg btn-outline-primary btn-block" id="inicio">Elegir otra palabra</button>
+            <button class="btn btn-lg btn-outline-danger btn-block" id="pista">¿Quieres una pista?</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

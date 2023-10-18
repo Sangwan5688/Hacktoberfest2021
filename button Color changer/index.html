@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Color Changer</title>
+</head>
+<body>
+    <button id="colorButton">Change Color</button>
+
+    <script>
+        // JavaScript code to change the button's background color
+        document.getElementById('colorButton').addEventListener('click', function() {
+            // Array of possible colors
+            var colors = ["#FF5733", "#33FF57", "#3366FF", "#FF33E9", "#33E9FF"];
+            
+            // Generate a random index for the colors array
+            var randomIndex = Math.floor(Math.random() * colors.length);
+            
+            // Set the background color of the button
+            this.style.backgroundColor = colors[randomIndex];
+        });
+    </script>
+</body>
+</html>

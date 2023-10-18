@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <br>
+            <input type="password" id="password" placeholder="Password" required>
+            <br>
+            <input type="submit" value="Login">
+        </form>
+        <div id="login-message"></div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            
+            // Replace this with actual login logic on the server.
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            
+            if (username === 'user' && password === 'password') {
+                document.getElementById('login-message').innerHTML = 'Login successful! Redirecting...';
+                setTimeout(function() {
+                    window.location.href = 'dashboard.html';
+                }, 2000); // Redirect to dashboard.html after 2 seconds.
+            } else {
+                document.getElementById('login-message').innerHTML = 'Login failed. Please try again.';
+            }
+        });
+    </script>
+</body>
+</html>

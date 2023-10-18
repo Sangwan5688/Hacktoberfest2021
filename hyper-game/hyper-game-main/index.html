@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Hyper Game</title>
+	<meta content="Hyper Game" property="og:title" />
+  <meta content="KUNGULUS!!!" property="og:description" />
+  <meta content="http://demonin.com/games/hyperGame" property="og:url" />
+  <meta content="icon.png" property="og:image" />
+  <meta content="#008800" data-react-helmet="true" name="theme-color" />
+  <meta name="color-scheme" content="light only">
+  <link rel="icon" type="image/x-icon" href="icon.png">
+  <link href="style.css?v130=1" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<script src="chs.js"></script>
+	<script src="core.js"></script>
+	<h2 style="color: #ada; margin-top: 10px; display: inline-block; vertical-align: top; user-select: none" onclick="$('#borzoi').css('display','block')">Hyper Game</h2><p style="color: #ada; display: inline-block">v1.3.0</p>
+	<img src="borzoi.png" id="borzoi" style="width: 300px; position: absolute; left: 0; top: 0; display: none" onclick="$('#borzoi').css('display','none')">
+	<div id="game">
+		<h1 id="number">1E1</h1>
+		<center>
+			<button class="tabButton" onclick="switchTab(1)">Hyper-E</button>
+			<button class="tabButton" style="border: 2px solid #eb2; color: #eb2; display: none" onclick="switchTab(2)">Cascade</button>
+			<button class="tabButton" style="border: 2px solid #afa; color: #afa; display: none" onclick="switchTab(5)">The end</button>
+			<button class="tabButton" style="border: 2px solid #ca8; color: #ca8" onclick="switchTab(3)">Achievements</button>
+			<button class="tabButton" style="border: 2px solid #888; color: #888" onclick="switchTab(4)">Settings</button>
+		</center><br>
+		<!--Hyper-E tab-->
+		<div class="tab">
+			<center>
+				<button class="hyperESubTabButton" onclick="switchHyperESubTab(1)">Number</button>
+				<button class="hyperESubTabButton" style="border: 2px solid #c94; color: #c94" onclick="switchHyperESubTab(2)">Factors</button>
+				<button class="hyperESubTabButton" style="border: 2px solid #c53; color: #c53; display: none" onclick="switchHyperESubTab(3)">Clusters</button>
+				<button class="hyperESubTabButton" style="border: 2px solid #bbb; color: #bbb; display: none" onclick="switchHyperESubTab(4)">Challenges</button>
+				<button class="hyperESubTabButton" style="border: 2px solid #2dd; color: #2dd; display: none" onclick="switchHyperESubTab(5)">Vectors</button>
+				<button class="hyperESubTabButton" style="border: 2px solid #47e; color: #47e; display: none" onclick="switchHyperESubTab(6)">Base points</button>
+			<br><br>
+			<h2 style="color: #c94">You have <span id="hyperpoints">0</span> hyper-points</h2><br>
+			<button style="padding: 8px" onclick="gainHyperpoints()">Reset your number to gain <span id="hyperpointsToGet" style="color: #c94">0 hyper-points</span> (R)</button>
+			</center><br><br>
+			<!--Hyper-E - number-->
+			<div class="hyperESubTab">
+				<center>
+				<button style="padding: 8px; width: 300px" onclick="increaseNumber()">Increase your number (I)</button><br>
+				<button id="multiplierButton" style="padding: 8px; border: 2px solid #c94; color: #c94; width: 300px" onclick="buyMultiplier()">Gain an autoclicker multiplier [0]<br>Costs 20 hyper-points</button>
+				<button style="padding: 8px; border: 2px solid #c94; color: #c94; width: 150px" onclick="buyMaxMultipliers()">Gain max multipliers (M)</button><br>
+				<p style="color: #c94">Your <span id="autoclickers">0</span> autoclickers are clicking the increase button <span id="autoclickerEffect">0</span> times/second</p>
+				</center>
+			</div>
+			<!--Hyper-E - factors-->
+			<div class="hyperESubTab" style="display: none">
+				<center>
+				<button id="baseShiftButton" style="border: 2px solid #c94; color: #888; width: 300px" onclick="baseShift()">Perform a base shift (S)<br>Requires <span id="baseShiftRequirement">200,000</span> hyper-points</button>
+				<button id="clusterButton" style="border: 2px solid #c53; color: #888; min-width: 300px" onclick="gainClusters()">Cluster your number [+<span id="clustersToGet">0</span>] (U)<br><span id="clusterRequirement">Requires 1E1##1##2 in base 5</span></button><br>
+				<div id="clusterProgressBar"><div id="clusterProgressBarInner"></div></div><br>
+				<button class="factorButton" style="border: 2px solid #c94; color: #c94; width: 350px" onclick="buyFactor(1)">1st factor [0, 0]<br>Costs 10 hyper-points</button><br>
+				<button class="factorButton" style="border: 2px solid #c94; color: #c94; width: 350px" onclick="buyFactor(2)">2nd factor [0, 0]<br>Locked!</button><br>
+				<button class="factorButton" style="border: 2px solid #c94; color: #c94; width: 350px" onclick="buyFactor(3)">3rd factor [0, 0]<br>Locked!</button><br>
+				<button class="factorButton" style="border: 2px solid #c94; color: #c94; width: 350px" onclick="buyFactor(4)">4th factor [0, 0]<br>Locked!</button><br>
+				<button class="factorButton" style="border: 2px solid #c94; color: #c94; width: 350px" onclick="buyFactor(5)">5th factor [0, 0]<br>Locked!</button><br>
+				<button class="factorButton" style="border: 2px solid #c94; color: #c94; width: 350px" onclick="buyFactor(6)">6th factor [0, 0]<br>Locked!</button><br>
+				<button style="border: 2px solid #c94; color: #c94; width: 350px" onclick="buyMaxFactors()">Buy max factors (F)</button><br>
+				<button id="factorAutobuyer" style="border: 2px solid #c94; color: #c94; width: 350px; display: none" onclick="changeAutobuyer(1)">Factor autobuyer: <span class="autobuyer" style="color: #0b0">On</span></button>
+				<button id="autoBaseShift" style="border: 2px solid #c94; color: #c94; width: 350px; display: none" onclick="changeAutobuyer(2)">Auto-base shift: <span class="autobuyer" style="color: #0b0">On</span></button>
+				<p style="color: #c94">Each factor produces the one before it. 1st factors produce autoclickers.<br>Hold shift to see bought factor amounts</p>
+				</center>
+			</div>
+			<!--Hyper-E - clusters-->
+			<div class="hyperESubTab" style="display: none">
+				<center>
+				<h2 style="color: #c53">You have <span id="clusters">0</span> clusters (<span id="totalClusters">0</span> total)</h2><br>
+				<div id="clusterLimiter" style="display: none">
+					<label for="clusterLimiterCheckbox" style="color: #c94">Limit clusters:</span></label>
+					<input type="checkbox" id="clusterLimiterCheckbox" oninput="enableDisableClusterLimit()"></input><br>
+					<label for="clusterLimiterSlider" style="color: #c94">Cluster limit: <span id="clusterLimit">0</span></label><br>
+					<input type="range" min="1" max="31" value="31" class="slider" id="clusterLimiterSlider" oninput="changeClusterLimit()"><br>
+					<p style="color: #c94">(The cluster limiter will not work if you already have more clusters than the limit)</p>
+				</div>
+				<button id="clusterRespecButton" onclick="respecClusters()">Respec clusters</button>
+				<div id="clusterUpgrades">
+					<button class="clusterUpgrade" onclick="buyClusterUpgrade(1)"></button>
+					<button class="clusterUpgrade" onclick="buyClusterUpgrade(2)"></button>
+					<button class="clusterUpgrade" onclick="buyClusterUpgrade(3)"></button>
+					<button class="clusterUnlock" style="border: 2px dashed #c53">Unlock <b>challenges</b><br>Requires 10 clusters</button>
+					<button class="clusterUpgrade" onclick="buyClusterUpgrade(4)"></button>
+					<button class="clusterUpgrade" onclick="buyClusterUpgrade(5)"></button>
+					<button class="clusterUpgrade" onclick="buyClusterUpgrade(6)"></button>
+					<button class="clusterUnlock" style="border: 2px dashed #c53">Unlock <b>vectors</b><br>Requires 55 clusters</button>
+					<button class="clusterUpgrade" onclick="buyClusterUpgrade(7)"></button>
+					<button class="clusterUpgrade" onclick="buyClusterUpgrade(8)"></button>
+					<button class="clusterUpgrade" onclick="buyClusterUpgrade(9)"></button>
+					<button class="clusterUnlock" style="border: 2px dashed #c53">Unlock <b>base points</b><br>Requires 153 clusters</button>
+					<button class="clusterUpgrade" onclick="buyClusterUpgrade(10)"></button>
+					<button class="clusterUpgrade" onclick="buyClusterUpgrade(11)"></button>
+					<button class="clusterUpgrade" onclick="buyClusterUpgrade(12)"></button>
+					<button class="clusterUnlock" style="border: 2px dashed #c53">Unlock something...<br>Requires 496 clusters</button>
+				</div>
+				<p style="color: #c53">Hold shift for more upgrade info</p>
+				</center>
+			</div>
+			<!--Hyper-E - challenges-->
+			<div class="hyperESubTab" style="display: none">
+				<center>
+				<button id="exitChallengeButton" onclick="exitChallenge()">Exit current challenge</button>
+				<div id="challengeProgressBar"><div id="challengeProgressBarInner"></div></div>
+				<div id="challenges">
+					<button class="challengeButton" onclick="enterChallenge(1)"><span style="font-size: 24px"><b>Challenge 1 (<span class="challengesBeaten">0</span>/3)</b></span><br><span class="challengeInfo"></span></button>
+					<button class="challengeButton" onclick="enterChallenge(2)"><span style="font-size: 24px"><b>Challenge 2 (<span class="challengesBeaten">0</span>/3)</b></span><br><span class="challengeInfo"></span></button>
+					<button class="challengeButton" onclick="enterChallenge(3)"><span style="font-size: 24px"><b>Challenge 3 (<span class="challengesBeaten">0</span>/3)</b></span><br><span class="challengeInfo"></span></button>
+					<button class="challengeButton" onclick="enterChallenge(4)"><span style="font-size: 24px"><b>Challenge 4 (<span class="challengesBeaten">0</span>/3)</b></span><br><span class="challengeInfo"></span></button>
+					<button class="challengeButton" onclick="enterChallenge(5)" style="display: none"><span style="font-size: 24px"><b>Challenge 5 (<span class="challengesBeaten">0</span>/3)</b></span><br><span class="challengeInfo"></span></button>
+					<button class="challengeButton" onclick="enterChallenge(6)" style="display: none"><span style="font-size: 24px"><b>Challenge 6 (<span class="challengesBeaten">0</span>/3)</b></span><br><span class="challengeInfo"></span></button>
+				</div>
+				<p style="color: #bbb">Completing challenges provides a x100 boost to the corresponding factor.<br>Hold shift to see current challenge boosts</p>
+				</center>
+			</div>
+			<!--Hyper-E - vectors-->
+			<div class="hyperESubTab" style="display: none">
+				<center>
+				<h2 style="color: #2bb">You have <span id="vectors">0</span> vectors</h2>
+				<p style="color: #2bb">You are gaining <span id="vectorsPerSecond">0</span> vectors per second <span id="vectorSoftcap" style="color: #b44"></span>(based on current number, only if vector gain is enabled)<br>Your vectors are dividing factor production by <span id="vectorEffect" style="color: #b22">1</span></p>
+				<button id="vectorGainButton" onclick="enableDisableVectorGain()">Enable vector gain</button><br>
+				<button id="vectorResetButton" style="border: 2px solid #a66; color: #a66; width: 300px;" onclick="resetVectors()">Reset vectors to 0</button><br><br>
+				<div id="vectorUpgrades">
+					<button class="vectorUpgrade" onclick="buyVectorUpgrade(1)">Double vector gain [<span class="vectorUpgradeAmount">0</span>]<br>Costs <span class="vectorUpgradeCost">200</span> vectors</button>
+					<button class="vectorUpgrade" onclick="buyVectorUpgrade(2)">Increase vector gain based on total clusters [<span class="vectorUpgradeAmount">0</span>]<br>Currently x<span class="vectorUpgradeEffect">1</span><br>Costs <span class="vectorUpgradeCost">1,000</span> vectors</button>
+					<button class="vectorUpgrade" onclick="buyVectorUpgrade(3)">Multiply factor production [<span class="vectorUpgradeAmount">0</span>]<br>Currently x<span class="vectorUpgradeEffect">1</span><br>Costs <span class="vectorUpgradeCost">1,000</span> vectors</button>
+					<button class="vectorUpgrade" onclick="buyVectorUpgrade(4)">Multiply autoclicker speed in challenges [<span class="vectorUpgradeAmount">0</span>]<br>Currently x<span class="vectorUpgradeEffect">1</span><br>Costs <span class="vectorUpgradeCost">10,000</span> vectors</button>
+					<button class="vectorUpgrade" style="border: 2px solid #47e; background-color: #013; display: none" onclick="buyVectorUpgrade(5)">Decrease basedverse base [<span class="vectorUpgradeAmount">0</span>/5]<br>Costs <span class="vectorUpgradeCost">1.00e12</span> vectors</button>
+					<button class="vectorUpgrade" style="border: 2px solid #47e; background-color: #013; display: none" onclick="buyVectorUpgrade(6)">Multiply up-base and down-base effect [<span class="vectorUpgradeAmount">0</span>]<br>Currently x<span class="vectorUpgradeEffect">1</span><br>Costs <span class="vectorUpgradeCost">1.00e15</span> vectors</button>
+				</div>
+				<button style="border: 2px solid #2bb; color: #2bb; background-color: #022"onclick="maxVectorUpgrades()">Max vector upgrades (V)</button>
+				</center>
+			</div>
+			<!--Hyper-E - base points-->
+			<div class="hyperESubTab" style="display: none">
+				<center>
+				<h2 style="color: #47e">You have <span id="basePoints">0</span> base points (<span id="totalBasePoints">0</span> total)</h2><br><br>
+				<button id="basedverseButton" onclick="enterExitBasedverse()"><b><span id="basedverseButtonText">Enter</span> the Basedverse</b><br>You are trapped in base <span id="basedverseBase">20</span>.<br>Upon leaving you will gain base points based on your number.</button>
+				<p id="basePointsText" style="color: #47e"></p>
+				<div style="display: inline-block">
+					<h2 style="color: #edc">You have <span id="upBase">0</span> up-base</h2>
+					<p style="color: #edc">Multiplying factor production by x<span id="upBaseEffect">1.00</span></p>
+					<button style="border: 2px solid #edc; color: #edc" onclick="spendBasePoints(1)">Put 1 base point into up-base</button><br>
+					<button style="border: 2px solid #edc; color: #edc" onclick="spendBasePoints(2)">Put all base points into up-base</button>
+				</div>
+				<div style="display: inline-block">
+					<h2 style="color: #807870">You have <span id="downBase">0</span> down-base</h2>
+					<p style="color: #807870">Multiplying vector gain by x<span id="downBaseEffect">1.00</span></p>
+					<button style="border: 2px solid #807870; color: #807870" onclick="spendBasePoints(3)">Put 1 base point into down-base</button><br>
+					<button style="border: 2px solid #807870; color: #807870" onclick="spendBasePoints(4)">Put all base points into down-base</button>
+				</div><br>
+				<button style="border: 2px solid #47e; color: #47e" onclick="respecBasePoints()">Respec base points</button>
+				</center>
+			</div>
+		</div>
+		<!--Cascade tab-->
+		<div class="tab" style="display: none">
+			<center>
+				<button class="cascadeSubTabButton" style="border: 2px solid #eb2; color: #eb2" onclick="switchCascadeSubTab(1)">Cascade</button>
+				<button class="cascadeSubTabButton" style="border: 2px solid #eb2; color: #eb2" onclick="switchCascadeSubTab(2)">Recent</button>
+				<button class="cascadeSubTabButton" style="border: 2px solid #eb2; color: #eb2" onclick="switchCascadeSubTab(3)">Milestones</button>
+				<button class="cascadeSubTabButton" style="border: 2px solid #e72; color: #e72; display: none" onclick="switchCascadeSubTab(4)">Post-cascade</button>
+				<button class="cascadeSubTabButton" style="border: 2px solid #0ff; color: #0ff; display: none" onclick="switchCascadeSubTab(5)">Flavours</button>
+				<button class="cascadeSubTabButton" style="border: 2px solid #666; color: #666; display: none" onclick="switchCascadeSubTab(6)">Shadow crystals</button>
+			<br><br>
+			<h2 style="color: #eb2">You have <span id="cascades">0</span> cascades</h2><br>
+			<button id="cascadeButton" style="border: 2px solid #eb2; color: #eb2; padding: 8px" onclick="cascade()">Reset previous progress to gain a cascade (C)</button>
+			</center><br><br>
+			<!--Cascade - cascade-->
+			<div class="cascadeSubTab">
+				<center>
+				<p style="color: #eb2">You have <span id="cascadePower">0</span> cascade power, multiplying factor production by <span id="cascadePowerEffect">1.00</span></p>
+				<button class="layerButton" style="border: 2px solid #c94; color: #eb2; width: 350px" onclick="buyLayer(0)">Power producer [0]<br>Costs 1 cascades</button><br>
+				<button class="layerButton" style="border: 2px solid #c94; color: #eb2; width: 350px" onclick="buyLayer(1)">1st layer [0]<br>Costs 2 cascades</button><br>
+				<button class="layerButton" style="border: 2px solid #c94; color: #eb2; width: 350px" onclick="buyLayer(2)">2nd layer [0]<br>Costs 4 cascades</button><br>
+				<button class="layerButton" style="border: 2px solid #c94; color: #eb2; width: 350px" onclick="buyLayer(3)">3rd layer [0]<br>Costs 8 cascades</button><br>
+				<button class="layerButton" style="border: 2px solid #c94; color: #eb2; width: 350px" onclick="buyLayer(4)">4th layer [0]<br>Costs 16 cascades</button><br>
+				<button class="layerButton" style="border: 2px solid #c94; color: #eb2; width: 350px" onclick="buyLayer(5)">5th layer [0]<br>Costs 32 cascades</button><br>
+				<button class="layerButton" style="border: 2px solid #c94; color: #eb2; width: 350px" onclick="buyLayer(6)">6th layer [0]<br>Costs 64 cascades</button><br>
+				<button style="border: 2px solid #c94; color: #eb2; width: 350px" onclick="buyMaxLayers()">Buy max layers (L)</button><br>
+				<p style="color: #c94">Each layer produces the one before it. Power producers produce power.<br>Hold shift to see bought layer amounts</p>
+				
+				</center>
+			</div>
+			<!--Cascade - recent-->
+			<div class="cascadeSubTab">
+				<center><p style="color: #e72"><span style="font-size: 24px; color: #eb2"><b>Recent cascades:</b></span><br><span id="recentCascades"></span></p></center>
+			</div>
+			<!--Cascade - milestones-->
+			<div class="cascadeSubTab" style="display: none">
+				<center>
+				<p style="color: #eb2">Cascade with certain amounts of clusters or less to achieve cascade milestones!</p>
+				<div class="milestones">
+					<div class="cascadeMilestone"><span style="font-size: 24px"><b>496 clusters</b></span><br>Unlock an autobuyer for factors (at no cost)</div>
+					<div class="cascadeMilestone"><span style="font-size: 24px"><b>435 clusters</b></span><br>Vectors no longer divide factor production (except in challenge 5)</div>
+					<div class="cascadeMilestone"><span style="font-size: 24px"><b>378 clusters</b></span><br>Challenge reward is ^1.5, and unlock layers</div>
+					<div class="cascadeMilestone"><span style="font-size: 24px"><b>325 clusters</b></span><br>Keep base points on cascade reset</div>
+					<div class="cascadeMilestone"><span style="font-size: 24px"><b>276 clusters</b></span><br>Bought layers (+ power producers) multiply that layer's production</div>
+					<div class="cascadeMilestone"><span style="font-size: 24px"><b>231 clusters</b></span><br>Cascade power effect is improved</div>
+					<div class="cascadeMilestone"><span style="font-size: 24px"><b>171 clusters</b></span><br>Keep challenge completions on cascade reset</div>
+					<div class="cascadeMilestone"><span style="font-size: 24px"><b>120 clusters</b></span><br>Keep vector upgrades on cascade reset</div>
+					<div class="cascadeMilestone"><span style="font-size: 24px"><b>21 clusters</b></span><br>Always gain 100 hyper-points per second</div>
+					<div class="cascadeMilestone"><span style="font-size: 24px"><b>0 clusters</b></span><br>Unlock <span style="color: #e72"><b>post-cascade</b></span></div>
+				</div><br><br>
+				<div id="shadowMilestoneDiv" style="display: none">
+					<h2 style="color: #666">Shadow milestones</h2>
+					<p style="color: #666">Reach certain amounts of shadow crystals to achieve shadow milestones!</p>
+					<div class="milestones">
+						<div class="shadowMilestone"><span style="font-size: 24px"><b>1 crystal</b></span><br>Vector upgrade 3 formula is improved</div>
+						<div class="shadowMilestone"><span style="font-size: 24px"><b>3 crystals</b></span><br>Alpha-flavour multiplies shadow power/s<br>Currently x<span class="shadowMilestoneEffect">1.00</span></div>
+						<div class="shadowMilestone"><span style="font-size: 24px"><b>10 crystals</b></span><br>Automatically gain clusters without resetting</div>
+						<div class="shadowMilestone"><span style="font-size: 24px"><b>50 crystals</b></span><br>Alpha-flavour cascade gain multiplier is increased</div>
+						<div class="shadowMilestone"><span style="font-size: 24px"><b>200 crystals</b></span><br>Vector upgrade 3 formula is improved again</div>
+						<div class="shadowMilestone"><span style="font-size: 24px"><b>1,500 crystals</b></span><br>Blood crystals multiply shadow power/s<br>Currently x<span class="shadowMilestoneEffect">1.00</div>
+						<div class="shadowMilestone"><span style="font-size: 24px"><b>15,000 crystals</b></span><br>Shadow crystals multiply divine power/s<br>Currently x<span class="shadowMilestoneEffect">1.00</div>
+						<div class="shadowMilestone"><span style="font-size: 24px"><b>100,000 cr.</b></span><br>Automatically buy post-cascade upgrade 1 at no cost</div>
+						<div class="shadowMilestone"><span style="font-size: 24px"><b>10,000,000 cr.</b></span><br>Gain 100% of potential cascades per second</div>
+						<div class="shadowMilestone"><span style="font-size: 24px"><b>1.00e15 cr.</b></span><br>Finish <span style="color: #ada">Hyper Game</span>!</span></div>
+					</div>
+				</div>
+				</center>
+			</div>
+			<!--Cascade - post-cascade-->
+			<div class="cascadeSubTab" style="display: none">
+				<center>
+				<button id="surpassCascadeButton" style="border: 2px solid #e72; color: #0f0; background-color: #210; width: 350px" onclick="surpassCascade()">Surpass the limits of cascade and go beyond!<br>This will allow you to gain more than 1 cascade per reset.</button><br><br>
+				<button class="postCascadeUpgrade" style="width: 250px" onclick="buyPostCascadeUpgrade(1)">Increase cascade gain [<span class="postCascadeUpgradeBought">0</span>]<br>Currently x<span class="postCascadeUpgradeEffect">1.00</span><span id="postCascadeUpgrade1Softcap"></span><br>Costs <span class="postCascadeUpgradeCost">20</span> cascades</button>
+				<div id="postCascadeUpgrades">
+					<button class="postCascadeUpgrade" onclick="buyPostCascadeUpgrade(2)">Increase up/down-base effect based on time spent in this cascade<br>Currently x<span class="postCascadeUpgradeEffect">1.00</span><br>Costs 30 cascades</button>
+					<button class="postCascadeUpgrade" onclick="buyPostCascadeUpgrade(3)">Unlock auto-base shift<br>Costs 50 cascades</button>
+					<button class="postCascadeUpgrade" onclick="buyPostCascadeUpgrade(4)">Multiply cascade gain based on unspent clusters<br>Currently x<span class="postCascadeUpgradeEffect">1.00</span><br>Costs 120 cascades</button>
+					<button class="postCascadeUpgrade" onclick="buyPostCascadeUpgrade(5)">Cluster upgrades are always bought at no cost<br>Costs 300 cascades</button>
+					<button class="postCascadeUpgrade" onclick="buyPostCascadeUpgrade(6)">Gain 100% of potential hyper-points per second<br>Costs 750 cascades</button>
+					<button class="postCascadeUpgrade" onclick="buyPostCascadeUpgrade(7)">Gain 10% of best cascades per second (Currently <span id="bestCascadesPerSecond">0.00</span>/s)<br>Also unlocks flavours<br>Costs 1,000 cascades</button>
+					<button class="postCascadeUpgrade" onclick="buyPostCascadeUpgrade(8)">Improve post-cascade upgrade 1 cost<br>Costs 5,000,000 cascades</button>
+					<button class="postCascadeUpgrade" onclick="buyPostCascadeUpgrade(9)">Layer production is multiplied by (layers bought)^3 instead of ^1<br>Costs 250,000,000 cascades</button>
+					<button class="postCascadeUpgrade" onclick="buyPostCascadeUpgrade(10)">Unlock <span style="color: #666">Shadow crystals</span> and <span style="color: #666">Shadow milestones</span><br>Costs 1.00e12 cascades</button>
+				</div>
+				</center>
+			</div>
+			<!--Cascade - flavours-->
+			<div class="cascadeSubTab" style="display: none">
+				<center>
+				<button class="flavourUnlockButton" style="border: 2px solid #0ff; color: #0ff; width: 400px" onclick="unlockFlavour(1)">Unlock Alpha-flavour<br>Costs 500 cascades</button>
+				<p class="flavourText" style="color: #0ff; display: none">You have <span class="flavour">0</span> alpha-flavour, increasing factor production by ^<span class="flavourEffect">1.00</span> and multiplying cascade gain by <span class="flavourEffect">1.00</span><br>Each alpha-flavour costs <span class="flavourCost">1,000</span> cascades!</p>
+				<button class="flavourButton" style="border: 2px solid #0ff; color: #0ff; width: 400px; display: none" onclick="convertFlavour(1)">Turn all cascades into <span class="flavourToGet">0</span> α-flavour</button>
+				<button class="flavourUnlockButton" style="border: 2px solid #4bf; color: #4bf; width: 400px" onclick="unlockFlavour(2)">Unlock Beta-flavour<br>Costs 100,000 cascades</button>
+				<p class="flavourText" style="color: #4bf; display: none">You have <span class="flavour">0</span> beta-flavour, multiplying alpha-flavour gain by <span class="flavourEffect">1.00</span> and multiplying cascade gain by <span class="flavourEffect">1.00</span><br>Each beta-flavour costs <span class="flavourCost">1,000</span> alpha-flavour!</p>
+				<button class="flavourButton" style="border: 2px solid #4bf; color: #4bf; width: 400px; display: none" onclick="convertFlavour(2)">Turn all alpha-flavour into <span class="flavourToGet">0</span> β-flavour</button>
+				<button class="flavourUnlockButton" style="border: 2px solid #88f; color: #88f; width: 400px" onclick="unlockFlavour(3)">Unlock Gamma-flavour<br>Costs 1,000,000 cascades</button>
+				<p class="flavourText" style="color: #88f; display: none">You have <span class="flavour">0</span> gamma-flavour, multiplying beta-flavour gain by <span class="flavourEffect">1.00</span> and multiplying cascade gain by <span class="flavourEffect">1.00</span><br>Each gamma-flavour costs <span class="flavourCost">1,000</span> beta-flavour!</p>
+				<button class="flavourButton" style="border: 2px solid #88f; color: #88f; width: 400px; display: none" onclick="convertFlavour(3)">Turn all beta-flavour into <span class="flavourToGet">0</span> γ-flavour</button>
+				<button class="flavourUnlockButton" style="border: 2px solid #b4f; color: #b4f; width: 400px" onclick="unlockFlavour(4)">Unlock Delta-flavour<br>Costs 100,000,000 cascades</button>
+				<p class="flavourText" style="color: #b4f; display: none">You have <span class="flavour">0</span> delta-flavour, multiplying gamma-flavour gain by <span class="flavourEffect">1.00</span> and multiplying cascade gain by <span class="flavourEffect">1.00</span><br>Each delta-flavour costs <span class="flavourCost">1,000</span> gamma-flavour!</p>
+				<button class="flavourButton" style="border: 2px solid #b4f; color: #b4f; width: 400px; display: none" onclick="convertFlavour(4)">Turn all gamma-flavour into <span class="flavourToGet">0</span> δ-flavour</button>
+				<button class="flavourUnlockButton" style="border: 2px solid #f0f; color: #f0f; width: 400px" onclick="unlockFlavour(5)">Unlock Epsilon-flavour<br>Costs 1.00e10 cascades</button>
+				<p class="flavourText" style="color: #f0f; display: none">You have <span class="flavour">0</span> epsilon-flavour, multiplying delta-flavour gain by <span class="flavourEffect">1.00</span> and multiplying cascade gain by <span class="flavourEffect">1.00</span><br>Each epsilon-flavour costs <span class="flavourCost">1,000</span> delta-flavour!</p>
+				<button class="flavourButton" style="border: 2px solid #f0f; color: #f0f; width: 400px; display: none" onclick="convertFlavour(5)">Turn all delta-flavour into <span class="flavourToGet">0</span> ε-flavour</button>
+				</center>
+			</div>
+			<!--Cascade - shadow mind-->
+			<div class="cascadeSubTab" style="display: none">
+				<p style="color: #666; margin-bottom: 2px">Your <span id="shadowPower" style="color: #aaa">0</span> shadow power gives you <span id="shadowCrystals" style="color: #aaa">0</span> shadow crystals, multiplying cascade gain by <span id="shadowCrystalEffect">1.00</span><br>You are gaining 1 shadow crystal every <span id="shadowCrystalPoint">1,000,000</span> shadow power</p>
+				<div id="shadowPowerBar"><div id="shadowPowerBarInner"></div></div>
+				<p style="color: #666; margin-top: 2px">You are gaining <span id="shadowPowerPerSecond" style="color: #aaa">0</span> shadow power/s (based on current hyper-points)</p><br>
+				<p class="shadowUnknown" style="color: #999; margin-bottom: 2px">To be unlocked...</p>
+				<div class="shadowUnknown unknownBar"></div>
+				<div id="bloodCrystalDiv" style="display: none; width: 100%">
+					<p style="color: #b22; margin-bottom: 2px">Your <span id="bloodPower" style="color: #f44">0</span> blood power gives you <span id="bloodCrystals" style="color: #f44">0</span> blood crystals, multiplying shadow power/s by <span class="bloodCrystalEffect">1.00</span> and cascade gain by <span class="bloodCrystalEffect">1.00</span><br>You are gaining 1 blood crystal every <span id="bloodCrystalPoint">1,000,000</span> blood power</p>
+					<div id="bloodPowerBar"><div id="bloodPowerBarInner"></div></div>
+					<p style="color: #b22; margin-top: 2px">You are gaining <span id="bloodPowerPerSecond" style="color: #f44">0</span> blood power/s (based on current shadow power)</p><br>
+				</div>
+				<p class="shadowUnknown" style="color: #999; margin-bottom: 2px">To be unlocked...</p>
+				<div class="shadowUnknown unknownBar"></div>
+				<div id="divineCrystalDiv" style="display: none; width: 100%">
+					<p style="color: #dd9; margin-bottom: 2px">Your <span id="divinePower" style="color: #ffd">0</span> divine power gives you <span id="divineCrystals" style="color: #ffd">0</span> divine crystals, multiplying blood power/s by <span class="divineCrystalEffect">1.00</span> and cascade gain by <span class="divineCrystalEffect">1.00</span><br>You are gaining 1 divine crystal every <span id="divineCrystalPoint">1,000,000</span> divine power</p>
+					<div id="divinePowerBar"><div id="divinePowerBarInner"></div></div>
+					<p style="color: #dd9; margin-top: 2px">You are gaining <span id="divinePowerPerSecond" style="color: #ffd">0</span> divine power/s (based on current blood power)</p><br>
+				</div>
+				<center>
+				<button class="shadowUpgrade" onclick="buyShadowUpgrade(1)">Double shadow power/s<br>Currently x<span class="shadowUpgradeEffect">1.00</span><br>Costs <span class="shadowUpgradeCost">100,000</span> shadow power</button>
+				<button class="shadowUpgrade" onclick="buyShadowUpgrade(2)">Decrease shadow crystal requirement<br>Costs <span class="shadowUpgradeCost">5,000,000</span> shadow power</button>
+				<button class="shadowUpgrade" onclick="unlockBloodCrystals()">Unlock <span style="color: #b22">blood crystals</span><br>Costs 25,000,000 shadow power</button>
+				<button class="bloodUpgrade" onclick="buyBloodUpgrade(1)">Double blood power/s<br>Costs <span class="bloodUpgradeCost">100,000</span> blood power</button>
+				<button class="bloodUpgrade" onclick="buyBloodUpgrade(2)">Decrease blood crystal requirement<br>Costs <span class="bloodUpgradeCost">5,000,000</span> blood power</button>
+				<button class="bloodUpgrade" onclick="unlockDivineCrystals()">Unlock <span style="color: #ff8">divine crystals</span><br>Costs 25,000,000 blood power</button>
+				<button class="divineUpgrade" onclick="buyDivineUpgrade(1)">Double divine power/s<br>Costs <span class="divineUpgradeCost">100,000</span> divine power</button>
+				<button class="divineUpgrade" onclick="buyDivineUpgrade(2)">Decrease divine crystal requirement<br>Costs <span class="divineUpgradeCost">5,000,000</span> divine power</button>
+				</center>
+			</div>
+		</div>
+		<!--Achievements tab-->
+		<div class="tab" style="display: none">
+			<center>
+			<div id="achievements">
+				<!--I know these could be created through JS but I'm lazy-->
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+				<div class="achievement"></div>
+			</div>
+			</center>
+		</div>
+		<!--Settings tab-->
+		<div class="tab" style="display: none">
+			<center>
+			<button class="confirmationButton" style="border: 2px solid #c53; color: #888; display: block" onclick="changeConfirmation(1)">Cluster confirmation: <span class="confirmation" style="color: #0b0">On</span></button>
+			<button class="confirmationButton" style="border: 2px solid #c53; color: #888; display: block" onclick="changeConfirmation(2)">Cluster upgrade respec confirmation: <span class="confirmation" style="color: #0b0">On</span></button>
+			<button class="confirmationButton" style="border: 2px solid #888; color: #888; display: none" onclick="changeConfirmation(3)">Challenge enter confirmation: <span class="confirmation" style="color: #0b0">On</span></button>
+			<button class="confirmationButton" style="border: 2px solid #888; color: #888; display: none" onclick="changeConfirmation(4)">Challenge exit confirmation: <span class="confirmation" style="color: #0b0">On</span></button>
+			<button class="confirmationButton" style="border: 2px solid #47e; color: #888; display: none" onclick="changeConfirmation(5)">Basedverse enter/exit confirmation: <span class="confirmation" style="color: #0b0">On</span></button>
+			<button class="confirmationButton" style="border: 2px solid #47e; color: #888; display: none" onclick="changeConfirmation(6)">Base points respec confirmation: <span class="confirmation" style="color: #0b0">On</span></button>
+			<button class="confirmationButton" style="border: 2px solid #eb2; color: #888; display: none" onclick="changeConfirmation(7)">Cascade confirmation: <span class="confirmation" style="color: #0b0">On</span></button>
+			<br><br>
+			<button style="border: 2px solid #888; color: #888" onclick="save()">Manual save</button><br>
+			<button style="border: 2px solid #888; color: #888" onclick="exportGame()">Export</button><br>
+			<button style="border: 2px solid #888; color: #888" onclick="importGame()">Import</button><br>
+			<button style="border: 2px solid #b44; color: #b44" onclick="hardReset()">Hard reset</button><br><br>
+			<p>Made by Demonin<br>HyperNum made with help from solarzone<br>Heavily inspired by <a href="https://flamemasternxf.github.io/ordinal-pringles/">Ordinal Pringles</a> (<a href="https://galaxy.click/play/8">galaxy link</a>)<br>
+			<span style="color: #57c">Want to stay up-to-date with updates and chat about the game? Check out the <a href="https://discord.gg/7PChmUV3wk">Discord</a>!<span><br>
+			<span style="color: #f55">Want to support my game development efforts and get early access to updates? Check out my <a href="https://www.patreon.com/Demonin">Patreon</a> :)</span></p>
+			</center>
+			<p id="a"></p>
+		</div>
+		<!--The end tab-->
+		<div class="tab" style="display: none">
+			<center>
+			<h1>🎉🎉🎉</h1>
+			<p style="color: #ada">Congratulations, you've hit the end of Hyper Game! If you're still seeking more, you can check out my <a href="https://demonin.com/games/">other projects</a>.</p>
+			</center>
+		</div>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script src="Mousetrap.js"></script>
+		<script src="break_eternity.js?v2=1"></script>
+		<script src="HyperNum.js?v1304=1"></script>
+		<script src="constants.js?v130=1"></script>
+		<script src="script.js?v1302=1"></script>
+		<script>load(); if (!isDevVersion) setAutoSave()</script>
+	</div>
+	<!--客服 开始-->
+<link rel="stylesheet" href="//g8hh.github.io/static/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="//g8hh.github.io/static/js/kf.js"></script>
+<!-- 客服 结束 -->
+<!--站长统计-->
+    <div style="display: none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?828597e93cee632465679b7ef35edfd5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>    </div>
+</body>

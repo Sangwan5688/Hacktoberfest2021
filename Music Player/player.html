@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MP3 Player</title>
+  </head>
+  <body>
+    <input type="file" id="fileInput">
+    <button onclick="playSong()">Play</button>
+    <button onclick="pauseSong()">Pause</button>
+    <audio id="audioPlayer" controls></audio>
+
+    <script>
+      function playSong() {
+        var audioPlayer = document.getElementById("audioPlayer");
+        audioPlayer.play();
+      }
+
+      function pauseSong() {
+        var audioPlayer = document.getElementById("audioPlayer");
+        audioPlayer.pause();
+      }
+
+      document.getElementById("fileInput").addEventListener("change", function(event) {
+        var file = event.target.files[0];
+        var audioPlayer = document.getElementById("audioPlayer");
+        audioPlayer.src = URL.createObjectURL(file);
+      });
+    </script>
+  </body>
+</html>

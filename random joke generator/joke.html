@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Joke Generator</title>
+</head>
+<body>
+    <button id="jokeButton">Tell Me a Joke</button>
+    <div id="jokeContainer"></div>
+
+    <script>
+        // An array of jokes
+        var jokes = [
+            "Why did the scarecrow win an award? Because he was outstanding in his field!",
+            "Parallel lines have so much in common. It's a shame they'll never meet.",
+            "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+            "How do you organize a space party? You planet!",
+            "I used to play piano by ear, but now I use my hands.",
+        ];
+
+        // Function to display a random joke
+        function tellJoke() {
+            var randomIndex = Math.floor(Math.random() * jokes.length);
+            var joke = jokes[randomIndex];
+            document.getElementById('jokeContainer').innerHTML = '<p>' + joke + '</p>';
+        }
+
+        document.getElementById('jokeButton').addEventListener('click', tellJoke);
+    </script>
+</body>
+</html>

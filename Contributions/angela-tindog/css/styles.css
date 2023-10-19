@@ -1,0 +1,243 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "montserrat";
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "montserrat";
+  font-weight: bolder;
+}
+
+/* Headings */
+
+.main-heading {
+  line-height: 1.5;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.section-heading {
+  font-weight: 669;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.price-heading {
+  font-weight: 669;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* SECTIONS */
+.colored-section {
+  background: #ff4c68;
+  color: #912a2e;
+}
+
+.white-section {
+  background: #fff;
+}
+
+/* TITLE */
+
+#title {
+  text-align: left;
+}
+
+#title .container-fluid {
+  padding: 3% 10% 5%;
+}
+
+/* TITLE IMAGE */
+
+#title-img {
+  max-width: 56%;
+  max-height: 190%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 30%;
+}
+
+.container-fluid {
+  padding: 5% 10%;
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "ubuntu";
+  font-size: 2.5rem;
+}
+
+.nav-item {
+  padding: 0 7px;
+}
+
+/* DOWNLOAD AND SIGN-UP BUTTONS */
+
+.down-btn {
+  font-size: 15px;
+  background: transparent;
+  border: solid 1px black;
+  cursor: pointer;
+  color: #ffe4e4;
+  border-radius: 5%;
+  transition: all 0.6s;
+  box-shadow: 10px 10px 35px #f44a67, -10px -10px 35px #f44a67;
+  margin: 3% 2% 3% 0;
+}
+
+.down-btn:hover {
+  color: black;
+  background: linear-gradient(to right, #fb575c, #ef3e47);
+}
+
+.shade {
+  box-shadow: 10px 10px 35px whitesmoke, -10px -10px 35px gainsboro;
+}
+
+/* FEATURES SECTION */
+
+#features {
+  position: relative;
+}
+
+.features-title {
+  font-weight: 750;
+  font-size: 1.5rem;
+}
+
+/* FEATURES ICONS */
+
+#fi {
+  color: #ef8172;
+  padding-bottom: 1rem;
+}
+
+#fi:hover {
+  color: #ff4c68;
+}
+
+#fp {
+  color: #8f8f8f;
+}
+
+/* TESTIMONIALS */
+
+#testimonials {
+  background-color: #ef8172;
+}
+
+.testimonial-text {
+  font-weight: 669;
+  font-size: 2.8rem;
+  line-height: 1.5;
+}
+
+.testic-img {
+  width: 7%;
+  border-radius: 100%;
+  margin: 2%;
+}
+
+/* PRESS IMAGES ADVERT */
+
+#press {
+  padding-top: 2%;
+  padding-bottom: 0.5%;
+  background-color: #ef8172;
+}
+
+#press-logo {
+  width: 10%;
+  margin: 0px 20px 50px;
+}
+
+/* pricing section */
+
+#pricing {
+  padding: 100px;
+}
+
+.pricing-col {
+  padding: 3% 2%;
+}
+
+.plan-title {
+  font-weight: 750;
+  font-size: 1.5rem;
+}
+
+/* CTA */
+
+/* Footer */
+
+#footer {
+  z-index: -1;
+}
+
+/* Icons */
+
+.icons {
+  width: 38px;
+  height: 38px;
+  margin: 10px auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.icons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(100%, 100%);
+  transition: all 0.4s;
+  background: linear-gradient(to right, #ffae00, #fa7e91);
+}
+
+.icons:hover::before {
+  transform: translate(0);
+  animation: anim 0.4s ease-in-out;
+}
+
+@keyframes anim {
+  0%,
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+  50% {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 1080px) {
+  #title {
+    text-align: center;
+  }
+  #title-img {
+    position: static;
+    transform: rotate(0);
+  }
+}

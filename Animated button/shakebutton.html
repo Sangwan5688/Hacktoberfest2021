@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .shake-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #9b59b6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      animation: shake 0.5s infinite;
+    }
+    
+    @keyframes shake {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(5px);
+      }
+      50% {
+        transform: translateX(-5px);
+      }
+      75% {
+        transform: translateX(5px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="shake-button">Shake</button>
+</body>
+</html>

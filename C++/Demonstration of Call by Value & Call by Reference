@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+void swap(int x,int y);
+void swap(int *x,int *y);
+int main()
+{
+	int a,b;
+	cout<<"Enter 1st Number :";
+	cin>>a;
+	
+	cout<<"Enter 2nd Number :";
+	cin>>b;
+	cout<<endl;
+	
+	cout<<"Before CALL BY VALUE, value of 1st Number :"<<a<<endl;
+	cout<<"Before CALL BY VALUE, value of 2nd Number :"<<b<<endl;
+	
+	swap(a,b);
+	cout<<endl;
+	cout<<"After CALL BY VALUE, value of 1st Number :"<<a<<endl;
+	cout<<"After CALL BY VALUE, value of 2nd Number :"<<b<<endl;
+	
+	cout<<"_______\n"<<endl;
+	
+	cout<<"Before CALL BY REFERENCE, value of 1st Number :"<<a<<endl;
+	cout<<"Before CALL BY REFERENCE, value of 2nd Number :"<<b<<endl;
+	
+	swap(&a,&b);
+	cout<<endl;
+	cout<<"After CALL BY REFERENCE, value of 1st Number :"<<a<<endl;
+	cout<<"After CALL BY REFERENCE, value of 2nd Number :"<<b<<endl;
+	
+	return 0;
+}
+void swap(int x,int y) //call by value
+{
+	int swap;
+	swap=x;
+	x=y;
+	y=swap;
+}
+void swap(int *x,int *y) //call by reference
+{
+	int swap;
+	swap=*x;
+	*x=*y;
+	*y=swap;
+}

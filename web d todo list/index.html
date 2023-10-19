@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive To-Do List</title>
+    <style>
+        ul { list-style: none; }
+    </style>
+</head>
+<body>
+    <h1>My To-Do List</h1>
+    <input id="task" type="text" placeholder="Enter a new task">
+    <button id="add">Add Task</button>
+    <ul id="taskList"></ul>
+    <script>
+        const taskInput = document.getElementById("task");
+        const addButton = document.getElementById("add");
+        const taskList = document.getElementById("taskList");
+
+        addButton.addEventListener("click", function () {
+            const taskText = taskInput.value;
+            if (taskText) {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `<input type="checkbox"> ${taskText}`;
+                taskList.appendChild(listItem);
+                taskInput.value = "";
+            }
+        });
+    </script>
+</body>
+</html>

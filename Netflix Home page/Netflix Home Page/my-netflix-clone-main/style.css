@@ -1,0 +1,278 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+.container-md {
+  /* border: 2px solid red; */
+  height: 100vh;
+  padding: 0px;
+}
+.main {
+  height: 70vh;
+  width: 100%;
+  /* border: 2px solid green; */
+  margin-bottom: 5px;
+  background-image: url(images/Header\ Background\ Img.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.collapse {
+  justify-content: end;
+}
+.navbar-nav li {
+  /* background-color: azure; */
+  color: yellowgreen;
+}
+.nav-item1 {
+  border: 2px solid white;
+  margin: 6px;
+  padding: 2px;
+  border-radius: 8px;
+  padding: 0px 4px;
+}
+.nav-item a {
+  color: aliceblue;
+  font-size: medium;
+  font-weight: 600;
+}
+.nav-item2 {
+  background-color: #e50914;
+  border-radius: 8px;
+  color: #e50914;
+  margin: 6px;
+  padding: 2px;
+  padding: 0px 4px;
+}
+.main-heading {
+  height: 300px;
+  width: 50vw;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  align-self: center;
+}
+.main-heading h1 {
+  text-align: center;
+  font-weight: 800;
+  color: white;
+}
+.main-heading p {
+  text-align: center;
+  color: white;
+  font-weight: 600;
+}
+.main-search {
+  /* border: 2px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0%;
+  margin: 0%;
+}
+.navbar-toggler{
+  background-color: white !important;
+}
+.navbar-toggler-icon{
+  color: #fff !important;
+}
+.main-search-sub {
+  width: 500px;
+  border: 2px solid white;
+  height: 40px;
+}
+.main-btn {
+  background-color: #e50914;
+  color: white;
+  font-weight: 400;
+  border: 2px solid #e50914;
+  width: 200px;
+  height: 40px;
+}
+
+.partition {
+  height: 50vh;
+  width: 100%;
+  /* border: 2px solid green; */
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.partition-heading h2 {
+  color: white;
+  font-size: x-large;
+  font-weight: 900;
+}
+.partition-heading p {
+  color: white;
+  font-size: large;
+  font-weight: 400;
+}
+.partition-img img {
+  width: 300px;
+  height: 200px;
+}
+.partition2 {
+  flex-direction: row-reverse;
+}
+.faq {
+  /* height: 70vh; */
+  margin-bottom: 3px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+.faq h1 {
+  padding: 1em;
+  color: white;
+  font-size: x-large;
+  font-weight: 900;
+}
+.btn-faq {
+  background-color: #434343;
+  height: 50px;
+  width: 40vw;
+  display: flex;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 1em;
+  align-items: center;
+  font-size: large;
+  font-weight: 400;
+}
+.card-body1 {
+  width: 40vw;
+  border-radius: 0%;
+}
+.card {
+  background-color: #434343 !important;
+  color: #fff !important;
+  padding: 0.5em;
+  margin: 0.2em;
+}
+.faq p {
+  color: white;
+}
+.main-search{
+  margin: 1em;
+}
+.fotter{
+  height: 5vh;
+  /* border: 2px solid red; */
+  background-color: black;
+}
+.fotter h3{
+  text-align: center;
+  color: white;
+  font-size: smaller;
+  font-weight: 400;
+  padding: 1em;
+}
+.fotter a{
+  color: white;
+  text-decoration: none;
+  font-size: smaller;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 992px){
+  .navbar-brand img{
+    width: 50px;
+    height: 25px;
+  }
+  .main {
+    height: 50vh;
+  }
+  .main-heading h1 {
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    font-size: medium;
+  }
+  .main-heading{
+    width: 100%;
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-heading p {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: small;
+    margin: 1px;
+  }
+  /* .main-search {
+    border: 2px solid red;
+    width: 10px;
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+  } */
+  .main-search-sub {
+    margin: 0%;
+    width: 250%;
+    height: 40px;
+  }
+  .main-btn {
+    color: white;
+    font-weight: 400;
+    width: 150%;
+    height: 40px;
+    font-size: x-small;
+  }
+  ::placeholder{
+    font-weight: 400;
+    font-size: small;
+  }
+  .partition {
+    height: 32vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .partition-heading h2 {
+    font-size: small;
+    font-weight: 900;
+  }
+  .partition-heading p {
+    color: white;
+    font-size: small;
+    font-weight: 400;
+  }
+  .partition-img img {
+    width: 150px;
+    height: 100px;
+  }
+  .faq h1{
+    text-align: center;
+    font-size: medium;
+    font-weight: 800;
+  }
+  .btn-faq {
+    height: 50px;
+    width: 300px;
+  }
+  .card-body1 {
+    width: 300px;
+  }
+  .faq p {
+    font-size: small;
+    font-weight: 500;
+    text-align: center;
+  }
+  .main-search2{
+    padding: 1em;
+  }
+
+}

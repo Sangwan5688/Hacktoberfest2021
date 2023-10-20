@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password GENERATOR</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="./styles.css">
+<body>
+    <!-- Container -->
+
+    <div class = "container">
+
+        <!-- mainHeading(PASS GEN) -->
+        <div>
+            <h1>Password Generator</h1>
+        </div>
+
+        <div class =  "display-container">
+
+            <input readonly placeholder = "Paswword" class = "display" data-passwordDisplay>
+              
+            
+            <!-- copy image button for password left side  with a text when clicked on-->
+
+            <button data-copy>
+                <span class = "tooltip" data-copy-Msg></span>
+                <img src="./images/copy.svg" width = "23" height = "23" >
+             </button>
+        </div>
+ 
+
+        <!-- main container  -->
+        
+        <div>
+            <!-- first content before slider -->
+            <div class = "input-container">
+                <div class = "length-container">
+                    <h2>Password Length</h2>
+
+                    <div id = "number"data-lengthNumber>0</div>
+                </div>
+             
+           
+
+
+            <!-- slider     step use hota hai jaise kitne se aage barhe when moved that pointer -->
+            <input type="range" min = "1" max = "20" class ="slider" step = "1" data-lengthSlider>
+
+  <!-- checkboxes-->
+  <div class="check">
+    <input type="checkbox" id="uppercase">
+    <label for="uppercase">Includes Uppercase letters</label>
+</div>
+
+<div class="check">
+    <input type="checkbox" id="lowercase">
+    <label for="lowercase">Includes Lowercase letters</label>
+</div>
+
+<div class="check">
+    <input type="checkbox" id="numbers">
+    <label for="numbers">Includes Numbers </label>
+</div>
+
+<div class="check">
+    <input type="checkbox" id="symbols">
+    <label for="symbols">Includes Symbols </label>
+</div>
+
+
+
+            <!-- Strength section -->
+            <div class="strength-container">
+                <h2>Strength</h2>
+                <!-- circle indication -->
+                <div data-indicator class="indicator"></div>
+            </div>
+
+
+            <!-- generate password button -->
+
+            <button class ="generateButton">GENERATE PASSWORD</button>
+        </div>
+    </div>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

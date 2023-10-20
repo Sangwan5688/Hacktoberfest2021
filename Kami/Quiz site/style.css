@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+@font-face {
+    font-family: 'speedyregular';
+    src: url('speedyregular-7bloe-webfont.woff2') format('woff2'),
+        url('speedyregular-7bloe-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background: url('img/bg.jpg');
+    font-family: "Poppins", sans-serif;
+    height: 700px;
+}
+
+
+/* Logo */
+.logo img {
+    position: relative;
+    bottom: 124px;
+    right: 50px;
+    width: 23%;
+}
+
+.astro img {
+    width: 32%;
+    position: relative;
+    bottom: 665px;
+    left: 762px;
+}
+
+.astro1 img {
+    width: 15%;
+    position: relative;
+    bottom: 1231px;
+    left: 1086px;
+
+}
+
+.sun img {
+    width: 7%;
+    position: relative;
+    bottom: 1160px;
+    left: 691px;
+}
+
+.mercury img {
+    width: 5%;
+    position: relative;
+    bottom: 1329px;
+    left: 742px;
+}
+
+.venus img {
+    width: 5%;
+    position: relative;
+    bottom: 1477px;
+    left: 786px;
+}
+
+.earth img {
+    width: 4%;
+    position: relative;
+    bottom: 1609px;
+    left: 864px;
+
+}
+
+.mars img {
+    width: 10%;
+    position: relative;
+    bottom: 1734px;
+    left: 906px;
+}
+
+.jupiter img {
+    width: 5%;
+    position: relative;
+    bottom: 1819px;
+    left: 1036px;
+}
+
+.uranus img {
+    width: 5%;
+    position: relative;
+    bottom: 1747px;
+    left: 1167px;
+}
+
+.neptune img {
+    width: 5%;
+    position: relative;
+    bottom: 1746px;
+    left: 1219px;
+}
+
+.solo img {
+    width: 22%;
+    position: relative;
+    top: 190px;
+    left: 163px;
+}
+
+.team img {
+    width: 22%;
+    position: relative;
+    top: -210px;
+    left: 975px;
+    bottom: 200px;
+}
+
+.new2 img {
+    width: 6%;
+    position: relative;
+    left: 489px;
+    bottom: 30px;
+}
+
+.img2 img {
+    width: 7%;
+    position: relative;
+    left: 888px;
+    bottom: 139px;
+}
+
+.email img {
+    position: relative;
+    width: 3%;
+    left: 372px;
+    top: 8px;
+}
+
+.insta img {
+    position: relative;
+    width: 5%;
+    left: 685px;
+    top: -62px;
+}
+
+.call img {
+    position: relative;
+    width: 4%;
+    left: 906px;
+    top: -141px;
+}
+
+
+
+
+/* Navbar */
+
+
+
+.navbar {
+    position: relative;
+    width: 44%;
+    left: 469px;
+    bottom: 322px;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    position: relative;
+
+}
+
+.nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 4px;
+    background: rgb(104, 85, 224);
+    position: absolute;
+    left: 0;
+    bottom: 12px;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Login button */
+
+.btn {
+    position: relative;
+    float: right;
+    right: 50px;
+    bottom: 350px;
+    width: 7%;
+    height: 32px;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(104, 85, 224, 1);
+}
+
+button:hover {
+    color: white;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+    background-color: rgba(104, 85, 224, 1);
+    cursor: pointer;
+}
+
+/* main tagline */
+.tagline h1 {
+    font-family: 'speedyregular';
+    font-size: 103px;
+    position: relative;
+    width: 46%;
+    bottom: 251px;
+    text-align: center;
+    color: rgb(224 219 255);
+}
+
+
+.new {
+    width: 100%;
+    height: 198%;
+    position: relative;
+    bottom: 1382px;
+    background: url('img/bg1.jpg');
+}
+
+.title h1 {
+    width: 98%;
+    font-size: 41px;
+    color: white;
+    font-family: 'speedyregular';
+    height: 68px;
+    position: relative;
+    text-align: center;
+    top: 64px;
+}
+
+.solo h3 {
+    color: white;
+    position: relative;
+    font-size: 26px;
+    text-align: center;
+    top: 190px;
+    width: 36%;
+    left: 44px;
+    font-family: 'speedyregular';
+}
+
+
+
+.btn1 {
+    width: 8%;
+    height: 32px;
+    position: relative;
+    top: 214px;
+    right: 220px;
+    background: transparent;
+    border: 1px solid rgba(104, 85, 224, 1);
+    color: white;
+    font-family: 'speedyregular';
+}
+
+.btn2 {
+    width: 8%;
+    height: 32px;
+    position: relative;
+    top: 214px;
+    right: 92px;
+    background: transparent;
+    border: 1px solid rgba(104, 85, 224, 1);
+    color: white;
+    font-family: 'speedyregular';
+}
+
+.team h3 {
+    color: white;
+    position: relative;
+    font-size: 26px;
+    text-align: center;
+    top: -192px;
+    width: 36%;
+    left: 896px;
+    bottom: 139px;
+    width: 30%;
+    font-family: 'speedyregular';
+}
+
+
+
+.btn3 {
+    width: 8%;
+    height: 32px;
+    position: relative;
+    top: -173px;
+    right: 220px;
+    left: 594px;
+    background: transparent;
+    border: 1px solid rgba(104, 85, 224, 1);
+    color: white;
+    font-family: 'speedyregular';
+}
+
+.btn4 {
+    width: 8%;
+    height: 32px;
+    position: relative;
+    top: -173px;
+    right: 220px;
+    left: 635px;
+    background: transparent;
+    border: 1px solid rgb(104, 85, 224);
+    color: white;
+    font-family: 'speedyregular';
+}
+
+.btn5 {
+    width: 8%;
+    height: 32px;
+    position: relative;
+    top: -173px;
+    right: 220px;
+    left: 677px;
+    background: transparent;
+    border: 1px solid rgb(104, 85, 224);
+    color: white;
+    font-family: 'speedyregular';
+}
+
+.new2 {
+    width: 100%;
+    height: 72%;
+    bottom: 1886px;
+    position: relative;
+    background: url('img/bg.jpg');
+}
+
+.new2 h1 {
+    color: white;
+    position: relative;
+    width: 30%;
+    font-size: 47px;
+    text-align: center;
+    left: 500px;
+    top: 50px;
+    font-family: 'speedyregular';
+}
+
+
+.email a {
+    position: relative;
+    font-size: 23px;
+    width: 22%;
+    color: white;
+    left: 375px;
+    text-align: center;
+    bottom: 8px;
+    text-decoration: none;
+    font-family: 'speedyregular';
+}
+
+
+.insta a {
+    position: relative;
+    font-size: 23px;
+    width: 22%;
+    color: white;
+    left: 680px;
+    text-align: center;
+    bottom: 93px;
+    text-decoration: none;
+    font-family: 'speedyregular';
+}
+
+
+.call a {
+    position: relative;
+    font-size: 23px;
+    width: 22%;
+    color: white;
+    left: 896px;
+    text-align: center;
+    bottom: 167px;
+    text-decoration: none;
+    font-family: 'speedyregular';
+}
+
+.email a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.insta a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.call a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+footer {
+    margin: 0 1rem;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}

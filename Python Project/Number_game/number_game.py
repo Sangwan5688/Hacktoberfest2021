@@ -1,12 +1,20 @@
 import random
 
 def guess_the_number():
-    # Generate a random number between 1 and 100
-    secret_number = random.randint(1, 100)
+    """
+    A simple number guessing game.
+    """
+
+    # Get the range from the user
+    min_range = int(input("Enter the minimum number in the range: "))
+    max_range = int(input("Enter the maximum number in the range: "))
+
+    # Generate a random number within the specified range
+    secret_number = random.randint(min_range, max_range)
     attempts = 0
 
-    print("Welcome to the Guess the Number game!")
-    print("I'm thinking of a number between 1 and 100.")
+    print("\nWelcome to the Guess the Number game!")
+    print(f"I'm thinking of a number between {min_range} and {max_range}.")
 
     while True:
         try:

@@ -1,4 +1,0 @@
-apple = 7
-Cherry = 9
-Fruit= apple + Cherry
-print(Fruit)

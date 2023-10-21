@@ -1,9 +1,10 @@
-#include <iostream>
+#include <stdio.h>
 
 void insertionSort(int arr[], int n) {
-    for (int i = 1; i < n; i++) {
-        int key = arr[i];
-        int j = i - 1;
+    int i, key, j;
+    for (i = 1; i < n; i++) {
+        key = arr[i];
+        j = i - 1;
 
         // Move elements of arr[0..i-1] that are greater than key
         // to one position ahead of their current position
@@ -17,22 +18,22 @@ void insertionSort(int arr[], int n) {
 
 int main() {
     int n;
-    std::cout << "Enter the number of elements in the array: ";
-    std::cin >> n;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
 
     int arr[n];
-    std::cout << "Enter the elements of the array: ";
+    printf("Enter the elements of the array: ");
     for (int i = 0; i < n; i++) {
-        std::cin >> arr[i];
+        scanf("%d", &arr[i]);
     }
 
     insertionSort(arr, n);
 
-    std::cout << "Sorted array: ";
+    printf("Sorted array: ");
     for (int i = 0; i < n; i++) {
-        std::cout << arr[i] << " ";
-    } 
-    std::cout << std::endl;
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
 
     return 0;
 }

@@ -43,6 +43,7 @@ function myfunc() {
 		b2btn.style.color = "red";
 		b3btn.style.color = "red";
 	}
+		
 	else if ((b1 == 'x' || b1 == 'X') && (b4 == 'x' ||
 		b4 == 'X') && (b7 == 'x' || b7 == 'X')) {
 		document.getElementById('print')

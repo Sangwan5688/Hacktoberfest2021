@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+    </header>
+
+    <main>
+        <section id="search">
+            <h2>Check the Weather</h2>
+            <form id="search-form">
+                <input type="text" id="location" placeholder="Enter location">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section id="weather">
+            <h2>Current Weather</h2>
+            <div id="weather-info">
+                <p><strong>Location:</strong> <span id="location-name">City, Country</span></p>
+                <p><strong>Temperature:</strong> <span id="temperature">--°C</span></p>
+                <p><strong>Conditions:</strong> <span id="conditions">--</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Weather App</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

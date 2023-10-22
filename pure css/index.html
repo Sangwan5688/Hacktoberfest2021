@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            width: 70%;
+        }
+        .close {
+            color: #555;
+            float: right;
+            font-size: 30px;
+        }
+        .close:hover {
+            color: #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="openModal">Open Modal</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <p>This is a modal dialog.</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("openModal").addEventListener("click", function() {
+            document.getElementById("myModal").style.display = "block";
+        });
+
+        document.getElementById("closeModal").addEventListener("click", function() {
+            document.getElementById("myModal").style.display = "none";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #container {
+            text-align: center;
+            background-color: #394867;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        #guessInput {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        #submitBtn {
+            margin-top: 10px;
+            padding: 8px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #61dafb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #submitBtn:hover {
+            background-color: #45aaf2;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Guess the Number Game</h1>
+        <p>Guess a number between 1 and 10:</p>
+        <input type="number" id="guessInput" placeholder="Enter your guess" min="1" max="10">
+        <br>
+        <button id="submitBtn" onclick="checkGuess()">Submit Guess</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        // Generate a random number between 1 and 10
+        const secretNumber = Math.floor(Math.random() * 10) + 1;
+
+        function checkGuess() {
+            const guess = document.getElementById('guessInput').value;
+            const output = document.getElementById('output');
+
+            if (!guess || guess < 1 || guess > 10) {
+                output.textContent = 'Please enter a valid guess between 1 and 10.';
+                output.style.color = 'red';
+            } else if (parseInt(guess) === secretNumber) {
+                output.textContent = 'Congratulations! You guessed the correct number.';
+                output.style.color = 'green';
+            } else {
+                output.textContent = `Wrong guess. The correct number was ${secretNumber}.`;
+                output.style.color = 'red';
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+function topologicalSort(graph):
+    let stack = empty stack
+    let visited = array of boolean with size equal to number of nodes, initialized to false
+
+    for each node in graph:
+        if not visited[node]:
+            dfs(node, visited, stack, graph)
+
+    print elements from stack (in reverse order) as the result of topological sort
+
+function dfs(node, visited, stack, graph):
+    mark node as visited
+
+    for each neighbor in graph[node]:
+        if not visited[neighbor]:
+            dfs(neighbor, visited, stack, graph)
+
+    push node onto stack
+
+
+In this pseudocode:
+
+graph is the adjacency list representation of your directed graph.
+visited is an array to keep track of visited nodes to avoid infinite loops.
+stack is used to keep track of the nodes in the topological order.
+The dfs function performs a depth-first search starting from a node. It recursively explores all the unvisited neighbors of the current node before pushing the current node onto the stack.
+
+

@@ -1,0 +1,39 @@
+/*BY Engineer Elhamuddin Taheri*/
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000e0;
+}
+
+.header {
+    color: white;
+    margin-top: 30px;
+}
+
+#frame {
+    margin-top: 50px;
+    border: 1px solid black;
+    height:300px;
+    background-color: #000000f2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 4px #1900ffd4;
+}
+
+#header {
+    border-bottom: 1px solid black;
+    font-size: 30px;
+    height: 50px;
+    background-color: #ff1818f0;
+    color:white;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+
+#content {
+    color:white;
+    
+    font-size:70px;
+}

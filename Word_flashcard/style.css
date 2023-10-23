@@ -1,0 +1,71 @@
+/* Developed By Engineer Elhamuddin Taheri
+B.Sc in Software Engineering (Kabul University) */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightblue;
+}
+
+.container {
+    /* border: 1px solid black; */
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+.control {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding-top: 20px;
+    text-align: center;
+    height: 130px;
+    background-color: #ff8800;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+input, button {
+    width: 180px;
+    height: 30px;
+    pointer: cursor;
+}
+
+input {
+    outline: none;
+}
+
+button {
+
+}
+
+table{
+    width: 100%;
+}
+
+td {
+    border: 1px dotted gray;
+    width: 50%;
+    height: 30px;
+    font-size: 22px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 20px;
+    background-color: #e77a48;
+}
+
+span {
+    float: right;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+

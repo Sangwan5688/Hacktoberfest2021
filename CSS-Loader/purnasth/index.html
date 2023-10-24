@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purna CSS Loader</title>
+    <style>
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url("https://fonts.cdnfonts.com/css/classical-romance");
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+svg {
+  font: 20em "Classical Romance", "Ubuntu";
+  /* letter-spacing: 0.15em; */
+  width: 50%;
+  height: 50%;
+  text-transform: uppercase;
+}
+
+svg text {
+  fill: #111;
+  stroke: #111;
+  fill-opacity: 1;
+  stroke-width: 0;
+  stroke-dasharray: 100% 0;
+  animation: stroke-offset 3s ease-out;
+}
+
+@keyframes stroke-offset {
+  0% {
+    fill-opacity: 0;
+    stroke-width: 0;
+    stroke-dasharray: 0% 100%;
+  }
+  25% {
+    stroke-width: 3px;
+  }
+  50% {
+    fill-opacity: 0;
+  }
+  75% {
+    stroke-width: 3px;
+  }
+  100% {
+    stroke-width: 0;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <svg viewBox="0 0 1280 720">
+      <text
+        text-anchor="middle"
+        x="50%"
+        y="50%"
+        style="fill: url(#text-gradient)"
+      >
+        Purna
+      </text>
+      <defs>
+        <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color: rgb(4, 1, 70)"></stop>
+          <stop offset="35%" style="stop-color: rgb(12, 12, 148)"></stop>
+          <stop offset="100%" style="stop-color: rgba(0, 212, 255, 1)"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </body>
+</html>

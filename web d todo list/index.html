@@ -18,13 +18,41 @@
 
         addButton.addEventListener("click", function () {
             const taskText = taskInput.value;
-            if (taskText) {
-                const listItem = document.createElement("li");
-                listItem.innerHTML = `<input type="checkbox"> ${taskText}`;
-                taskList.appendChild(listItem);
-                taskInput.value = "";
+           if (taskText) {
+                let gittodoArry=window.localStorage.getItem('todolist');
+                if (gittodoArry) {
+                    let todolist=JSON.parse(gittodoArry);
+                    todolist.push(taskText);
+                    window.localStorage.setItem('todolist',JSON.stringify(todolist))
+                }else{
+                    let todolist=[];
+                    todolist.push(taskText);
+                    window.localStorage.setItem('todolist',JSON.stringify(todolist))
+
+                }
+                renderfn()
             }
         });
+
+         function renderfn(){
+        let gittodoArry=window.localStorage.getItem('todolist');
+if(gittodoArry){
+    let todolist=JSON.parse(gittodoArry);
+    let list=''
+    todolist.forEach(e => {
+        console.log(e);
+        list += `<li><input type="checkbox"> ${e}</li>`;
+
+                
+    });
+    taskList.innerHTML=list
+
+
+}
+        
+        }
+         // initily load all todos
+        renderfn();
     </script>
 </body>
 </html>
